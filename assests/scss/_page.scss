@@ -9,6 +9,8 @@ page
 ====================================================== Blog Index
 */
 
+//-----------------------------------| Blog Header
+
 // blog marque image
 .blogHero {
 	@include sizeEl(block, left, 100%, 200px);
@@ -71,6 +73,67 @@ page
 	padding: 18px 0 0 0;
 	color: $blogNavText;
 	border-left: solid 1px $blogNavBorder;
+}
+
+//-----------------------------------| Blog index posts
+
+// poast wraps | wraps index posts
+.postWrap {
+	@include sizeEl(inline-block, left, 100%, auto);
+	border: solid 1px $gBorder;
+	background-color: $w;
+	margin: 0 0 20px 0;
+}
+
+// featured img on post
+.postImgWrap {
+	@include sizeEl(inline-block, left, 100%, 165px);
+	background-color: $bA;
+}
+
+// wraps index post text
+.postTextWrap {
+	padding: 10px;
+}
+
+// author and date bar
+.postDate {
+	@include sizeEl(block, left, 100%, 25px);
+	border-bottom: solid 1px $gBorder;
+	position: relative;
+	margin: 0 0 10px 0;
+}
+
+// date posted
+.postDate time  {
+	position: absolute;
+	font-size: .6em;
+	letter-spacing: .05em;
+	top: 6px;
+	left: 0px;
+}
+
+// author full link
+.postDate a  {
+	position: absolute;
+	font-size: .6em;
+	letter-spacing: .05em;
+	top: 6px;
+	right: 0px;
+	color: $textColor;
+}
+
+// author name
+.postDate a span {
+	color: $bGreen !important;
+	font-weight: 600;
+	text-decoration: underline;
+	font-style: italic;
+}
+
+// post type
+.postWrap h2, .postWrap p {
+	@include sizeEl(inline-block, left, 100%, auto);
 }
 
 /* 

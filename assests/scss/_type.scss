@@ -22,6 +22,7 @@ Type
 p {
 	font-family: 'Lato', sans-serif; 
 	font-weight: 400;
+	padding: $pPadT 0 $pPadB 0;
 }
 
 
@@ -92,7 +93,6 @@ p, ol, ul, dl, address, time {
 	font-family: 'Lato', sans-serif; 
 	font-weight: 400;
 	font-size: 0.85em;
-	padding: $pPadT 0 $pPadB 0;
 	line-height: $pLineHeight;
 	letter-spacing: $pSpacing;
 

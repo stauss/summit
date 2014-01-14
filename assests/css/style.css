@@ -187,7 +187,6 @@ elements
   height: 20px;
   overflow: hidden;
   padding: 5px 4px 4px 4px;
-  border-bottom: solid 1px #dbdada;
   background-color: white; }
 
 .crumbs a {
@@ -215,7 +214,8 @@ Type
 
 p {
   font-family: 'Lato', sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  padding: 10px 0 15px 0; }
 
 /* 
 ====================================================== HEADINGS
@@ -273,7 +273,6 @@ p, ol, ul, dl, address, time {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 0.85em;
-  padding: 20px 0 20px 0;
   line-height: 1.6em;
   letter-spacing: 0.005em; }
   p a, ol a, ul a, dl a, address a, time a {
@@ -513,6 +512,61 @@ page
   padding: 18px 0 0 0;
   color: #4c4c4c;
   border-left: solid 1px #3c3c3c; }
+
+.postWrap {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: auto;
+  border: solid 1px #dbdada;
+  background-color: white;
+  margin: 0 0 20px 0; }
+
+.postImgWrap {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: 165px;
+  background-color: #bada55; }
+
+.postTextWrap {
+  padding: 10px; }
+
+.postDate {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 25px;
+  border-bottom: solid 1px #dbdada;
+  position: relative;
+  margin: 0 0 10px 0; }
+
+.postDate time {
+  position: absolute;
+  font-size: .6em;
+  letter-spacing: .05em;
+  top: 6px;
+  left: 0px; }
+
+.postDate a {
+  position: absolute;
+  font-size: .6em;
+  letter-spacing: .05em;
+  top: 6px;
+  right: 0px;
+  color: #3c3c3c; }
+
+.postDate a span {
+  color: #507a40 !important;
+  font-weight: 600;
+  text-decoration: underline;
+  font-style: italic; }
+
+.postWrap h2, .postWrap p {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: auto; }
 
 /* 
 ==============================================================
