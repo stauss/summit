@@ -1,0 +1,46 @@
+/* ============================================================
+
+Animations
+
+============================================================ */
+
+
+/* 
+====================================================== Menu Icon
+*/
+
+
+// -webkit-animation: play .4s steps(7) forwards;
+//    -moz-animation: play .4s steps(7) forwards;
+//     -ms-animation: play .4s steps(7) forwards;
+//      -o-animation: play .4s steps(7) forwards;
+//         animation: play .4s steps(7) forwards;
+
+
+@-webkit-keyframes menuIconBack {
+   from { background-position:    0px; }
+     to { background-position: -245px; }
+}
+
+@-moz-keyframes menuIconBack {
+   from { background-position:    0px; }
+     to { background-position: -245px; }
+}
+
+@-ms-keyframes menuIconBack {
+   from { background-position:    0px; }
+     to { background-position: -245px; }
+}
+
+@-o-keyframes menuIconBack {
+   from { background-position:    0px; }
+     to { background-position: -245px; }
+}
+
+@keyframes menuIconBack {
+   from { background-position:    0px; }
+     to { background-position: -245px; }
+}
+
+/* 
+==============================================================

@@ -1,0 +1,110 @@
+/* ============================================================
+
+Type
+
+============================================================ */
+
+// Heading Front
+@font-face {
+    font-family: 'brisko_sansbold';
+    src: url('../fonts/brisko_sans_bold_3-webfont.eot');
+    src: url('../fonts/brisko_sans_bold_3-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/brisko_sans_bold_3-webfont.woff') format('woff'),
+         url('../onts/brisko_sans_bold_3-webfont.ttf') format('truetype'),
+         url('../fonts/brisko_sans_bold_3-webfont.svg#brisko_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+p {
+	font-family: 'Lato', sans-serif; 
+	font-weight: 400;
+}
+
+
+
+/* 
+====================================================== HEADINGS
+*/
+
+h1, h2, h3, h4, h5 ,h6 {
+	font-family: 'brisko_sansbold';
+	font-weight: normal;
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: $h1Size;
+	color: $h1Color;
+	letter-spacing: $h1Spacing;
+	line-height: $h1LineHeight;
+}
+
+h2 {
+	font-size: $h2Size;
+	color: $h2Color;
+	letter-spacing: $h2Spacing;
+	line-height: $h2LineHeight;
+}
+
+h3 {
+	font-size: $h3Size;
+	color: $h3Color;
+	letter-spacing: $h3Spacing;
+	line-height: $h3LineHeight;
+}
+
+h4 {
+	font-size: $h4Size;
+	color: $h4Color;
+	letter-spacing: $h4Spacing;
+	line-height: $h4LineHeight;
+}
+
+h5 {
+	font-size: $h5Size;
+	color: $h5Color;
+	letter-spacing: $h5Spacing;
+	line-height: $h5LineHeight;
+}
+
+h6 {
+	font-size: $h6Size;
+	color: $h5Color;
+	letter-spacing: $h6Spacing;
+	line-height: $h6LineHeight;
+}
+
+/* 
+====================================================== OTHER TYPE
+*/
+
+a {
+   display:block;
+   position:relative;
+}
+
+p, ol, ul, dl, address, time {
+	font-family: 'Lato', sans-serif; 
+	font-weight: 400;
+	font-size: 0.85em;
+	padding: $pPadT 0 $pPadB 0;
+	line-height: $pLineHeight;
+	letter-spacing: $pSpacing;
+
+	a {
+		text-decoration:none;
+		font-style:normal;
+	}
+}
+
+
+
+
+
+
+

@@ -9,11 +9,26 @@ URL: summitprojects.com
 // CSS reset
 @import "reset";
 
-// @import "variables";
+@import "variables";
+@import "mixins";
 
-// @import "mixins";
+// Base Site Styles
+@import "site";
 
-// @import "site";
+// Global Elemnets - Header / Footer
+@import "elements";
+
+// Type
+@import "type";
+
+// Type
+@import "buttons";
+
+// Type
+@import "menu";
+
+// Type
+@import "page";
 
 // @import "typography";
 

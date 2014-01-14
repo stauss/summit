@@ -1,0 +1,78 @@
+/* ============================================================
+
+page
+
+============================================================ */
+
+
+/* 
+====================================================== Blog Index
+*/
+
+// blog marque image
+.blogHero {
+	@include sizeEl(block, left, 100%, 200px);
+	background-color: $b;
+}
+
+.blogNavWrap {
+	@include sizeEl(block, left, 100%, 50px);
+	position: relative;
+	background-color: $headBg;
+	color: $blogNavText;
+	overflow: hidden;
+}
+
+// search icon header
+.blogNavWrap .fa-search {
+	position: absolute;
+	top: 17px;
+	right: 15px;
+	color: $w;
+}
+
+//blog nav dropdown
+.blogNavDd {
+	margin: 0;
+	padding: 0;
+}
+
+//blog nav links
+.blogNavDd a {
+	text-transform: uppercase;
+	font-size: 1.1em;
+	letter-spacing: .2em;
+	color: $blogNavText;
+}
+
+// blog nav icon
+.menuIconBlog {
+	@include sizeEl(block, left, 85%, 272px);
+	background-color: $headBg;
+	padding: 16px 16px 16px 45px;
+}
+
+// actual icon 
+.menuIconBlog span {
+	@include sizeEl(block, left, 50px, 20px);
+	position: absolute;
+	top: 16px;
+	left: 0px;
+	@include spritePos('sprite.png', -290px -20px);
+}
+
+// blog nav search icon
+.blogNavDd .fa-search {
+	@include sizeEl(block, left, 50px, 50px);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	text-align: center;
+	padding: 18px 0 0 0;
+	color: $blogNavText;
+	border-left: solid 1px $blogNavBorder;
+}
+
+/* 
+==============================================================
+*/

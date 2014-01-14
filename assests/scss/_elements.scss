@@ -1,0 +1,71 @@
+/* ============================================================
+
+elements
+
+============================================================ */
+
+
+/* 
+====================================================== Header
+*/
+
+// global header
+.gHead {
+	@include sizeEl(block, left, 100%, 50px);
+	position: relative;
+	background-color: $headBg;
+}
+
+// main branding
+.gLogo {
+	@include sizeEl(block, none, 85px, 50px);
+	@include spritePos('sprite.png', 0px 16px);
+	margin: 0 auto;
+	overflow: hidden;
+	text-indent: -99999px;
+}
+
+
+// search icon header
+.gHead .fa-search {
+	position: absolute;
+	top: 17px;
+	right: 15px;
+	color: $w;
+}
+
+// menu icon
+.menuIcon {
+	position: absolute;
+	width: 20px;
+	height: 16px;
+	overflow: hidden;
+	text-indent: -99999px;
+	top: 18px;
+	left: 15px;
+	@include spritePos('menuIcon.png', -210px -10px);
+	//background-color: $bA;
+}
+
+// bread crumbs
+.crumbs {
+	@include sizeEl(block, left, 100%, 20px);
+	overflow: hidden;
+	padding: 5px 4px 4px 4px;
+	border-bottom: solid 1px $gBorder;
+	background-color: $w;
+}
+
+// bread crumb links
+.crumbs a {
+	display: inline-block;
+	float: left;
+	font-size: .5em;
+	letter-spacing: .08em;
+	color: $crumbs;
+	padding: 0 0 0 2px;
+}
+
+/* 
+==============================================================
+*/

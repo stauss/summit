@@ -1,0 +1,580 @@
+/* ============================================================
+
+Summit Projects | 1 / 13 / 14
+URL: summitprojects.com
+
+============================================================ */
+/* ============================================================
+
+Reset
+
+============================================================ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none;
+  font-weight: normal; }
+
+/* ============================================================
+
+Variables
+
+============================================================ */
+/* 
+====================================================== DEFAULTS
+*/
+/* 
+===============================================================
+*/
+/* 
+====================================================== TYPE
+*/
+/* 
+===============================================================
+*/
+/* 
+====================================================== COLORS
+*/
+/* 
+===============================================================
+*/
+/* ============================================================
+
+Mixins
+
+============================================================ */
+/* ============================================================
+
+site
+
+============================================================ */
+@-webkit-viewport {
+  width: device-width; }
+
+@-moz-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@viewport {
+  width: device-width; }
+
+html {
+  background: url(../img/backgrounds/bg.jpg);
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #3c3c3c; }
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent; }
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.wrap {
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 15px; }
+
+/* ============================================================
+
+elements
+
+============================================================ */
+/* 
+====================================================== Header
+*/
+.gHead {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  background-color: #171716; }
+
+.gLogo {
+  display: block;
+  float: none;
+  width: 85px;
+  height: 50px;
+  background-image: url(../img/sprite/sprite.png);
+  background-repeat: no-repeat;
+  background-position: 0px 16px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-indent: -99999px; }
+
+.gHead .fa-search {
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  color: white; }
+
+.menuIcon {
+  position: absolute;
+  width: 20px;
+  height: 16px;
+  overflow: hidden;
+  text-indent: -99999px;
+  top: 18px;
+  left: 15px;
+  background-image: url(../img/sprite/menuIcon.png);
+  background-repeat: no-repeat;
+  background-position: -210px -10px; }
+
+.crumbs {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 20px;
+  overflow: hidden;
+  padding: 5px 4px 4px 4px;
+  border-bottom: solid 1px #dbdada;
+  background-color: white; }
+
+.crumbs a {
+  display: inline-block;
+  float: left;
+  font-size: .5em;
+  letter-spacing: .08em;
+  color: #737373;
+  padding: 0 0 0 2px; }
+
+/* 
+==============================================================
+*/
+/* ============================================================
+
+Type
+
+============================================================ */
+@font-face {
+  font-family: 'brisko_sansbold';
+  src: url("../fonts/brisko_sans_bold_3-webfont.eot");
+  src: url("../fonts/brisko_sans_bold_3-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/brisko_sans_bold_3-webfont.woff") format("woff"), url("../onts/brisko_sans_bold_3-webfont.ttf") format("truetype"), url("../fonts/brisko_sans_bold_3-webfont.svg#brisko_sansbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400; }
+
+/* 
+====================================================== HEADINGS
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'brisko_sansbold';
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 2.2em;
+  color: #3c3c3c;
+  letter-spacing: 0.09em;
+  line-height: 1.2em; }
+
+h2 {
+  font-size: 1.7em;
+  color: #3c3c3c;
+  letter-spacing: 0.09em;
+  line-height: 1.2em; }
+
+h3 {
+  font-size: 1.4em;
+  color: #3c3c3c;
+  letter-spacing: 0.05em;
+  line-height: 1.2em; }
+
+h4 {
+  font-size: 1.1em;
+  color: #3c3c3c;
+  letter-spacing: 0.05em;
+  line-height: 1.2em; }
+
+h5 {
+  font-size: 0.95em;
+  color: #3c3c3c;
+  letter-spacing: 0.02em;
+  line-height: 1.2em; }
+
+h6 {
+  font-size: 0.68em;
+  color: #3c3c3c;
+  letter-spacing: 0.05em;
+  line-height: 1.2em; }
+
+/* 
+====================================================== OTHER TYPE
+*/
+a {
+  display: block;
+  position: relative; }
+
+p, ol, ul, dl, address, time {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 0.85em;
+  padding: 20px 0 20px 0;
+  line-height: 1.6em;
+  letter-spacing: 0.005em; }
+  p a, ol a, ul a, dl a, address a, time a {
+    text-decoration: none;
+    font-style: normal; }
+
+/* ============================================================
+
+Buttons
+
+============================================================ */
+.btn {
+  display: inline-block;
+  *display: inline;
+  padding: 10px 15px;
+  margin: 0 15px 0 0;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  font-weight: 200;
+  font-size: 0.8em;
+  letter-spacing: .05em;
+  color: white; }
+
+.btnG {
+  background-color: #507a40; }
+
+.btnB {
+  background-color: #101010; }
+
+.gNav {
+  display: none;
+  position: fixed;
+  background: #47a3da;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  width: 225px;
+  height: 100%;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+.gNav.on {
+  display: block;
+  z-index: 9999999; }
+
+.cbp-spmenu h3 {
+  color: #afdefa;
+  font-size: 1.9em;
+  padding: 20px;
+  margin: 0;
+  font-weight: 300;
+  background: #0d77b6; }
+
+.cbp-spmenu a {
+  display: block;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 300; }
+
+.cbp-spmenu a:hover {
+  background: #258ecd; }
+
+.cbp-spmenu a:active {
+  background: #afdefa;
+  color: #47a3da; }
+
+/* Orientation-dependent styles for the content of the menu */
+.cbp-spmenu-vertical {
+  width: 240px;
+  height: 100%;
+  top: 0;
+  z-index: 1000; }
+
+.cbp-spmenu-vertical a {
+  border-bottom: 1px solid #258ecd;
+  padding: 1em; }
+
+.cbp-spmenu-horizontal {
+  width: 100%;
+  height: 150px;
+  left: 0;
+  z-index: 1000;
+  overflow: hidden; }
+
+.cbp-spmenu-horizontal h3 {
+  height: 100%;
+  width: 20%;
+  float: left; }
+
+.cbp-spmenu-horizontal a {
+  float: left;
+  width: 20%;
+  padding: 0.8em;
+  border-left: 1px solid #258ecd; }
+
+/* Vertical menu that slides from the left or right */
+.cbp-spmenu-left {
+  left: -240px; }
+
+.cbp-spmenu-right {
+  right: -240px; }
+
+.cbp-spmenu-left.cbp-spmenu-open {
+  left: 0px; }
+
+.cbp-spmenu-right.cbp-spmenu-open {
+  right: 0px; }
+
+/* Horizontal menu that slides from the top or bottom */
+.cbp-spmenu-top {
+  top: -150px; }
+
+.cbp-spmenu-bottom {
+  bottom: -150px; }
+
+.cbp-spmenu-top.cbp-spmenu-open {
+  top: 0px; }
+
+.cbp-spmenu-bottom.cbp-spmenu-open {
+  bottom: 0px; }
+
+/* Push classes applied to the body */
+.cbp-spmenu-push {
+  overflow-x: hidden;
+  position: relative;
+  left: 0; }
+
+.cbp-spmenu-push-toright {
+  left: 240px; }
+
+.cbp-spmenu-push-toleft {
+  left: -240px; }
+
+/* Transitions */
+.cbp-spmenu,
+.cbp-spmenu-push {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+/* Example media queries */
+@media screen and (max-width: 55.1875em) {
+  .cbp-spmenu-horizontal {
+    font-size: 75%;
+    height: 110px; }
+
+  .cbp-spmenu-top {
+    top: -110px; }
+
+  .cbp-spmenu-bottom {
+    bottom: -110px; } }
+@media screen and (max-height: 26.375em) {
+  .cbp-spmenu-vertical {
+    font-size: 90%;
+    width: 190px; }
+
+  .cbp-spmenu-left,
+  .cbp-spmenu-push-toleft {
+    left: -190px; }
+
+  .cbp-spmenu-right {
+    right: -190px; }
+
+  .cbp-spmenu-push-toright {
+    left: 190px; } }
+/* ============================================================
+
+page
+
+============================================================ */
+/* 
+====================================================== Blog Index
+*/
+.blogHero {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 200px;
+  background-color: black; }
+
+.blogNavWrap {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  background-color: #171716;
+  color: #4c4c4c;
+  overflow: hidden; }
+
+.blogNavWrap .fa-search {
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  color: white; }
+
+.blogNavDd {
+  margin: 0;
+  padding: 0; }
+
+.blogNavDd a {
+  text-transform: uppercase;
+  font-size: 1.1em;
+  letter-spacing: .2em;
+  color: #4c4c4c; }
+
+.menuIconBlog {
+  display: block;
+  float: left;
+  width: 85%;
+  height: 272px;
+  background-color: #171716;
+  padding: 16px 16px 16px 45px; }
+
+.menuIconBlog span {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  background-image: url(../img/sprite/sprite.png);
+  background-repeat: no-repeat;
+  background-position: -290px -20px; }
+
+.blogNavDd .fa-search {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  text-align: center;
+  padding: 18px 0 0 0;
+  color: #4c4c4c;
+  border-left: solid 1px #3c3c3c; }
+
+/* 
+==============================================================
+*/
+/* =========================| MQ |========================= */
+@media print {
+  /* ============================================================
+  
+  Print
+  
+  ============================================================ */
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+  h2, h3 {
+    orphans: 3;
+    widows: 3;
+    page-break-after: avoid; }
+
+  p {
+    orphans: 3;
+    widows: 3; }
+
+  pre, blockquote {
+    border: 1px solid #000;
+    page-break-inside: avoid; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  a, a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; } }
+@media only screen and (min-width: 480px) {
+  /* ============================================================
+  
+  480
+  
+  ============================================================ */ }
+/*-------------------------------
+	
+	Standard Sizes
+	600px // 768 // 992 // 1382 
+
+-------------------------------*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* ============================================================
+  
+  480
+  
+  ============================================================ */ }
