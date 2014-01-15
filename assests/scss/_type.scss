@@ -22,7 +22,6 @@ Type
 p {
 	font-family: 'Lato', sans-serif; 
 	font-weight: 400;
-	padding: $pPadT 0 $pPadB 0;
 }
 
 
@@ -43,6 +42,7 @@ h1 {
 	color: $h1Color;
 	letter-spacing: $h1Spacing;
 	line-height: $h1LineHeight;
+	font-weight: $h1FontWeight;
 }
 
 h2 {
@@ -50,6 +50,7 @@ h2 {
 	color: $h2Color;
 	letter-spacing: $h2Spacing;
 	line-height: $h2LineHeight;
+	font-weight: $h2FontWeight;
 }
 
 h3 {
@@ -57,6 +58,7 @@ h3 {
 	color: $h3Color;
 	letter-spacing: $h3Spacing;
 	line-height: $h3LineHeight;
+	font-weight: $h3FontWeight;
 }
 
 h4 {
@@ -64,6 +66,7 @@ h4 {
 	color: $h4Color;
 	letter-spacing: $h4Spacing;
 	line-height: $h4LineHeight;
+	font-weight: $h4FontWeight;
 }
 
 h5 {
@@ -71,6 +74,7 @@ h5 {
 	color: $h5Color;
 	letter-spacing: $h5Spacing;
 	line-height: $h5LineHeight;
+	font-weight: $h5FontWeight;
 }
 
 h6 {
@@ -78,6 +82,7 @@ h6 {
 	color: $h5Color;
 	letter-spacing: $h6Spacing;
 	line-height: $h6LineHeight;
+	font-weight: $h6FontWeight;
 }
 
 /* 

@@ -1,0 +1,58 @@
+/* ============================================================
+
+550
+
+============================================================ */
+
+// on / off styles
+// things that are only mobile
+.offLittle {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+}
+
+// els that turn on at this width
+.onLittle {
+	display: block;
+	visibility: visible;
+	opacity: 1;
+}
+
+/* 
+====================================================== Blog Index
+*/
+
+// blog posts
+.blogIndexPostWrap {
+	@include sizeEl(inline-block, left, 65%, inherit);
+}
+
+// blog hero
+.blogHero {
+	height: 250px;
+}
+
+// blog side bar
+.blogSb {
+	@include sizeEl(inline-block, right, 35%, inherit);
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+// inner wrap
+.innerSbWrap {
+	padding: 10px;
+	background:$headBg url($sidebarBg);
+	border: solid 1px #000000;
+}
+
+.innerSbWrap ul, .innerSbWrap ul li, .innerSbWrap ul li a, .innerSbWrap h6, .innerSbWrap a {
+	color: $w;
+}
+
+.innerSbWrap h6 {
+	font-size: 10%;
+	letter-spacing: .2em;
+}

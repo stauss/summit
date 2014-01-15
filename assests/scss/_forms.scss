@@ -1,0 +1,468 @@
+/* ============================================================
+
+Forms
+
+============================================================ */
+
+
+
+*:focus {
+    outline: none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+
+
+// dark inputs 
+.darkInput {
+  width: 100%;
+  background-color: $darkInputBackground;
+  border: 1px solid $darkInputBorder;
+  color: $darkInputColor;
+  font-style: italic;
+  font-size: .6em;
+  letter-spacing: .05em;
+  padding: 8px 0 8px 0px;
+}
+
+// on focus keep border
+.darkInput:focus {
+  border: 1px solid $darkInputBorder;
+}
+
+// html5 place holder styling
+.darkInput::-webkit-input-placeholder {
+  padding: 0 0 0 16px;
+   color: $darkInputColor;
+   position: relative;
+}
+
+
+// mag search
+.darkInput::-webkit-input-placeholder::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 12px;
+  height: 12px;
+  background-color: $bA;
+  overflow: visible;
+}
+
+
+// .darkInput:-moz-placeholder { /* Firefox 18- */
+//    color: $darkInputColor;
+// }
+
+// .darkInput::-moz-placeholder {  Firefox 19+
+//    color: $darkInputColor; 
+// }
+
+// .darkInput:-ms-input-placeholder {  
+//    color: $darkInputColor;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// input:focus,
+// textarea:focus {
+//   outline : 0;
+//   outline : thin dotted \9; 
+// }
+
+// input[type="file"]:focus,
+// input[type="radio"]:focus,
+// input[type="checkbox"]:focus,
+// select:focus {
+//   @include box-shadow(none); 
+// }
+
+
+
+// form label {
+//   display:block;
+//   float:left;
+//   width:100%;
+// }
+
+// /* All Input Style */
+// textarea,input {
+//   border: 2px solid #dce4ec;
+//   color: #34495e;
+//   font-family: "Lato", sans-serif;
+//   font-size: 14px;
+//   padding: 8px 0 9px 10px;
+//   text-indent: 1px;
+//   -webkit-border-radius: 6px;
+//   -moz-border-radius: 6px;
+//   border-radius: 6px;
+//   -webkit-box-shadow: none;
+//   -moz-box-shadow: none;
+//   box-shadow: none;
+//   position:relative;
+//   @include simpleTransAni(border-color, 0.2s, linear);
+// }
+
+// input[type="submit"] {
+//   @include simpleTransAni(border-color, 0, linear);
+//    border: none;
+// }
+
+// // Wraps search for pos rel. Allows me to position the mag icon as a webfont
+// .search-input-wrap {position:relative;}
+
+// .seach-input-icon {
+//   position:absolute;
+//   top:8px;
+//   right:15px;
+//   color:#aeb3b7;
+//   font-weight:200;
+//   @include simpleTransAni(border-color, 0.2s, linear);
+// }
+
+// .active-search {color:#1abc9c;}
+
+// /* Webkit Paceholders */
+// textarea::-webkit-input-placeholder, input::-webkit-input-placeholder,
+// /* Firefox 18- Place holders */
+// textarea:-moz-placeholder, input:-moz-placeholder,
+// /* Firefox 19+ */
+// textarea::-moz-placeholder, input::-moz-placeholder,
+// /* Windows */
+// textarea:-ms-input-placeholder, input:-ms-input-placeholder {
+//     color: #acb6c0; 
+// }
+
+
+// /* On Focus Inputs */
+// textarea:focus, input:focus, {
+//     border-color: #1abc9c;
+//     -webkit-box-shadow: none;
+//     -moz-box-shadow: none;
+//     box-shadow: none; 
+// }
+
+
+  
+// textarea.input-error, input.input-error, {
+// 	border-color: #e74c3c;
+//     color: #e74c3c;
+//     -webkit-box-shadow: none;
+//     -moz-box-shadow: none;
+//     box-shadow: none; 
+// }
+
+
+// textarea:focus.input-error, input:focus.input-error, {
+// 	-webkit-box-shadow: none;
+//     -moz-box-shadow: none;
+//     box-shadow: none;
+// }
+
+    
+// textarea.input-success, input.input-success {
+//     border-color: #2ecc71;
+//     color: #2ecc71;
+//     -webkit-box-shadow: none;
+//     -moz-box-shadow: none;
+//     box-shadow: none;
+// }
+
+// textarea:focus.input-success, input:focus.input-success {
+//     -webkit-box-shadow: none;
+//     -moz-box-shadow: none;
+//     box-shadow: none; 
+// }
+
+
+  
+// input[disabled],
+// input[readonly],
+// textarea[disabled],
+// textarea[readonly] {
+//   border-color: transparent;
+//   color: #41494a;
+//   cursor: default; 
+// }
+
+
+// /* Check Boxes and Radio Buttons */
+
+
+// .checkbox, .radio {
+//   margin-bottom: 12px;
+//   padding-left: 32px;
+//   position: relative;
+//   -webkit-transition: 0.25s;
+//   -moz-transition: 0.25s;
+//   -o-transition: 0.25s;
+//   transition: 0.25s;
+//   -webkit-backface-visibility: hidden; 
+// }
+
+// .checkbox:hover, .radio:hover {
+//     color: #1abc9c; 
+// }
+
+// .checkbox input, .radio input {
+//     outline: none !important;
+//     opacity: 0;
+//     filter: alpha(opacity=0);
+//     zoom: 1; 
+// }
+
+// .checkbox.checked .icon, .radio.checked .icon {
+//     background-position: -60px -30px;
+//     opacity: 1;
+//     display: block\9; 
+// }
+  
+// .checkbox.checked .icon-to-fade, .radio.checked .icon-to-fade {
+//     opacity: 0;
+//     display: none\9; 
+// }
+
+// .checkbox.disabled, .radio.disabled {
+// 	color: #d7dddd;
+// 	cursor: default; 
+// }
+
+// .checkbox.disabled .icon, .radio.disabled .icon {
+// 	opacity: 0;
+// 	display: none\9; 
+// }
+
+// .checkbox.disabled .icon-to-fade, .radio.disabled .icon-to-fade {
+//     background-position: -30px -60px;
+//     opacity: 1;
+//     display: block\9; 
+// }
+
+// .checkbox.disabled.checked .icon, .radio.disabled.checked .icon {
+//       background-position: 0 -90px;
+//       opacity: 1;
+//       display: block\9; 
+// }
+
+// .checkbox.disabled.checked .icon-to-fade, .radio.disabled.checked .icon-to-fade {
+//     opacity: 0;
+//     display: none\9; 
+//   }
+
+// // Fade effect
+// .checkbox .icon, .checkbox .icon-to-fade, .radio .icon, .radio .icon-to-fade {
+//     background: url("../img/checkbox.png") -90px 0 no-repeat;
+//     display: block;
+//     height: 20px;
+//     left: 0;
+//     opacity: 1;
+//     position: absolute;
+//     top: -1px;
+//     width: 20px;
+//     -webkit-transition: opacity 0.1s linear;
+//     -moz-transition: opacity 0.1s linear;
+//     -o-transition: opacity 0.1s linear;
+//     transition: opacity 0.1s linear;
+//     -webkit-backface-visibility: hidden; 
+// }
+
+
+// .checkbox .icon, .radio .icon {
+//     opacity: 0;
+//     top: 0;
+//     z-index: 2;
+//     display: none\9; 
+// }
+// // Set Background Image
+// .radio .icon, .radio .icon-to-fade {background-image: url("../img/radio.png"); }
+
+
+
+
+
+
+
+
+// /* Custom Dropdown Selections */
+
+// .hidden {
+//   visibility:hidden;
+//   padding-right:10px;
+// }
+// /*
+// .select {
+//   cursor:pointer;
+//   display:inline-block;
+//   position:relative;
+//   font:normal 11px/22px Arial,Sans-Serif;
+//   color:black;
+// }
+// */
+
+// .select {
+//   display:block;
+//   float:left;
+//   position:relative;
+//   width:100%;
+//   min-height:42px;
+//   cursor:pointer;
+// }
+
+// .styledSelect {
+//   position:absolute;
+//   display:block;
+//   top:0;
+//   right:0;
+//   bottom:0;
+//   left:0;
+//   font-weight:bold;
+//   width:100%;
+//   height:42px;
+// }
+
+// .styledSelect span {
+//   display:block;
+//   float:left;
+//   width:100%;
+//   border: 2px solid #dce4ec;
+//   color: #34495e;
+//   font-family: "Lato", sans-serif;
+//   font-size: 14px;
+//   padding: 6px 0 6px 8px;
+//   text-indent: 1px;
+//   -webkit-border-radius: 6px;
+//   -moz-border-radius: 6px;
+//   border-radius: 6px;
+//   -webkit-box-shadow: none;
+//   -moz-box-shadow: none;
+//   box-shadow: none; 
+//   //width:200px;
+// }
+
+// .styledSelect:after {
+//   content:"";
+//   width:0;
+//   height:0;
+//   border:5px solid transparent;
+//   position:absolute;
+//   top:48%;
+//   right:15px;
+// }
+
+// .styledSelect:active,
+// .styledSelect.active {
+//   //background-color:#eee;
+// }
+
+// .options {
+//   display:none;
+//   width:100%;
+//   position:absolute;
+//   top:40px;
+//   right:0;
+//   left:0;
+//   z-index:999;
+//   margin:0 0;
+//   padding:0 0;
+//   list-style:none;
+//   border: 2px solid #dce4ec;
+//   border-top: none;
+//   background-color:white;
+//   -webkit-border-bottom-right-radius: 6px;
+//   -webkit-border-bottom-left-radius: 6px;
+//   -moz-border-radius-bottomright: 6px;
+//   -moz-border-radius-bottomleft: 6px;
+//   border-bottom-right-radius: 6px;
+//   border-bottom-left-radius: 6px;
+// }
+
+// .options.show-custom-dd {
+// 	opacity:1;
+//   -webkit-backface-visibility: hidden; 
+// }
+
+// .options li {
+//   padding:0 6px;
+//   margin:0 0;
+//   padding:0 10px;
+// }
+
+// .options li:hover {
+//   background-color:#39f;
+//   color:white;
+// }
+
+
+
+
+
+
+// // Number input 
+
+// div.custom-number-wrap{
+// 	position:relative;
+// 	display:block;
+// 	float:left;
+// }
+
+// div.custom-number-wrap input {
+// 	text-align:center;
+//   width:60px;
+//   text-indent:-10px;
+// }
+
+// span.custom-number-button {
+// 	display:block;
+// 	cursor:pointer;
+// 	position:absolute;
+// 	max-width:50px;
+// 	height:30px;
+// 	-webkit-border-radius: 50px;
+// 	-moz-border-radius: 50px;
+// 	border-radius: 50px;
+// 	background-color: #1abc9c;
+// 	color:#fff;
+// 	font-size:20px;
+// }
+
+// .custom-number-button.inc {
+// 	padding:1px 10px 0px 10px;
+// 	top:5px;
+// 	right:-15px;
+// }
+
+// .custom-number-button.dec {
+// 	padding:0px 12px 0px 12px;
+// 	top:5px;
+// 	left:-15px;
+// }
+
+

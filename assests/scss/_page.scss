@@ -75,25 +75,116 @@ page
 	border-left: solid 1px $blogNavBorder;
 }
 
+//-----------------------------------| Pagination
+
+// Pagination Wrap
+.paginationWrap {
+	@include sizeEl(inline-block, left, 100%, 50px);
+	overflow: hidden;
+	position: relative;
+	border-top: solid 1px $gBorder;
+	border-bottom: solid 1px $gBorder;
+}
+
+// pagination ul
+.paginationWrap ul {
+	@include sizeEl(block, left, 100%, 100%);
+}
+
+// wrap all the numbers
+.pageNumWrap {
+	@include sizeEl(block, none, 200px, 50px);
+	margin: 0 auto;
+}
+
+// numbers wrap uesed to center things
+.pageNumWrap div {
+	@include sizeEl(block, none, 140px, 50px);
+	padding: 15px 0 0 0;
+	margin: 0 auto;
+}
+
+// pagination numbers 1-5
+.paginationWrap ul li a {
+	@include sizeEl(block, left, 20%, 10%);
+	font-size: .8em;
+	color: $textColor;
+	position: relative;
+	z-index: 1;
+}
+
+// active page link
+a.activePageLink::before {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: -6px;
+	width: 18px;
+	height: 18px;
+	border: solid 2px $bGreen;
+	z-index: 0;
+
+	-ms-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+
+	// IE8 filter magic
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0.45);
+}
+
+// arrows 
+.paginationWrap a.pageArrow {
+	width: 55px;
+	height: 50px;
+	position: absolute;
+	overflow: hidden;
+	text-indent: -99999px;
+	@include spritePos('sprite.png', 0px 0px);
+}
+
+// prev arrow
+.paginationWrap a.prevArrow {
+	top: 0px;
+	left: 0px;
+	background-position: 14px -19px;
+	border-right: solid 1px $gBorder;
+}
+
+// next arrow
+.paginationWrap a.nextArrow {
+	top: 0px;
+	right: 0px;
+	background-position: -35px -19px;
+	border-left: solid 1px $gBorder;
+}
+
 //-----------------------------------| Blog index posts
+
+.blogIndexPostWrap {
+	padding: 10px;
+}
 
 // poast wraps | wraps index posts
 .postWrap {
 	@include sizeEl(inline-block, left, 100%, auto);
 	border: solid 1px $gBorder;
 	background-color: $w;
-	margin: 0 0 20px 0;
+	margin: 0 0 15px 0;
 }
 
 // featured img on post
 .postImgWrap {
 	@include sizeEl(inline-block, left, 100%, 165px);
-	background-color: $bA;
+	
+	//---------------------------------------------------------------------------------------------------------- DELETE THIS
+	background-color: #ccc;
+	//---------------------------------------------------------------------------------------------------------- END DELETE THIS
 }
 
 // wraps index post text
 .postTextWrap {
-	padding: 10px;
+	padding: 10px 10px 10px 10px;
 }
 
 // author and date bar
@@ -118,7 +209,7 @@ page
 	position: absolute;
 	font-size: .6em;
 	letter-spacing: .05em;
-	top: 6px;
+	top: 7px;
 	right: 0px;
 	color: $textColor;
 }
@@ -135,6 +226,7 @@ page
 .postWrap h2, .postWrap p {
 	@include sizeEl(inline-block, left, 100%, auto);
 }
+
 
 /* 
 ==============================================================
