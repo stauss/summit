@@ -1,0 +1,60 @@
+/* ============================================================
+
+650
+
+============================================================ */
+
+// on / off styles
+// things that are only mobile
+.offLittle {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+}
+
+// els that turn on at this width
+.onLittle {
+	display: block;
+	visibility: visible;
+	opacity: 1;
+}
+
+/* 
+====================================================== Nav
+*/
+
+.mobileMenuHead {
+	display: none;
+}
+
+.gNav {
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+
+	position: relative;
+	top: -50px;
+	background: transparent;
+	z-index: 0 !important;
+
+	// top:0;
+	// left: 0;
+
+	width: 50%;
+	height: 50px;
+	//height: 100%;
+
+
+	// -webkit-transition: all 0.3s ease;
+	// -moz-transition: all 0.3s ease;
+	// transition: all 0.3s ease;
+}
+
+.gNav li {
+	display: block;
+	float: left; 
+	width: 25%;
+	background: $bA;
+}
+
+

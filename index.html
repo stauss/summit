@@ -19,24 +19,24 @@
       Please <a href="http://browsehappy.com/">upgrade your browser</a>
       to improve your experience.
     </p><![endif]-->
-    <div class="gNav">
-      <div class="mobileMenuHead">
-        <h1> <a href="#">Summit Projects</a></h1>
-        <h2>Big Ideas for Great Breands</h2>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#">Work</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Newsletter Signup</a></li>
-        </ul>
-      </nav>
-    </div>
     <header class="gHead">
-      <div class="topwrap">
-        <h1 class="gLogo">Summit Projects</h1><i class="fa fa-search"></i><a href="#" id="menuIcon" class="menuIcon">Menu</a>
+      <div class="topwrap"><a href="#">
+          <h1 class="gLogo">Summit Projects</h1></a><i class="fa fa-search offLittle"></i><a href="#" id="menuIcon" class="menuIcon offLittle">Menu</a>
+        <div class="gNav">
+          <div class="mobileMenuHead">
+            <h1> <a href="#">Summit Projects</a></h1>
+            <h2>Big Ideas for Great Breands</h2>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#">Work</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#" class="offLittle">Newsletter Signup</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
       <div class="crumbs"><a href="#">Home / </a><a href="#">Big Ideas Blog</a></div>
     </header>
@@ -95,8 +95,12 @@
         <div class="innerSbWrap">
           <div class="blogSbSearchWrap">
             <h6>Search Summit Blog</h6>
-            <input type="search" placeholder="Search" class="darkInput">
-            <input type="submit" value="Search Blog">
+            <div>
+              <form method="get" action="">
+                <input type="search" placeholder="Search" class="darkInput sbSearch">
+                <input type="submit" value="Search" class="sbSearchInput greenSubmit">
+              </form>
+            </div>
           </div>
           <div class="archiveListWrap">
             <h6>Blog Post Archives</h6>
@@ -113,9 +117,9 @@
               <li><a href="#">Web Development</a></li>
               <li><a href="#">Technology</a></li>
             </ul><a href="#" class="sbSeeAllLink">View all Categories</a>
-            <div class="sbProjectWrap">
-              <p>This is a simple project wrap</p>
-            </div>
+          </div>
+          <div class="sbProjectWrap">
+            <div></div>
           </div>
         </div>
       </sidebar>

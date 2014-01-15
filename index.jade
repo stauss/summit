@@ -27,30 +27,30 @@ html.no-js
         | Please <a href="http://browsehappy.com/">upgrade your browser</a>
         | to improve your experience.
 
-    div.gNav
-        div.mobileMenuHead
-            h1 
-                a(href="#") Summit Projects
-            h2 Big Ideas for Great Breands
-        nav
-            ul
-                li
-                    a(href="#") Work
-                li
-                    a(href="#") Services
-                li
-                    a(href="#") Contact
-                li
-                    a(href="#") Blog
-                li
-                    a(href="#") Newsletter Signup
-     
-
     header.gHead
         div.topwrap
-            h1.gLogo Summit Projects
-            i(class="fa fa-search")
-            a(href="#", id="menuIcon", class="menuIcon") Menu
+            a(href="#")
+                h1.gLogo Summit Projects
+            i(class="fa fa-search offLittle")
+            a(href="#", id="menuIcon", class="menuIcon offLittle") Menu
+
+            div.gNav
+                div.mobileMenuHead
+                    h1 
+                        a(href="#") Summit Projects
+                    h2 Big Ideas for Great Breands
+                nav
+                    ul
+                        li
+                            a(href="#") Work
+                        li
+                            a(href="#") Services
+                        li
+                            a(href="#") Contact
+                        li
+                            a(href="#") Blog
+                        li
+                            a.offLittle(href="#") Newsletter Signup
         div.crumbs
             a(href="#") Home / 
             a(href="#") Big Ideas Blog
@@ -124,8 +124,10 @@ html.no-js
                 div.innerSbWrap
                     div.blogSbSearchWrap
                         h6 Search Summit Blog
-                        input.darkInput(type='search', placeholder="Search") Search
-                        input(type='submit', value='Search Blog') 
+                        div
+                            form(method="get", action="")
+                                input.darkInput.sbSearch(type='search', placeholder="Search") Search
+                                input.sbSearchInput.greenSubmit(type='submit', value='Search') 
 
                     div.archiveListWrap
                         h6 Blog Post Archives
@@ -151,8 +153,8 @@ html.no-js
 
                         a.sbSeeAllLink(href="#") View all Categories
 
-                        div.sbProjectWrap
-                            p This is a simple project wrap
+                    div.sbProjectWrap
+                        div
 
             //- Blog Pagination
             div.paginationWrap

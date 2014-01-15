@@ -22,7 +22,17 @@ elements
 	@include spritePos('sprite.png', 0px 16px);
 	margin: 0 auto;
 	overflow: hidden;
+	position: absolute;
+	position: relative;
 	text-indent: -99999px;
+}
+
+.gLogo a {
+	@include sizeEl(block, none, 85px, 50px);
+	@include spritePos('sprite.png', 0px 16px);
+	position: absolute;
+	background-color: #bada55;
+	z-index: 999999;
 }
 
 

@@ -31,32 +31,58 @@ textarea:focus, input:focus{
   font-size: .6em;
   letter-spacing: .05em;
   padding: 8px 0 8px 0px;
+  @include simpleTransAni(all, .3s, ease-in-out);
 }
 
-// on focus keep border
-.darkInput:focus {
+// on focus change bg and color
+input.darkInput:focus {
   border: 1px solid $darkInputBorder;
+  background-color: $darkInputBackground;
+  color: $w;
 }
+
 
 // html5 place holder styling
 .darkInput::-webkit-input-placeholder {
-  padding: 0 0 0 16px;
+  color: $darkInputColor;
+  position: relative;
+  @include simpleTransAni(all, .3s, ease-in-out);
+}
+
+input.darkInput:focus::-webkit-input-placeholder {
+   color: $darkInputColor;
+   position: relative;
+   color: $w;
+}
+
+
+
+
+.greenSubmit {
+  display: block;
+  background-color: $bGreen;
+  color: $w;
+  border: none;
+  padding: 8px 12px 8px 12px;
+}
+
+
+
+
+
+
+
+// search input
+.darkInput::-webkit-input-placeholder {
    color: $darkInputColor;
    position: relative;
 }
 
 
-// mag search
-.darkInput::-webkit-input-placeholder::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 12px;
-  height: 12px;
-  background-color: $bA;
-  overflow: visible;
-}
+
+
+
+
 
 
 // .darkInput:-moz-placeholder { /* Firefox 18- */
