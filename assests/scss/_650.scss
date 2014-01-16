@@ -4,57 +4,129 @@
 
 ============================================================ */
 
+
+//============================================================================================ Delete Code Kit Fuck Up!!!!!!
+@mixin sizeEl($display, $float, $width, $height){
+  display: $display;
+  float: $float;
+  width: $width;
+  height: $height;
+}
+//============================================================================================ Delete Code Kit Fuck Up!!!!!!
+
+
+
+
+
 // on / off styles
 // things that are only mobile
-.offLittle {
-	display: none;
-	visibility: hidden;
-	opacity: 0;
+.offSmall {
+	display: none !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
 }
 
 // els that turn on at this width
-.onLittle {
+.onSmall {
 	display: block;
 	visibility: visible;
 	opacity: 1;
 }
 
+
 /* 
-====================================================== Nav
+====================================================== Footer
 */
 
-.mobileMenuHead {
-	display: none;
+.gFoot {
+	@include sizeEl(block, left, 100%, 500px);
 }
 
-.gNav {
-	display: block;
-	margin: 0 auto;
-	overflow: hidden;
+// mid foot bad=r
+.footMid {
+	@include sizeEl(block, left, 100%, 115px);
+}
 
+
+
+.footLinkWrap {
+	background-color: $bA;
+}
+
+
+// address link / phone number link
+.footMid a {
+	@include sizeEl(block, left, 100%, auto);
+	text-align: center;
+	font-size: .75em;
+	letter-spacing: .15em;
+	text-transform: uppercase;
+	color: $footerText;
+	padding: 5px 0 0 0;
+}
+
+// legal footer wrap
+.footBottom {
+	@include sizeEl(block, left, 100%, 25px);
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	border-top: solid 1px $footerBorder;
+	padding: 8px 10px;
+}
+
+// mid floating s logo
+.footBottom::before {
+	content: "";
+	position: absolute;
+	top: -17px;
+	left: 0px;
+	width: 100%;
+	height: 33px;
+	background-color: $bA;
+	z-index: 0;
+	background: url($diamondLogoFoot) no-repeat top center;
+
+}
+
+// legal text / copyright
+.footBottom span, .footBottom a {
+	font-size: .5em;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	color: $footerText;
+}
+
+.footBottom span {
+	float: left;
+}
+
+.footBottom a {
+	float: right;
+}
+
+/* 
+====================================================== Blog Index
+*/
+
+// blog hero
+.blogHero {
+	height: 300px;
+}
+
+// blog post wrap
+.blogIndexPostWrap {
+	@include sizeEl(block, left, 65%, auto);
+}
+
+// news side bar
+.newsSb {
+	@include sizeEl(block, left, 35%, auto);
+}
+
+// blog side bar
+.blogSb {
+	@include sizeEl(block, left, 35%, auto);
+	// creates room at bottom for news stories
 	position: relative;
-	top: -50px;
-	background: transparent;
-	z-index: 0 !important;
-
-	// top:0;
-	// left: 0;
-
-	width: 50%;
-	height: 50px;
-	//height: 100%;
-
-
-	// -webkit-transition: all 0.3s ease;
-	// -moz-transition: all 0.3s ease;
-	// transition: all 0.3s ease;
 }
-
-.gNav li {
-	display: block;
-	float: left; 
-	width: 25%;
-	background: $bA;
-}
-
-

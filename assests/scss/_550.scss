@@ -21,48 +21,139 @@
 
 
 
+/* 
+====================================================== Footer
+*/
 
+// socail / news letter bar
+.footTop {
+	@include sizeEl(none, none, 100%, 50px);
+	margin: 0 auto;
+	padding: 0px 10px;
+	border-bottom: solid 1px $footerBorder;
+	overflow: hidden;
+}
 
+// Footer social wrap
+.footSocial {
+	@include sizeEl(block, left, 250px, 50px);
+	overflow: hidden;
+}
 
-.mobileMenuHead {
+// social icon links
+.footSocial li a {
+	@include sizeEl(block, left, 35px, 50px);
+	padding: 14px 0 0 0;
+}
+
+// copy for disabled stylesheets
+.footSocial li a span {
 	display: none;
 }
 
-.gNav {
-	display: block;
-	margin: 0 auto;
+// social icons themselves
+.footSocial i {
+	color: $w;
+}
+
+// news letter wrap
+.footSignUpWrap {
+	@include sizeEl(block, right, 300px, 50px);
+	position: relative;	
+}
+
+.footSignUpWrap span {
+	@include sizeEl(block, left, 100px, 50px);
+	position: absolute;
+	top: 20px;
+	left: 0px;
 	overflow: hidden;
+	font-size: .6em;
+	text-transform: uppercase;
+	color: $w;
+	letter-spacing: .25em;
+}
 
-	position: relative;
-	top: -50px;
-	background: transparent;
-	// z-index: 9999999;
+.footSignUpWrap .darkInput {
+	@include sizeEl(block, right, 200px, auto);
+	position: absolute;
+	top: 10px;
+	right: 0px;
+	padding-left: 10px;
+}
 
-	// top:0;
-	// left: 0;
+.footSignUpWrap .greenSubmit {
+	position: absolute;
+	height: 30px;
+	top: 10px;
+	right: -2px;
+}
 
-	width: 50%;
+/* 
+====================================================== Global Nav Change
+*/
+
+// fixes main nav over lap
+a.gLogo {
+	z-index: 999999;
+}
+
+// nav link wraps
+.menuWrap {
+	@include disBlock();
+	position: absolute;
+	width: 100%;
 	height: 50px;
-	//height: 100%;
-
-
-	// -webkit-transition: all 0.3s ease;
-	// -moz-transition: all 0.3s ease;
-	// transition: all 0.3s ease;
+	top: 0px;
+	left: 0px;
+	z-index: 0;
 }
 
-.gNav li {
-	display: block;
-	float: left; 
-	width: 25%;
-	background: $bA;
+// main nav
+.menuWrap nav {
+	@include sizeEl(block, none, 500px, 50px);
+	margin: 0 auto;
+	position: relative;
 }
 
+// main nav list items
+.menuWrap nav li {
+	@include sizeEl(block, none, 80px, 50px);
+	position: absolute;
+}
+
+.menuWrap nav li a {
+	@include sizeEl(block, none, 80px, 50px);
+	padding: 16px 0 0 0;
+	color: $w;
+
+	font-family: 'brisko_sansbold';
+	font-style: normal;
+	text-transform: uppercase;
+	font-size: .6em;
+	letter-spacing: .3em;
+	font-weight: 200;
+}
+
+// link positions
+.firstLink  { top: 0px; left: 14px;   text-align: right; }
+.secondLink { top: 0px; left: 100px; text-align: right; }
+.thirdLink  { top: 0px; left: 323px; text-align: left;  }
+.forthLink  { top: 0px; left: 409px; text-align: left;  }
+
+// mobile nav menu head 
+.mobileMenuHead {
+	@include disNone();
+}
 
 
 /* 
 ====================================================== Blog Index
 */
+
+.mobileCrumbs {
+	display: none;
+}
 
 // blog posts
 .blogIndexPostWrap {
@@ -73,161 +164,3 @@
 .blogHero {
 	height: 250px;
 }
-
-// blog side bar
-.blogSb {
-	@include sizeEl(inline-block, right, 35%, inherit);
-	border: solid 1px #000000;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-}
-
-// inner wrap
-.innerSbWrap {
-	background:$headBg url($sidebarBg);
-	border: solid 1px #000000;
-	overflow: hidden;
-	border-top: solid 1px $sidebarTopBorder;
-}
-
-.innerSbWrap h6 {
-	padding: 0 0 15px 0;
-}
-
-.innerSbWrap ul, .innerSbWrap ul li, .innerSbWrap ul li a, .innerSbWrap h6, .innerSbWrap a {
-	color: $w;
-}
-
-.innerSbWrap h6 {
-	font-size: 10%;
-	letter-spacing: .2em;
-}
-
-
-//-----------------------------------| Sidebar Search
-
-// sb search section wrap
-.blogSbSearchWrap {
-	@include sizeEl(block, right, 100%, auto);
-	padding: 17px 10px 15px;
-	border-bottom: solid 1px $b;
-	@include simpleTransAni(all, .6s, ease-in-out);
-}
-
-// Sidebar Search icon
-.darkInput.sbSearch {
-	position: relative;
-	width: 100%;
-	background-color: $darkInputBackground;
-	border: 1px solid $darkInputBorder;
-	color: $darkInputColor;
-	font-style: italic;
-	font-size: .6em;
-	letter-spacing: .05em;
-	padding: 8px 0 8px 20px;
-	background: url(../img/global/searchMag.png) no-repeat 8px 9px;
-}
-
-// blog search from wrap
-.blogSbSearchWrap div {
-	display: block;
-	float: left;
-	position: relative;
-	width: 100%;
-}
-
-// submit btn
-.sbSearchInput {
-	position: absolute;
-	top: -2px;
-	right: -2px;
-	cursor: pointer;
-}
-
-//-----------------------------------| Sidebar Archives
-
-// archive sb wrapper
-.archiveListWrap {
-	@include sizeEl(inline-block, left, 100%, auto);
-	padding: 17px 10px 15px;
-	border-bottom: solid 1px $b;
-	border-top: solid 1px $sidebarTopBorder;
-	@include simpleTransAni(all, .6s, ease-in-out);
-}
-
-// all side bar link / list bars
-.sbLinkList li {
-	@include sizeEl(block, left, 100%, 26px);
-	@include simpleTransAni(all, .3s, ease-in-out);
-	background-color: $sidebarCatBg;
-	border: solid 1px $sidebarTopBorder;
-	margin-bottom: 5px;
-	padding: 2px 0px 0px 6px;
-}
-
-.sbLinkList li:hover {
-	background-color: #282828;
-}
-
-
-// all side bar link / list bars
-.sbLinkList li a {
-	text-transform: uppercase;
-	font-size: .5em;
-	letter-spacing: .2em;
-	color: $sidebarCatColor !important;
-	@include simpleTransAni(all, .3s, ease-in-out);
-}
-
-// hover animation
-.sbLinkList li:hover a {
-	color: #fff !important;
-}
-
-// veiw all links
-a.sbSeeAllLink {
-	display: block;
-	width: 100%;
-	float: right;
-	text-align: right;
-	text-transform: uppercase;
-	font-size: .5em;
-	letter-spacing: .2em;
-	color: $sidebarCatColor;
-	padding: 5px 0 0 0;
-}
-
-//-----------------------------------| Sidebar Categories
-
-// sb cat wrap
-.categoriesListWrap {
-	@include sizeEl(block, left, 100%, auto);
-	padding: 17px 10px 15px;
-	border-bottom: solid 1px $b;
-	border-top: solid 1px $sidebarTopBorder;
-	overflow: hidden;
-	@include simpleTransAni(all, .3s, ease-in-out);
-}
-
-//-----------------------------------| Sidebar Project Wrap
-
-// project wrap sb
-.sbProjectWrap {
-	@include sizeEl(block, left, 100%, auto);
-	border-top: solid 1px $sidebarTopBorder;
-	padding: 17px 10px 15px;
-}
-
-// project itself
-.sbProjectWrap div {
-	@include sizeEl(block, left, 100%, 400px);
-	background-color: $sidebarCatColor;
-}
-
-// darken sb sections on hover
-.blogSbSearchWrap:hover, .archiveListWrap:hover, .categoriesListWrap:hover {
-	background-color: rgba(0, 0, 0, .15);
-}
-
-

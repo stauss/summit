@@ -1,0 +1,35 @@
+/* ============================================================
+
+755
+
+============================================================ */
+
+
+/* 
+====================================================== Blog Index
+*/
+
+// blog post wrap
+.blogIndexPostWrap {
+	@include sizeEl(block, left, 45%, auto);
+}
+
+// news side bar
+.newsSb {
+	@include sizeEl(block, left, 30%, auto);
+}
+
+// blog side bar
+.blogSb {
+	@include sizeEl(block, right, 25%, 100%);
+	// Make side bar 100% of wrap
+	position: absolute;
+}
+
+.newsSb {
+	// Make side bar 100% of wrap
+	position: absolute;
+	// .blogSb width from the right
+	right: 25%;
+	height: 100%;
+}

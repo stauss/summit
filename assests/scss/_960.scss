@@ -1,0 +1,42 @@
+/* ============================================================
+
+960
+
+============================================================ */
+
+/* 
+====================================================== Blog Index
+*/
+
+// blog hero
+.blogHero {
+	height: 450px;
+}
+
+// blog post wrap
+.blogIndexPostWrap {
+	@include sizeEl(block, left, 50%, auto);
+}
+
+
+// news side bar
+.newsSb {
+	@include sizeEl(block, left, 28%, auto);
+}
+
+
+// blog side bar
+.blogSb {
+	@include sizeEl(block, right, 22%, 100%);
+	// Make side bar 100% of wrap
+	position: absolute;
+}
+
+.newsSb {
+	// Make side bar 100% of wrap
+	position: absolute;
+	// .blogSb width from the right
+	right: 22%;
+	height: 100%;
+}
+

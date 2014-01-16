@@ -57,8 +57,12 @@ elements
 	//background-color: $bA;
 }
 
+.menuWrap {
+	@include disNone();
+}
+
 // bread crumbs
-.crumbs {
+.mobileCrumbs {
 	@include sizeEl(block, left, 100%, 20px);
 	overflow: hidden;
 	padding: 6px 4px 4px 4px;
@@ -66,7 +70,7 @@ elements
 }
 
 // bread crumb links
-.crumbs a {
+.mobileCrumbs a {
 	display: inline-block;
 	float: left;
 	font-size: .5em;
@@ -163,3 +167,44 @@ elements
 /* 
 ==============================================================
 */
+
+.center {
+	display: block;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* 
+====================================================== Contact DropDown
+*/
+
+// .contactDd {
+// 	display: none;
+// }
+
+// .contactDd {
+// 	position: fixed;
+// 	top: 0px;
+// 	left: 0px;
+// 	width: 100%;
+// 	height: 100%;
+// 	background-color: rgba(0, 0, 0, .6);
+// 	display: block;
+// 	z-index:99999999999999999;
+// 	padding: 5%;
+// }
+
+// .contactWrap {
+// 	position: absolute;
+// 	height: 90%;
+// 	width: 90%;
+// 	background-color:#bada55;
+// }
+
+
+
+
+
+
+
+

@@ -27,35 +27,67 @@ html.no-js
         | Please <a href="http://browsehappy.com/">upgrade your browser</a>
         | to improve your experience.
 
-    header.gHead
-        div.topwrap
-            a(href="#")
-                h1.gLogo Summit Projects
+    //- header.gHead
+    //-     div.topwrap
+    //-         a(href="#")
+    //-             h1.gLogo Summit Projects
+    //-         i(class="fa fa-search offLittle")
+    //-         a(href="#", id="menuIcon", class="menuIcon offLittle") Menu
+
+    //-         div.gNav
+    //-             div.mobileMenuHead
+    //-                 h1 
+    //-                     a(href="#") Summit Projects
+    //-                 h2 Big Ideas for Great Breands
+    //-             nav
+    //-                 ul
+    //-                     li
+    //-                         a(href="#") Work
+    //-                     li
+    //-                         a(href="#") Services
+    //-                     li
+    //-                         a(href="#") Contact
+    //-                     li
+    //-                         a(href="#") Blog
+    //-                     li
+    //-                         a.offLittle(href="#") Newsletter Signup
+    //-     div.crumbs
+    //-         a(href="#") Home / 
+    //-         a(href="#") Big Ideas Blog
+
+    header.gHead           
+        div.gNav
+
+            a.gLogo(href="#")
+                h1 Summit Projects
+
             i(class="fa fa-search offLittle")
             a(href="#", id="menuIcon", class="menuIcon offLittle") Menu
 
-            div.gNav
+            div.menuWrap
                 div.mobileMenuHead
                     h1 
                         a(href="#") Summit Projects
                     h2 Big Ideas for Great Breands
                 nav
                     ul
-                        li
+                        li.firstLink
                             a(href="#") Work
-                        li
+                        li.secondLink
                             a(href="#") Services
-                        li
+                        li.thirdLink
                             a(href="#") Contact
-                        li
+                        li.forthLink
                             a(href="#") Blog
-                        li
-                            a.offLittle(href="#") Newsletter Signup
-        div.crumbs
-            a(href="#") Home / 
-            a(href="#") Big Ideas Blog
+                        li.offLittle
+                            a(href="#") Newsletter Signup
 
-    div.blogHero This is the blog hero
+    div.mobileCrumbs
+        a(href="#") Home / 
+        a(href="#") Big Ideas Blog
+
+
+    div.blogHero
 
     div.blogNavWrap.offLittle
 
@@ -76,113 +108,208 @@ html.no-js
                     li
                         a(href="#") Item DD 3
 
-    //- START THE SITE
-    div.wrap
+    div.content
+        //- START THE SITE
+        div.wrap
 
-        div.innerWrap
-                div.blogIndexPostWrap
-                    //- BLOG POST
-                    section.postWrap
-                        div(class="postImgWrap", style="background-image:'';")
-                        div.postTextWrap
-                            div.postDate
-                                time 1 / 6 / 2014
-                                a(href="http://johnsplace.com", rel="author") Author: 
-                                    span Caleb Stauss
-                            h2 Curabb itur blandit tem abipus portt itor.
-                            p Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                            a(href="#", class="btn btnG ") Read More
-                            a(href="#", class="btn btnB Share") Share This
+            div.innerWrap
+                    div.blogIndexPostWrap
+                        //- BLOG POST
+                        section.postWrap
+                            article
+                                div(class="postImgWrap", style="background-image:'';")
+                                div.postTextWrap
+                                    div.postDate
+                                        time 1 / 6 / 2014
+                                        a(href="http://johnsplace.com", rel="author") Author: 
+                                            span Caleb Stauss
+                                    h2 Curabb itur blandit tem abipus portt itor.
+                                    p Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+                                    a(href="#", class="btn btnG ") Read More
+                                    a(href="#", class="btn btnB Share") Share This
 
-                    //- BLOG POST
-                    section.postWrap
-                        div(class="postImgWrap", style="background-image:'';")
-                        div.postTextWrap
-                            div.postDate
-                                time 1 / 6 / 2014
-                                a(href="http://johnsplace.com", rel="author") Author: 
-                                    span Caleb Stauss
-                            h2 Curabb itur blandit tem abipus portt itor.
-                            p Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                            a(href="#", class="btn btnG ") Read More
-                            a(href="#", class="btn btnB Share") Share This
+                        //- BLOG POST
+                        section.postWrap
+                            article
+                                div(class="postImgWrap", style="background-image:'';")
+                                div.postTextWrap
+                                    div.postDate
+                                        time 1 / 6 / 2014
+                                        a(href="http://johnsplace.com", rel="author") Author: 
+                                            span Caleb Stauss
+                                    h2 Curabb itur blandit tem abipus portt itor.
+                                    p Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+                                    a(href="#", class="btn btnG ") Read More
+                                    a(href="#", class="btn btnB Share") Share This
 
-                    //- BLOG POST
-                    section.postWrap
-                        div(class="postImgWrap", style="background-image:'';")
-                        div.postTextWrap
-                            div.postDate
-                                time 1 / 6 / 2014
-                                a(href="http://johnsplace.com", rel="author") Author: 
-                                    span Caleb Stauss
-                            h2 Curabb itur blandit tem abipus portt itor.
-                            p Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                            a(href="#", class="btn btnG ") Read More
-                            a(href="#", class="btn btnB Share") Share This
+                        //- BLOG POST
+                        section.postWrap
+                            article
+                                div(class="postImgWrap", style="background-image:'';")
+                                div.postTextWrap
+                                    div.postDate
+                                        time 1 / 6 / 2014
+                                        a(href="http://johnsplace.com", rel="author") Author: 
+                                            span Caleb Stauss
+                                    h2 Curabb itur blandit tem abipus portt itor.
+                                    p Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+                                    a(href="#", class="btn btnG ") Read More
+                                    a(href="#", class="btn btnB Share") Share This
 
-            sidebar.blogSb.onLittle
-                div.innerSbWrap
-                    div.blogSbSearchWrap
-                        h6 Search Summit Blog
-                        div
-                            form(method="get", action="")
-                                input.darkInput.sbSearch(type='search', placeholder="Search") Search
-                                input.sbSearchInput.greenSubmit(type='submit', value='Search') 
+                aside.blogSb.onLittle
+                    div.innerSbWrap
+                        div.blogSbSearchWrap
+                            h6 Search Summit Blog
+                            div
+                                form(method="get", action="")
+                                    input.darkInput.sbSearch(type='search', placeholder="Search") Search
+                                    input.sbSearchInput.greenSubmit(type='submit', value='Search') 
 
-                    div.archiveListWrap
-                        h6 Blog Post Archives
-                        ul.sbLinkList
-                            li
-                                a(href="#") December
-                            li
-                                a(href="#") November
-                            li
-                                a(href="#") October
+                        div.archiveListWrap
+                            h6 Blog Post Archives
+                            ul.sbLinkList
+                                li
+                                    a(href="#") December
+                                li
+                                    a(href="#") November
+                                li
+                                    a(href="#") October
 
-                        a.sbSeeAllLink(href="#") View all Archives
+                            a.sbSeeAllLink(href="#") View all Archives
 
-                    div.categoriesListWrap
-                        h6 Categories
-                        ul.sbLinkList
-                            li
-                                a(href="#") Web Design
-                            li
-                                a(href="#") Web Development
-                            li
-                                a(href="#") Technology
+                        div.categoriesListWrap
+                            h6 Categories
+                            ul.sbLinkList
+                                li
+                                    a(href="#") Web Design
+                                li
+                                    a(href="#") Web Development
+                                li
+                                    a(href="#") Technology
 
-                        a.sbSeeAllLink(href="#") View all Categories
+                            a.sbSeeAllLink(href="#") View all Categories
 
-                    div.sbProjectWrap
-                        div
+                        div.sbProjectWrap
+                            div
 
-            //- Blog Pagination
-            div.paginationWrap
-                ul
-                    li
-                        a(href="#", class="prevArrow pageArrow")
-                            span Prev
-                    div.pageNumWrap
-                        div
-                            li
-                                a(href="#", class="activePageLink") 1
-                            li
-                                a(href="#") 2
-                            li
-                                a(href="#") 3
-                            li
-                                a(href="#") 4
-                            li
-                                a(href="#") 5
-                    li
-                        a(href="#", class="nextArrow pageArrow")
-                            span Nex
+                aside.newsSb.onSmall.nonM
+                    div.innerNewsSbWrap
+                        section.newsArticleWrap
+                            article
+                                div.newsPostDate
+                                    a(href="#") Web News
+                                    time 1 / 6 / 2014
+                                div.newsTextWrap
+                                    h5 Aenean lacinia biben nulla sed consectetur.
+                                    p Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Nean lacinia bibendum nulla sed consectetur. Nulla tae elit lero, a pharetra augue.
+                                    p Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dinascetur ridiculus mus.
+                                    a(href="#", class="btn btnG ") Read More
+                                    a(href="#", class="btn btnB Share") Share
+
+                        section.newsArticleWrap
+                            article
+                                div.newsPostDate
+                                    a(href="#") Web News
+                                    time 1 / 6 / 2014
+                                div.newsTextWrap
+                                    h5 Aenean lacinia biben nulla sed consectetur.
+                                    p Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Nean lacinia bibendum nulla sed consectetur. Nulla tae elit lero, a pharetra augue.
+                                    p Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dinascetur ridiculus mus.
+                                    a(href="#", class="btn btnG ") Read More
+                                    a(href="#", class="btn btnB Share") Share
 
 
+                        section.newsArticleWrap
+                            article
+                                div.newsPostDate
+                                    a(href="#") Web News
+                                    time 1 / 6 / 2014
+                                div.newsTextWrap
+                                    h5 Aenean lacinia biben nulla sed consectetur.
+                                    p Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Nean lacinia bibendum nulla sed consectetur. Nulla tae elit lero, a pharetra augue.
+                                    p Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dinascetur ridiculus mus.
+                                    a(href="#", class="btn btnG ") Read More
+                                    a(href="#", class="btn btnB Share") Share
+
+
+                        section.newsArticleWrap
+                            article
+                                div.newsPostDate
+                                    a(href="#") Web News
+                                    time 1 / 6 / 2014
+                                div.newsTextWrap
+                                    h5 Aenean lacinia biben nulla sed consectetur.
+                                    p Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Nean lacinia bibendum nulla sed consectetur. Nulla tae elit lero, a pharetra augue.
+                                    p Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dinascetur ridiculus mus.
+                                    a(href="#", class="btn btnG ") Read More
+                                    a(href="#", class="btn btnB Share") Share
+
+
+                //- Blog Pagination
+                div.paginationWrap
+                    ul
+                        li
+                            a(href="#", class="prevArrow pageArrow")
+                                span Prev
+                        div.pageNumWrap
+                            div
+                                li
+                                    a(href="#", class="activePageLink") 1
+                                li
+                                    a(href="#") 2
+                                li
+                                    a(href="#") 3
+                                li
+                                    a(href="#") 4
+                                li
+                                    a(href="#") 5
+                        li
+                            a(href="#", class="nextArrow pageArrow")
+                                span Next
     footer.gFoot
+        div.footTop.nonM.onSmall
+            div.center
+                ul.footSocial
+                    li
+                        a(href="")
+                            span Facebook
+                            i(class="fa fa-facebook")
+                    li
+                        a(href="")
+                            span Twitter
+                            i(class="fa fa-twitter")
+                    li
+                        a(href="")
+                            span Pintrest
+                            i(class="fa fa-pinterest")
+                    li
+                        a(href="")
+                            span Instagram
+                            i(class="fa fa-instagram")
+                    li
+                        a(href="")
+                            span Email
+                            i(class="fa fa-envelope-o")
+                div.footSignUpWrap
+                    span newsletter
+                    input.darkInput(type='input', placeholder="Email Address")
+                    input.greenSubmit(type='submit', value='Sign Up')
         div.footMid
-            h2
-                span Big Ideas for Great Brands
+            h2.offSmall
+                span.offSmall Big Ideas for Great Brands
+            div.footLinkWrap.nonM.onSmall
+                nav
+                    ul
+                        li
+                            a(href="") Work
+                        li
+                            a(href="") Services
+                        li
+                            a(href="") Summit Projects
+                        li
+                            a(href="") Contact
+                        li
+                            a(href="") Blog
             a(href="#")
                 address 101.5 Oak St. Hood River, OR
             a(href="tel:") 541.399.4683

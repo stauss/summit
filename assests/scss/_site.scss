@@ -62,8 +62,10 @@ body {
 // site wrapper
 .wrap {
 	display: block;
-	float: left;
 	width: 100%;
+	float: left;
+	max-width: 1224px;
+	position: relative;
 }
 
 // .innerWrap {
@@ -80,12 +82,23 @@ p {
 	line-height: 1.4em;
 }
 
-// off / on stlyes
+
+/* 
+====================================================== Disaplay Sizes
+*/
+
 .onLittle {
 	display: none;
 	visibility: hidden;
 	opacity: 0;
 }
+
+.onSmall {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+}
+
 
 
 

@@ -4,6 +4,11 @@ page
 
 ============================================================ */
 
+// .nonM {
+// 	display: none !important;
+// 	visibility: hidden !important;
+// 	opacity: 0 !important;
+// }
 
 /* 
 ====================================================== Blog Index
@@ -231,3 +236,244 @@ a.activePageLink::before {
 /* 
 ==============================================================
 */
+
+
+
+
+/* 
+====================================================== Blog Index
+*/
+
+// blog side bar
+.blogSb {
+	@include sizeEl(inline-block, right, 35%, inherit);
+	border: solid 1px #000000;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+}
+
+// inner wrap
+.innerSbWrap {
+	background:$headBg url($sidebarBg);
+	border: solid 1px #000000;
+	overflow: hidden;
+	border-top: solid 1px $sidebarTopBorder;
+	height: 100%;
+}
+
+.innerSbWrap h6 {
+	padding: 0 0 15px 0;
+}
+
+.innerSbWrap ul, .innerSbWrap ul li, .innerSbWrap ul li a, .innerSbWrap h6, .innerSbWrap a {
+	color: $w;
+}
+
+.innerSbWrap h6 {
+	font-size: 10%;
+	letter-spacing: .2em;
+}
+
+
+//-----------------------------------| Sidebar Search
+
+// sb search section wrap
+.blogSbSearchWrap {
+	@include sizeEl(block, right, 100%, auto);
+	padding: 17px 10px 15px;
+	border-bottom: solid 1px $b;
+	@include simpleTransAni(all, .6s, ease-in-out);
+}
+
+// Sidebar Search icon
+.darkInput.sbSearch {
+	position: relative;
+	width: 100%;
+	background-color: $darkInputBackground;
+	border: 1px solid $darkInputBorder;
+	color: $darkInputColor;
+	font-style: italic;
+	font-size: .6em;
+	letter-spacing: .05em;
+	padding: 8px 0 8px 20px;
+	background: url(../img/global/searchMag.png) no-repeat 8px 9px;
+}
+
+// blog search from wrap
+.blogSbSearchWrap div {
+	display: block;
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+// submit btn
+.sbSearchInput {
+	position: absolute;
+	top: -2px;
+	right: -2px;
+	cursor: pointer;
+}
+
+//-----------------------------------| Sidebar Archives
+
+// archive sb wrapper
+.archiveListWrap {
+	@include sizeEl(inline-block, left, 100%, auto);
+	padding: 17px 10px 15px;
+	border-bottom: solid 1px $b;
+	border-top: solid 1px $sidebarTopBorder;
+	@include simpleTransAni(all, .6s, ease-in-out);
+}
+
+// all side bar link / list bars
+.sbLinkList li {
+	@include sizeEl(block, left, 100%, 26px);
+	@include simpleTransAni(all, .3s, ease-in-out);
+	background-color: $sidebarCatBg;
+	border: solid 1px $sidebarTopBorder;
+	margin-bottom: 5px;
+	padding: 2px 0px 0px 6px;
+}
+
+.sbLinkList li:hover {
+	background-color: #282828;
+}
+
+
+// all side bar link / list bars
+.sbLinkList li a {
+	text-transform: uppercase;
+	font-size: .5em;
+	letter-spacing: .2em;
+	color: $sidebarCatColor !important;
+	@include simpleTransAni(all, .3s, ease-in-out);
+}
+
+// hover animation
+.sbLinkList li:hover a {
+	color: #fff !important;
+}
+
+// veiw all links
+a.sbSeeAllLink {
+	display: block;
+	width: 100%;
+	float: right;
+	text-align: right;
+	text-transform: uppercase;
+	font-size: .5em;
+	letter-spacing: .2em;
+	color: $sidebarCatColor;
+	padding: 5px 0 0 0;
+}
+
+//-----------------------------------| Sidebar Categories
+
+// sb cat wrap
+.categoriesListWrap {
+	@include sizeEl(block, left, 100%, auto);
+	padding: 17px 10px 15px;
+	border-bottom: solid 1px $b;
+	border-top: solid 1px $sidebarTopBorder;
+	overflow: hidden;
+	@include simpleTransAni(all, .3s, ease-in-out);
+}
+
+//-----------------------------------| Sidebar Project Wrap
+
+// project wrap sb
+.sbProjectWrap {
+	@include sizeEl(block, left, 100%, auto);
+	border-top: solid 1px $sidebarTopBorder;
+	padding: 17px 10px 15px;
+}
+
+// project itself
+.sbProjectWrap div {
+	@include sizeEl(block, left, 100%, 400px);
+	background-color: $sidebarCatColor;
+}
+
+// darken sb sections on hover
+.blogSbSearchWrap:hover, .archiveListWrap:hover, .categoriesListWrap:hover {
+	background-color: rgba(0, 0, 0, .15);
+}
+
+
+//-----------------------------------| News Sidebar
+
+// news sb wrap
+.newsSb {
+	background: url($sidebarNewsBg);
+	border: solid 1px $gBorder;
+	padding: 10px 10px 0 10px;
+}
+
+// actual news post wrap
+.newsArticleWrap {
+	@include sizeEl(inline-block, left, 100%, auto);
+	border: solid 1px $gBorder;
+	padding: 10px;
+	background: $w;
+	margin: 0 0 10px 0;
+}
+
+// wraps the cat / post date
+.newsPostDate {
+	@include sizeEl(inline-block, left, 100%, 20px);
+	border-bottom: solid 1px $gBorder;
+}
+
+// news text wrap | article
+.newsTextWrap {
+	@include sizeEl(inline-block, left, 100%, auto);
+	overflow: hidden;
+}
+
+// news cat / date
+.newsPostDate a, .newsPostDate time {
+	text-transform: uppercase;
+	font-size: .5em;
+	letter-spacing: .2em;
+}
+
+// news cat
+.newsPostDate a {
+	float: left;
+	padding: 2px 0 0 0;
+	color: $textColor;
+}
+
+// news date
+.newsPostDate time {
+	float: right;
+}
+
+// wraps all text to prevent 
+.newsTextWrap {
+	@include sizeEl(block, left, 100%, auto);
+	overflow: hidden;
+	padding: 10px 0 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

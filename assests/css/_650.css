@@ -1,0 +1,39 @@
+/* ============================================================
+
+650
+
+============================================================ */
+.offSmall {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important; }
+
+.onSmall {
+  display: block;
+  visibility: visible;
+  opacity: 1; }
+
+/* 
+====================================================== Blog Index
+*/
+.blogHero {
+  height: 300px; }
+
+.blogIndexPostWrap {
+  display: block;
+  float: left;
+  width: 65%;
+  height: auto; }
+
+.newsSb {
+  display: block;
+  float: left;
+  width: 35%;
+  height: auto; }
+
+.blogSb {
+  display: block;
+  float: left;
+  width: 35%;
+  height: auto;
+  position: relative; }
