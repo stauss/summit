@@ -1163,7 +1163,7 @@ input.darkInput:focus::-webkit-input-placeholder {
     display: block;
     float: left;
     width: 100%;
-    height: 500px; }
+    height: 400px; }
 
   .footMid {
     display: block;
@@ -1172,53 +1172,100 @@ input.darkInput:focus::-webkit-input-placeholder {
     height: 115px; }
 
   .footLinkWrap {
-    background-color: #bada55; }
-
-  .footMid a {
     display: block;
-    float: left;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    font-size: .75em;
-    letter-spacing: .15em;
-    text-transform: uppercase;
-    color: #575757;
-    padding: 5px 0 0 0; }
+    float: none;
+    width: 95%;
+    height: 200px;
+    margin: 0 auto; }
 
-  .footBottom {
+  .footLinkWrap ul {
     display: block;
-    float: left;
-    width: 100%;
-    height: 25px;
+    float: none;
+    width: 450px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative; }
+
+  .footLinkWrap ul:after {
+    content: "";
+    display: block;
+    width: 68px;
+    height: 68px;
     position: absolute;
-    bottom: 0px;
-    left: 0px;
-    border-top: solid 1px #2c2c2a;
-    padding: 8px 10px; }
+    top: 82px;
+    left: 192px;
+    overflow: hidden;
+    background-image: url(../img/sprite/sprite.png);
+    background-repeat: no-repeat;
+    background-position: -58px -88px; }
+
+  .footLinkWrap li {
+    position: absolute;
+    top: 0px;
+    left: 0px; }
+
+  .footLinkWrap li a {
+    color: white; }
+
+  li.footSummit {
+    display: none; }
+
+  li.footWork {
+    top: 100px;
+    left: 30px; }
+
+  li.footServices {
+    top: 100px;
+    left: 101px; }
+
+  li.footContact {
+    top: 100px;
+    left: 293px; }
+
+  li.footBlog {
+    top: 100px;
+    left: 386px; }
+
+  .footMid address:before {
+    content: "";
+    display: block;
+    width: 352px;
+    height: 15px;
+    position: absolute;
+    top: -20px;
+    left: -80px;
+    overflow: hidden;
+    background-image: url(../img/sprite/sprite.png);
+    background-repeat: no-repeat;
+    background-position: -345px 0px; }
+
+  .footMid address, .footTel {
+    display: block;
+    float: none;
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    letter-spacing: .15em; }
 
   .footBottom::before {
-    content: "";
-    position: absolute;
-    top: -17px;
-    left: 0px;
+    display: none; }
+
+  .footBottom a.legal {
+    display: block;
+    float: left;
     width: 100%;
-    height: 33px;
-    background-color: #bada55;
-    z-index: 0;
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAhCAIAAAADPf8aAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY3ODBFMzg3NzU5NzExRTNBMjBGQTg4Rjk3NTQxOUQxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY3ODBFMzg4NzU5NzExRTNBMjBGQTg4Rjk3NTQxOUQxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Rjc4MEUzODU3NTk3MTFFM0EyMEZBODhGOTc1NDE5RDEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Rjc4MEUzODY3NTk3MTFFM0EyMEZBODhGOTc1NDE5RDEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5OcAVZAAADZklEQVR42sxYX0haURjfdLlIaW9qK8hVTxK0mr6up+UiKmjpevShIe2hUmGV0Gg9WJpQ2vOiHLLmXnwT0ulLhbiEGr30sIiChZAPQf+YTfbbLshFr7er5xidh497v3v4zu9+3+/73XPPA4VCfo/qGB0dNRhe+/1fFhYWKIYV0UU5MzNTU/O4o+MFLK7vKFC73S6VSsfG3p2dncHiGp47BxT5k8lkw8PDWQ+u4aGVVzpAZ2dnkT82yizWqqoqPL0TQFHfysrKfJTMGBkZwVNyDoioVBydzq8D5BwQEaLkrHj+wBzMJMEqIkEJ/glByeZryVjvlyb44FxOj+eMuro6vV6fyWR8Pt/JyUnW7/F4IF42m+02MpqvRDljcPBNOPxNInlYUSFZX9/o7u4h16yiMwqt4a+4Wq2ORKIu15zL5fo/32E0GhsanlxcXGTnuN3uy8vL8fHxcmWUX4mY0d/fDxuPx5nbVCoFq1KpCDVLRFeJMBhGdnZ2wvr9X61WKzyHh4eEmiW09MKVSKlUbm/vpNNpjeaZyWSqrn7k8bjzgWZ76/z8fGJi4sawYplMeuMks9mM9SwWi5BXQlMrlTWtra0ot8ViXltbOz09LTQ5GAzqdC+bm5tjsRiFjG5tJZAevtcViycn37e1tQUCgaWljwqFYmfnB/zt7c/39vbI4wvNKIre1/cqFAoVmrC8vDIwMFBbW6vVar3eT2iglpanjY2N19fX0WiEP7jTObe5uXFjRgU10/z8fCbzB3zifFpfX6/T6Q4ODlBurVaTTv+GMxz+91ZNTU38kRETkRGfWtdD80A+TqxQddjV1c/Hx79AR7ZeHh0d8cSEmqKTBKppEfKE7x6w5v8J7e//RI/r9Qa2c2joLazXu1IoGuLglYT0eymCD6xXV1fIBNuJD3pvbw8YCdXs6uoyGAzx+He0/PT0h93d3UK5RBzhKEvclHBqKjppampKLldIJJJkMrm46EkkEoV4iVwW9f0s4+6Jn5e3tHtiOID1cjggBCVyWQJKoo0zGIZVC2kWZ8WxYyqKl9R+RbAq8ioEa1FKVJafO2Dl1CwSJSrX7zKnZpEoURkPIFBTTr4yvCSpOP0jHYYDbKzIJTxUUFI+JGM0y+Fw4nMAW7IS3caxI/KKrUkoFIYl5yV7/BVgANK6xWUFBJkoAAAAAElFTkSuQmCC") no-repeat top center; }
+    height: 20px;
+    color: white;
+    text-align: center !important; }
 
-  .footBottom span, .footBottom a {
-    font-size: .5em;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: #575757; }
-
-  .footBottom span {
-    float: left; }
-
-  .footBottom a {
-    float: right; }
+  .legalFootWrap {
+    display: inline-block;
+    float: none;
+    width: auto;
+    height: 20px;
+    background-color: #000;
+    margin: 0 auto; }
 
   /* 
   ====================================================== Blog Index

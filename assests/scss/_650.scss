@@ -39,7 +39,7 @@
 */
 
 .gFoot {
-	@include sizeEl(block, left, 100%, 500px);
+	@include sizeEl(block, left, 100%, 400px);
 }
 
 // mid foot bad=r
@@ -47,62 +47,88 @@
 	@include sizeEl(block, left, 100%, 115px);
 }
 
-
-
+// footer link wrapper div>ul>li
 .footLinkWrap {
-	background-color: $bA;
+	@include sizeEl(block, none, 95%, 200px);
+	margin: 0 auto;
 }
 
-
-// address link / phone number link
-.footMid a {
-	@include sizeEl(block, left, 100%, auto);
-	text-align: center;
-	font-size: .75em;
-	letter-spacing: .15em;
-	text-transform: uppercase;
-	color: $footerText;
-	padding: 5px 0 0 0;
+// footer link wrap
+.footLinkWrap ul {
+	@include sizeEl(block, none, 450px, 200px);
+	margin: 0 auto;
+	position: relative;
 }
 
-// legal footer wrap
-.footBottom {
-	@include sizeEl(block, left, 100%, 25px);
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	border-top: solid 1px $footerBorder;
-	padding: 8px 10px;
-}
-
-// mid floating s logo
-.footBottom::before {
+.footLinkWrap ul:after {
 	content: "";
+	display: block;
+	width: 68px;
+	height: 68px;
 	position: absolute;
-	top: -17px;
+	top: 82px;
+	left: 192px;
+	overflow: hidden;
+	@include spritePos('sprite.png', -58px -88px);
+}
+
+// footer links
+.footLinkWrap li {
+	position: absolute;
+	top: 0px;
 	left: 0px;
-	width: 100%;
-	height: 33px;
-	background-color: $bA;
-	z-index: 0;
-	background: url($diamondLogoFoot) no-repeat top center;
-
 }
 
-// legal text / copyright
-.footBottom span, .footBottom a {
-	font-size: .5em;
-	letter-spacing: .1em;
-	text-transform: uppercase;
-	color: $footerText;
+// link text styles
+.footLinkWrap li a {
+	color: $w;
 }
 
-.footBottom span {
-	float: left;
+// replace this list item with the logo bg
+li.footSummit { display: none; }
+
+// link positioning in the footer
+li.footWork     { top: 100px; left: 30px; }
+li.footServices { top: 100px; left: 101px; }
+li.footContact  { top: 100px; left: 293px; }
+li.footBlog     { top: 100px; left: 386px; }
+
+// moto image
+.footMid address:before {
+	content: "";
+	display: block;
+	width: 352px;
+	height: 15px;
+	position: absolute;
+	top: -20px;
+	left: -80px;
+	overflow: hidden;
+	@include spritePos('sprite.png', -345px 0px);
 }
 
-.footBottom a {
-	float: right;
+// adress footer
+.footMid address, .footTel {
+	@include sizeEl(block, none, 200px, auto);
+	margin: 0 auto;
+	position: relative;
+	letter-spacing: .15em;
+}
+
+// hide small s logo
+.footBottom::before {
+	display: none;
+}
+
+.footBottom a.legal {
+	@include sizeEl(block, left, 100%, 20px);
+	color: $w;
+	text-align: center !important;
+}
+
+.legalFootWrap {
+	@include sizeEl(inline-block, none, auto, 20px);
+	background-color: #000;
+	margin: 0 auto;
 }
 
 /* 
