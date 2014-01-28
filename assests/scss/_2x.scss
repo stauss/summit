@@ -3,3 +3,56 @@
 480
 
 ============================================================ */
+
+// main branding
+.gLogo {
+	background-image: url($sprite2x) !important;
+	background-size: 510px 1500px; 
+}
+
+.gLogo a {
+	background-image: url($sprite2x) !important;
+	background-size: 510px 1500px; 
+}
+
+// menu icon
+.menuIcon {
+	background-image: url($sprite2x) !important;
+	background-size: 510px 1500px; 
+}
+
+// actual icon 
+.menuIconBlog span {
+	background-image: url($sprite2x) !important;
+	background-size: 510px 1500px;  
+}
+
+
+// mid slogan sprite centered
+.footMid h2 span {
+	background-image: url($sprite2x) !important;
+	background-size: 510px 1500px; 
+}
+
+// arrows 
+.paginationWrap a.pageArrow {
+	background-image: url($sprite2x) !important;
+	background-size: 510px 1500px; 
+}
+
+// mid floating s logo
+.footBottom::before {
+	background: url($diamondLogoFoot2x) no-repeat top center;
+	background-size: 56px 33px; 
+}
+
+.darkInput.sbSearch {
+	background-image: url($sprite2x) !important;
+	background-size: 510px 1500px; 
+}
+
+// Sidebar Search icon
+.darkInput.sbSearch {
+	background: url(../img/global/searchMag.png) no-repeat 8px 9px;
+}
+

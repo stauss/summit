@@ -1,0 +1,67 @@
+/* ============================================================
+
+480
+
+============================================================ */
+
+
+/* 
+====================================================== Home page
+*/
+
+// the list of all the featured projects
+.featuredProjects li {
+	@include sizeEl(block, left, 50%, 185px);
+}
+
+.featuredProjects li > a {
+	-webkit-background-size: cover !important;
+	-moz-background-size: cover !important;
+	-o-background-size: cover !important;
+	background-size: cover !important;
+}
+
+
+// client logo wrap
+h2.clientProjectLogo {
+	@include sizeEl(block, none, 100%, 100%);
+	position: absolute;
+	padding: 0px;
+
+	// this stop the el from moving on animation
+	top: 0px;
+	left: 0px;
+}
+
+// the client logo itself
+h2.clientProjectLogo span {
+	@include sizeEl(block, none, 150px, 120px);
+
+	// make the logos smaller
+	background-size: 525px 360px;
+
+	// hide the client name and replace with client logo
+	overflow: hidden;
+	text-indent: -99999px;
+	margin: 32px auto;
+
+	//background-color: #bada55;
+}
+
+
+
+
+
+
+
+
+// Featured Project Thumbnails |---------------------------------------------
+
+// this is where the image gets swapped out 
+
+.featuredProject1 > a { background: url(#{$projectDir}#{$project1Folder}#{$tThumb}); } // abkchound thumb | should be dynamic
+
+
+// Featured Project Client Logos |---------------------------------------------
+
+.featuredProject1 h2.clientProjectLogo span { background-position: 10px 15px; } // client logo position

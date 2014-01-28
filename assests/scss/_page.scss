@@ -4,287 +4,408 @@ page
 
 ============================================================ */
 
-// .nonM {
-// 	display: none !important;
-// 	visibility: hidden !important;
-// 	opacity: 0 !important;
-// }
-
-/* 
-====================================================== Blog Index
-*/
-
-//-----------------------------------| Blog Header
-
-// blog marque image
-.blogHero {
-	@include sizeEl(block, left, 100%, 200px);
-	background-color: $b;
+@mixin sizeEl($display, $float, $width, $height){
+  display: $display;
+  float: $float;
+  width: $width;
+  height: $height;
 }
 
-.blogNavWrap {
-	@include sizeEl(block, left, 100%, 50px);
-	position: relative;
-	background-color: $headBg;
-	color: $blogNavText;
+
+/* 
+====================================================== Turn off non mobile els
+*/
+
+// 550
+.onLittle {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+}
+
+// 650
+.onSmall {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+}
+
+
+
+
+/* 
+====================================================== Index Page
+*/
+
+// index image
+// this is used to be the bg of the whole home page and have things fade on scroll down
+.indexHeroBg {
+	@include sizeEl(block, left, 100%, 100%);
+	@include marquesImg('fpoHome.jpg', no-repeat, top center);
+	@include cover();
+	//margin: -50px 0 0 0;
+
+	position: fixed;
+	z-index: -1;
+}
+
+// this is the div that fades in the bg
+.indexHeroBg > div {
+	@include sizeEl(block, left, 100%, 100%);
+	@include simpleTransAni(all, 0.7s, ease);
+	opacity: 0;
+	background: $b;
+}
+
+// this is the fading in div active class
+.indexHeroBg > div.transOverlay {
+	visibility: visible;
+	opacity: .86;
+}
+
+// actual marquee space
+.indexHero {
+	@include sizeEl(block, left, 100%, 100%);
+	// corrects the top header space because of the float
+	margin: -50px 0 0 0;
+}
+
+
+
+//-----------------------------------| Project Wrappers
+
+// Projects Wrapper
+.projectsWrap {
+	@include sizeEl(block, left, 100%, 100%);
+	padding: 0 15px;
+}
+
+// ul of all the featured project
+.featuredProjects {
+	@include sizeEl(inline-block, left, 100%, auto);
+	background-color: $w;
+	-webkit-box-shadow: 0 0 68px 2px rgba(0,0,0,.3);
+	-moz-box-shadow: 0 0 68px 2px rgba(0,0,0,.3);
+	box-shadow: 0 0 68px 2px rgba(0,0,0,.3);
+}
+
+// all project items
+.featuredProjects li {
+	@include sizeEl(block, left, 100%, 100px);
+	@include cover();
 	overflow: hidden;
 }
 
-// search icon header
-.blogNavWrap .fa-search {
+// project link wrap
+.featuredProjects li > a {
+	@include sizeEl(block, left, 100%, 100%);
+	background-position: top right;
+	position: relative;
+}
+
+
+
+//-----------------------------------| Project Hover Backgrounds
+
+
+// div that holds all the hover content
+.projectDeetsWrap {
+	@include sizeEl(inherit, left, 100%, 100%);
+
+	//@include backgroundImg('proHoverBase.png', repeat, top center);
+	@include simpleTransAni(all, .4s, ease-in-out);
+
+	-webkit-box-shadow: inset 0 0 43px rgba(1,1,1,.2);
+	-moz-box-shadow:inset 0 0 43px rgba(1,1,1,.2);
+	box-shadow: inset 0 0 43px rgba(1,1,1,.2);
+}
+
+
+// inner project wrap | this wraps the over effects 
+// these are backgrounds only
+// creates animation speration between sizing elements and non sizing elemsn
+.proInnerWrap {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+// background that appears on hover
+.projectHoverBg {
+	@include backgroundImg('proHoverBase.png', repeat, top center);
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.2);
+	-webkit-box-shadow: inset 0 0 43px rgba(1,1,1,.4);
+	-moz-box-shadow:inset 0 0 43px rgba(1,1,1,.4);
+	box-shadow: inset 0 0 43px rgba(1,1,1,.4);
+	border: solid 1px rgba(255,255,255,.2);
+	@include simpleTransAni(all, .6s, ease-in-out);
+	position: relative;
+	overflow: hidden;
+}
+
+// adds noise to the backgrouns
+.projectHoverBg:before {
+	background-color: #bada55;
+	position: absolute !important;
+	top: 0px;
+	left: 0px;
+	@include afterImg(100%, 100%, 'noiseHover.png',repeat, 0px 0px);
+}
+
+// these are the diagonial shawdows
+// general styles
+.proShawdow {
+	@include sizeEl(block, none, 135px, 130px);
+	@include spritePos('sprite.png', -192px -50px);
 	position: absolute;
-	top: 17px;
-	right: 15px;
+	top: 0px;
+	@include simpleTransAni(all, 1.5s, ease-in-out);
+}
+
+// right shawsow
+.proShawdow.proRightShawdowBg {
+	background-position: -344px -50px;
+	right: 0px;
+}
+
+
+
+
+
+
+
+// hover project animations
+// h1.summitProjectLogo, h2.clientProjectLogo, h5.tpyeOfProject, span.projectBtn {
+// 	position: absolute; // position absolute for layout
+// 	top: 0px;
+// 	left: 0px;
+// }
+
+
+// poject thumb elemets | s logo, client logo, type of project, and btn
+
+
+// these elements have parent wrappers to aviod trying to center the el with absolute pos in % <- this is a bitch
+
+// // logo wrap | summit s logo wrap
+// h1.summitProjectLogo {
+// 	@include sizeEl(block, none, 100%, 50px);
+// 	top: 50px;
+// }
+
+// // the logo itself
+// h1.summitProjectLogo span {
+// 	@include spritePos('sprite.png', -78px -49px);
+// 	@include sizeEl(block, none, 50px, 50px);
+// 	overflow: hidden;
+// 	text-indent: -99999px;
+// 	margin: 0 auto;
+// }
+// 
+// 
+// could have wrote this is the last command but it is too specific and will overwite my show classes
+// .tpyeOfProject, .projectBtn {
+// 	@include disBlock(); // hide everything
+// 	position: absolute; // position absolute for layout
+// }
+
+
+
+
+/*-----------------------------------------------------------------------------
+
+	.summitProjectLogo ---> Diamond Logo
+	_________________________________________________________________________
+	
+	.clientProjectLogo ---> Client Name / Logo
+	_________________________________________________________________________
+	
+	.tpyeOfProject     ---> Text about the project (ecom, design, site ect.)
+	_________________________________________________________________________
+	
+	.projectBtn        ---> View Project Button
+
+-----------------------------------------------------------------------------*/
+
+//-----------------------------------| Gen Styles for project thumb elements
+
+// color the text white
+// using the element for overiting base styles (h1.summitProjectLogo)
+h1.summitProjectLogo, h2.clientProjectLogo, h5.tpyeOfProject{
+	position: absolute; // position absolute for layout
 	color: $w;
 }
 
-//blog nav dropdown
-.blogNavDd {
-	margin: 0;
-	padding: 0;
+// could have wrote this is the last command but it is too specific and will overwite my show classes
+.summitProjectLogo, .tpyeOfProject, .projectBtn {
+	//@include disNone(); // hide everything
+	position: absolute; // position absolute for layout
+	font-family: 'Lato', sans-serif, Arial, serif; font-weight: 400; 
 }
 
-//blog nav links
-.blogNavDd a {
-	text-transform: uppercase;
-	font-size: 1.1em;
-	letter-spacing: .2em;
-	color: $blogNavText;
-}
 
-// blog nav icon
-.menuIconBlog {
-	@include sizeEl(block, left, 85%, 272px);
-	background-color: $headBg;
-	padding: 16px 16px 16px 45px;
-}
+//-----------------------------------| Type of project
 
-// actual icon 
-.menuIconBlog span {
-	@include sizeEl(block, left, 50px, 20px);
-	position: absolute;
-	top: 16px;
-	left: 0px;
-	@include spritePos('sprite.png', -290px -20px);
-}
-
-// blog nav search icon
-.blogNavDd .fa-search {
-	@include sizeEl(block, left, 50px, 50px);
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	text-align: center;
-	padding: 18px 0 0 0;
-	color: $blogNavText;
-	border-left: solid 1px $blogNavBorder;
-}
-
-//-----------------------------------| Pagination
-
-// Pagination Wrap
-.paginationWrap {
-	@include sizeEl(inline-block, left, 100%, 50px);
-	overflow: hidden;
-	position: relative;
-	border-top: solid 1px $gBorder;
-	border-bottom: solid 1px $gBorder;
-}
-
-// pagination ul
-.paginationWrap ul {
+// show the client project
+.clientProjectLogo {
+	@include disBlock();
 	@include sizeEl(block, left, 100%, 100%);
+	padding: 41px 20px 20px 15px;
+	font-size: 1.3em;
 }
 
-// wrap all the numbers
-.pageNumWrap {
-	@include sizeEl(block, none, 200px, 50px);
-	margin: 0 auto;
+
+//-----------------------------------| Type of project
+
+
+// text desribing what type of project
+h5.tpyeOfProject {
+	width: 100%;
+	top: 230px;
+	text-align: center;
+	text-shadow: -2px 1px 8px rgba(2,2,2,.45);
+	font-weight: 100 !important;
+
+	color: transparent;
+   	text-shadow: 0 0 5px rgba(255,255,255, 1);
+
+   	@include simpleTransAni(all, .6s, ease-in-out);
+
+	font-family: 'Lato', sans-serif, Arial, serif; font-weight: 400; 
 }
 
-// numbers wrap uesed to center things
-.pageNumWrap div {
-	@include sizeEl(block, none, 140px, 50px);
-	padding: 15px 0 0 0;
-	margin: 0 auto;
+// type hover state | Focus in
+li a:hover h5.tpyeOfProject {
+	color: $w;
+	text-shadow: 0 0 0 rgba(255,255,255,0);
 }
 
-// pagination numbers 1-5
-.paginationWrap ul li a {
-	@include sizeEl(block, left, 20%, 10%);
-	font-size: .8em;
-	color: $textColor;
-	position: relative;
-	z-index: 1;
+
+// all lines in the type 
+h5.tpyeOfProject span {
+	@include sizeEl(block, left, 100%, 100%);
+	letter-spacing: .4em;
+	padding: 0 0 6px 0;
+	font-weight: 100 !important; 
 }
 
-// active page link
-a.activePageLink::before {
-	content: "";
+
+
+//-----------------------------------| Project Button
+
+
+
+// wraps the btn to fix responsiveness with woud doing absolute pos
+.proBtnWrap {
+	@include sizeEl(block, none, 100%, auto);
 	position: absolute;
-	top: 2px;
-	left: -6px;
-	width: 18px;
-	height: 18px;
-	border: solid 2px $bGreen;
-	z-index: 0;
-
-	-ms-transform:rotate(45deg);
-	-webkit-transform:rotate(45deg);
-	-o-transform:rotate(45deg);
-	-ms-transform:rotate(45deg);
-
-	// IE8 filter magic
-	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0.45);
-}
-
-// arrows 
-.paginationWrap a.pageArrow {
-	width: 55px;
-	height: 50px;
-	position: absolute;
-	overflow: hidden;
-	text-indent: -99999px;
-	@include spritePos('sprite.png', 0px 0px);
-}
-
-// prev arrow
-.paginationWrap a.prevArrow {
-	top: 0px;
+	bottom: 45px;
 	left: 0px;
-	background-position: 14px -19px;
-	border-right: solid 1px $gBorder;
+	text-align: center;
 }
 
-// next arrow
-.paginationWrap a.nextArrow {
-	top: 0px;
-	right: 0px;
-	background-position: -35px -19px;
-	border-left: solid 1px $gBorder;
+// button itself
+span.projectBtn {
+	display: inline-block;
+	position: relative;
+	letter-spacing: .4em;
+	text-transform: uppercase;
+
+	text-align: center;
+	font-weight: 100 !important;
+	font-size: .7em;
+
+	border: solid 1px $w;
+	padding: 3px 6px;
+	color: $w;
 }
 
-//-----------------------------------| Blog index posts
 
-.blogIndexPostWrap {
-	padding: 10px;
-}
 
-// poast wraps | wraps index posts
+/* 
+====================================================== General Blog 
+*/
+
+
+// Main Post Wrap
 .postWrap {
-	@include sizeEl(inline-block, left, 100%, auto);
-	border: solid 1px $gBorder;
+	@include sizeEl(block, left, 100%, auto);
+	padding: 0 10px;
+
 	background-color: $w;
-	margin: 0 0 15px 0;
 }
 
-// featured img on post
-.postImgWrap {
-	@include sizeEl(inline-block, left, 100%, 165px);
-	
-	//---------------------------------------------------------------------------------------------------------- DELETE THIS
-	background-color: #ccc;
-	//---------------------------------------------------------------------------------------------------------- END DELETE THIS
+.postWrap h2:hover {
+	color: $bGreen;
 }
 
-// wraps index post text
-.postTextWrap {
-	padding: 10px 10px 10px 10px;
-}
 
-// author and date bar
-.postDate {
-	@include sizeEl(block, left, 100%, 25px);
-	border-bottom: solid 1px $gBorder;
-	position: relative;
-	margin: 0 0 10px 0;
-}
 
-// date posted
-.postDate time  {
+//-----------------------------------| Main Blog Sidebar |-----------------------------------\\
+
+// main sidebar wrap
+.sbWrap {
 	position: absolute;
-	font-size: .6em;
-	letter-spacing: .05em;
-	top: 6px;
-	left: 0px;
-}
-
-// author full link
-.postDate a  {
-	position: absolute;
-	font-size: .6em;
-	letter-spacing: .05em;
-	top: 7px;
 	right: 0px;
-	color: $textColor;
-}
-
-// author name
-.postDate a span {
-	color: $bGreen !important;
-	font-weight: 600;
-	text-decoration: underline;
-	font-style: italic;
-}
-
-// post type
-.postWrap h2, .postWrap p {
-	@include sizeEl(inline-block, left, 100%, auto);
+	right: 0px;
+	height: 100%;
 }
 
 
-/* 
-==============================================================
-*/
-
-
-
-
-/* 
-====================================================== Blog Index
-*/
-
-// blog side bar
+// Main Blog Sidebar
 .blogSb {
-	@include sizeEl(inline-block, right, 35%, inherit);
-	border: solid 1px #000000;
-	margin: 0;
-	padding: 0;
 	overflow: hidden;
+	height: 100%;
+	
+	// set min height or else on small pages the sidebar will be to small vert.
+	// min-height: 500px;
+
+	border-left: solid 1px #000000;
+	border-right: solid 1px #000000;
+
+	border-top: solid 1px $sidebarTopBorder;
+
 	position: absolute;
 	top: 0px;
 	right: 0px;
-	height: 100%;
 }
 
-// inner wrap
+// Main Blog Sidebar Inner Wrap
 .innerSbWrap {
-	background:$headBg url($sidebarBg);
-	border: solid 1px #000000;
 	overflow: hidden;
-	border-top: solid 1px $sidebarTopBorder;
 	height: 100%;
+
+	background:$headBg url($sidebarBg);
+
+	border-left: solid 1px #000000;
+	border-right: solid 1px #000000;
 }
 
+// titles in the sidebar
 .innerSbWrap h6 {
+	@include sizeEl(inline-block, left, 100%, auto);
 	padding: 0 0 15px 0;
+	letter-spacing: .2em;
+	font-size: .5em !important;
 }
 
+// turn sidebar text white (General)
 .innerSbWrap ul, .innerSbWrap ul li, .innerSbWrap ul li a, .innerSbWrap h6, .innerSbWrap a {
 	color: $w;
 }
 
-.innerSbWrap h6 {
-	font-size: 10%;
-	letter-spacing: .2em;
-}
 
 
-//-----------------------------------| Sidebar Search
+//-----------------------------------| Blog Sidebar * Search Section
+
+
 
 // sb search section wrap
 .blogSbSearchWrap {
-	@include sizeEl(block, right, 100%, auto);
+	@include sizeEl(inline-block, right, 100%, auto);
+	overflow: hidden;
 	padding: 17px 10px 15px;
 	border-bottom: solid 1px $b;
 	@include simpleTransAni(all, .6s, ease-in-out);
@@ -301,7 +422,7 @@ a.activePageLink::before {
 	font-size: .6em;
 	letter-spacing: .05em;
 	padding: 8px 0 8px 20px;
-	background: url(../img/global/searchMag.png) no-repeat 8px 9px;
+	@include spritePos('sprite.png', -493px 9px);
 }
 
 // blog search from wrap
@@ -320,11 +441,16 @@ a.activePageLink::before {
 	cursor: pointer;
 }
 
-//-----------------------------------| Sidebar Archives
+
+
+//-----------------------------------| Blog Sidebar * Archives Section
+
+
 
 // archive sb wrapper
 .archiveListWrap {
 	@include sizeEl(inline-block, left, 100%, auto);
+	overflow: hidden;
 	padding: 17px 10px 15px;
 	border-bottom: solid 1px $b;
 	border-top: solid 1px $sidebarTopBorder;
@@ -333,23 +459,23 @@ a.activePageLink::before {
 
 // all side bar link / list bars
 .sbLinkList li {
-	@include sizeEl(block, left, 100%, 26px);
+	@include sizeEl(block, left, 100%, auto);
 	@include simpleTransAni(all, .3s, ease-in-out);
 	background-color: $sidebarCatBg;
 	border: solid 1px $sidebarTopBorder;
 	margin-bottom: 5px;
-	padding: 2px 0px 0px 6px;
+	padding: 0 0 0 6px;
 }
 
+// background color change on hover
 .sbLinkList li:hover {
 	background-color: #282828;
 }
 
-
 // all side bar link / list bars
 .sbLinkList li a {
 	text-transform: uppercase;
-	font-size: .5em;
+	font-size: 9px !important;
 	letter-spacing: .2em;
 	color: $sidebarCatColor !important;
 	@include simpleTransAni(all, .3s, ease-in-out);
@@ -360,7 +486,7 @@ a.activePageLink::before {
 	color: #fff !important;
 }
 
-// veiw all links
+// // veiw all links
 a.sbSeeAllLink {
 	display: block;
 	width: 100%;
@@ -369,11 +495,15 @@ a.sbSeeAllLink {
 	text-transform: uppercase;
 	font-size: .5em;
 	letter-spacing: .2em;
-	color: $sidebarCatColor;
+	color: $sidebarCatColor !important;
 	padding: 5px 0 0 0;
 }
 
+
+
 //-----------------------------------| Sidebar Categories
+
+
 
 // sb cat wrap
 .categoriesListWrap {
@@ -385,7 +515,13 @@ a.sbSeeAllLink {
 	@include simpleTransAni(all, .3s, ease-in-out);
 }
 
+
+
+
 //-----------------------------------| Sidebar Project Wrap
+
+
+
 
 // project wrap sb
 .sbProjectWrap {
@@ -406,22 +542,31 @@ a.sbSeeAllLink {
 }
 
 
-//-----------------------------------| News Sidebar
 
-// news sb wrap
+//-----------------------------------| News Blog Sidebar |-----------------------------------\\
+
+// // news sb wrap
 .newsSb {
-	background: url($sidebarNewsBg);
-	border: solid 1px $gBorder;
+	@include sizeEl(inline-block, right, 100%, auto);
 	padding: 10px 10px 0 10px;
 }
 
-// actual news post wrap
+// // actual news post wrap
 .newsArticleWrap {
 	@include sizeEl(inline-block, left, 100%, auto);
 	border: solid 1px $gBorder;
 	padding: 10px;
 	background: $w;
 	margin: 0 0 10px 0;
+
+ 	box-shadow: 0px 1px 0px 0px rgba( 189, 185, 185, .4 );
+ 	@include simpleTransAni(all, .2s, ease-in-out);
+
+
+}
+
+.newsArticleWrap:hover {
+	box-shadow: none;
 }
 
 // wraps the cat / post date
@@ -467,6 +612,181 @@ a.sbSeeAllLink {
 
 
 
+/* 
+====================================================== Blog Index
+*/
+
+
+// blog marque image
+.blogHero {
+	@include sizeEl(block, left, 100%, 200px);
+	background-color: black;
+}
+
+// Main Post Wrap
+section.postSection {
+	@include sizeEl(block, left, 100%, auto);
+	border: solid 1px $gBorder;
+	margin: 0 0 10px 0;
+
+ 	box-shadow: 0px 1px 0px 0px rgba( 189, 185, 185, .4 );
+ 	@include simpleTransAni(all, .2s, ease-in-out);
+
+
+}
+
+section.postSection:hover {
+	box-shadow: none;
+}
+
+//-----------------------------------| Post Wrap Children
+
+// post image thumb
+.postImgWrap {
+	@include sizeEl(block, left, 100%, 165px);
+	@include cover();
+	background-color: $bA
+}
+
+// text wrap giving article padding
+.postTextWrap {
+	@include sizeEl(inline-block, left, 100%, auto);
+	padding: 5px 10px 10px 10px;
+}
+
+
+
+// date post / article author wrap
+.postDate {
+	@include sizeEl(block, left, 100%, auto);
+	border-bottom: solid 1px $gBorder;
+	padding: 0 0 5px 0;
+	position: relative;
+}
+
+// date posted
+.postDate time{
+	font-size: .6em;
+	letter-spacing: .05em;
+	top: 5px;
+	left: 0px;
+}
+
+// // author full link
+.postDate a  {
+	position: absolute;
+	font-size: .6em;
+	letter-spacing: .05em;
+	top: 5px;
+	right: 0px;
+	color: $textColor;
+}
+
+// // author name
+.postDate a span {
+	color: $bGreen !important;
+	font-weight: 600;
+	font-style: italic;
+}
+
+
+
+//-----------------------------------| Pagination
+
+// Pagination Wrap
+.paginationWrap {
+	@include sizeEl(inline-block, left, 100%, 50px);
+	margin: 0 0 10px 0;
+	overflow: hidden;
+	position: relative;
+
+	border: solid 1px $gBorder;
+
+	background-color: $w;
+
+ 	box-shadow: 0px 1px 0px 0px rgba( 189, 185, 185, .4 );
+ 	@include simpleTransAni(all, .2s, ease-in-out);
+
+
+}
+
+.paginationWrap:hover {
+	box-shadow: none;
+}
+
+
+// pagination ul
+.paginationWrap ul {
+	@include sizeEl(block, left, 100%, 100%);
+}
+
+// wrap all the numbers | centers them
+.pageNumWrap {
+	@include sizeEl(block, none, 200px, 50px);
+	margin: 0 auto;
+}
+
+// numbers wrap uesed to center things
+.pageNumWrap div {
+	@include sizeEl(block, none, 140px, 50px);
+	padding: 15px 0 0 0;
+	margin: 0 auto;
+}
+
+// pagination numbers 1-5
+.paginationWrap ul li a {
+	@include sizeEl(block, left, 20%, 10%);
+	font-size: .8em;
+	color: $textColor;
+	position: relative;
+	z-index: 1;
+}
+
+// arrows 
+.paginationWrap a.pageArrow {
+	width: 55px;
+	height: 50px;
+	position: absolute;
+	overflow: hidden;
+	text-indent: -99999px;
+	@include spritePos('sprite.png', 0px 0px);
+}
+
+// prev arrow
+.paginationWrap a.prevArrow {
+	top: 0px;
+	left: 0px;
+	background-position: 14px -25px;
+	border-right: solid 1px $gBorder;
+}
+
+// next arrow
+.paginationWrap a.nextArrow {
+	top: 0px;
+	right: 0px;
+	background-position: -35px -25px;
+	border-left: solid 1px $gBorder;
+}
+
+// active page link
+a.activePageLink::before {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: -6px;
+	width: 19px;
+	height: 19px;
+	border: solid 2px $bGreen;
+	z-index: 0;
+
+	-ms-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+
+	// IE8 filter magic
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0.45);
+}
 
 
 
@@ -477,3 +797,431 @@ a.sbSeeAllLink {
 
 
 
+
+// //-----------------------------------| Blog index posts
+
+// .blogIndexPostWrap {
+// 	padding: 10px;
+// }
+
+// // poast wraps | wraps index posts
+// .postWrap {
+// 	@include sizeEl(inline-block, left, 100%, auto);
+// 	border: solid 1px $gBorder;
+// 	background-color: $w;
+// 	margin: 0 0 15px 0;
+// }
+
+// // featured img on post
+// .postImgWrap {
+// 	@include sizeEl(inline-block, left, 100%, 165px);
+	
+// 	//---------------------------------------------------------------------------------------------------------- DELETE THIS
+// 	background-color: #ccc;
+// 	//---------------------------------------------------------------------------------------------------------- END DELETE THIS
+// }
+
+// // wraps index post text
+// .postTextWrap {
+// 	padding: 10px 10px 10px 10px;
+// }
+
+// // author and date bar
+// .postDate, .postDateSquare {
+// 	@include sizeEl(block, left, 100%, 25px);
+// 	border-bottom: solid 1px $gBorder;
+// 	position: relative;
+// 	margin: 0 0 10px 0;
+// }
+
+// // date posted
+// .postDate time, .postDateSquare time {
+// 	position: absolute;
+// 	font-size: .6em;
+// 	letter-spacing: .05em;
+// 	top: 6px;
+// 	left: 0px;
+// }
+
+// // author full link
+// .postDate a  {
+// 	position: absolute;
+// 	font-size: .6em;
+// 	letter-spacing: .05em;
+// 	top: 7px;
+// 	right: 0px;
+// 	color: $textColor;
+// }
+
+// // author name
+// .postDate a span {
+// 	color: $bGreen !important;
+// 	font-weight: 600;
+// 	text-decoration: underline;
+// 	font-style: italic;
+// }
+
+// // post type
+// .postWrap h2, .postWrap p {
+// 	@include sizeEl(inline-block, left, 100%, auto);
+// }
+
+
+// /* 
+// ==============================================================
+// */
+
+
+
+
+// /* 
+// ====================================================== Blog Index
+// */
+
+// // blog side bar
+// .blogSb {
+// 	@include sizeEl(inline-block, right, 35%, inherit);
+// 	border: solid 1px #000000;
+// 	margin: 0;
+// 	padding: 0;
+// 	overflow: hidden;
+// 	position: absolute;
+// 	top: 0px;
+// 	right: 0px;
+// 	height: 100%;
+// }
+
+// // inner wrap
+// .innerSbWrap {
+// 	background:$headBg url($sidebarBg);
+// 	border: solid 1px #000000;
+// 	overflow: hidden;
+// 	border-top: solid 1px $sidebarTopBorder;
+// 	height: 100%;
+// }
+
+// .innerSbWrap h6 {
+// 	padding: 0 0 15px 0;
+// }
+
+// .innerSbWrap ul, .innerSbWrap ul li, .innerSbWrap ul li a, .innerSbWrap h6, .innerSbWrap a {
+// 	color: $w;
+// }
+
+// .innerSbWrap h6 {
+// 	font-size: 10%;
+// 	letter-spacing: .2em;
+// }
+
+
+// //-----------------------------------| Sidebar Search
+
+// // sb search section wrap
+// .blogSbSearchWrap {
+// 	@include sizeEl(block, right, 100%, auto);
+// 	padding: 17px 10px 15px;
+// 	border-bottom: solid 1px $b;
+// 	@include simpleTransAni(all, .6s, ease-in-out);
+// }
+
+// // Sidebar Search icon
+// .darkInput.sbSearch {
+// 	position: relative;
+// 	width: 100%;
+// 	background-color: $darkInputBackground;
+// 	border: 1px solid $darkInputBorder;
+// 	color: $darkInputColor;
+// 	font-style: italic;
+// 	font-size: .6em;
+// 	letter-spacing: .05em;
+// 	padding: 8px 0 8px 20px;
+// 	@include spritePos('sprite.png', -493px 9px);
+// 	// background: url(../img/global/searchMag.png) no-repeat 8px 9px;
+// }
+
+// // blog search from wrap
+// .blogSbSearchWrap div {
+// 	display: block;
+// 	float: left;
+// 	position: relative;
+// 	width: 100%;
+// }
+
+// // submit btn
+// .sbSearchInput {
+// 	position: absolute;
+// 	top: -2px;
+// 	right: -2px;
+// 	cursor: pointer;
+// }
+
+// //-----------------------------------| Sidebar Archives
+
+// // archive sb wrapper
+// .archiveListWrap {
+// 	@include sizeEl(inline-block, left, 100%, auto);
+// 	padding: 17px 10px 15px;
+// 	border-bottom: solid 1px $b;
+// 	border-top: solid 1px $sidebarTopBorder;
+// 	@include simpleTransAni(all, .6s, ease-in-out);
+// }
+
+// // all side bar link / list bars
+// .sbLinkList li {
+// 	@include sizeEl(block, left, 100%, 26px);
+// 	@include simpleTransAni(all, .3s, ease-in-out);
+// 	background-color: $sidebarCatBg;
+// 	border: solid 1px $sidebarTopBorder;
+// 	margin-bottom: 5px;
+// 	padding: 2px 0px 0px 6px;
+// }
+
+// .sbLinkList li:hover {
+// 	background-color: #282828;
+// }
+
+
+// // all side bar link / list bars
+// .sbLinkList li a {
+// 	text-transform: uppercase;
+// 	font-size: .5em;
+// 	letter-spacing: .2em;
+// 	color: $sidebarCatColor !important;
+// 	@include simpleTransAni(all, .3s, ease-in-out);
+// }
+
+// // hover animation
+// .sbLinkList li:hover a {
+// 	color: #fff !important;
+// }
+
+// // veiw all links
+// a.sbSeeAllLink {
+// 	display: block;
+// 	width: 100%;
+// 	float: right;
+// 	text-align: right;
+// 	text-transform: uppercase;
+// 	font-size: .5em;
+// 	letter-spacing: .2em;
+// 	color: $sidebarCatColor !important;
+// 	padding: 5px 0 0 0;
+// }
+
+// //-----------------------------------| Sidebar Categories
+
+// // sb cat wrap
+// .categoriesListWrap {
+// 	@include sizeEl(block, left, 100%, auto);
+// 	padding: 17px 10px 15px;
+// 	border-bottom: solid 1px $b;
+// 	border-top: solid 1px $sidebarTopBorder;
+// 	overflow: hidden;
+// 	@include simpleTransAni(all, .3s, ease-in-out);
+// }
+
+// //-----------------------------------| Sidebar Project Wrap
+
+// // project wrap sb
+// .sbProjectWrap {
+// 	@include sizeEl(block, left, 100%, auto);
+// 	border-top: solid 1px $sidebarTopBorder;
+// 	padding: 17px 10px 15px;
+// }
+
+// // project itself
+// .sbProjectWrap div {
+// 	@include sizeEl(block, left, 100%, 400px);
+// 	background-color: $sidebarCatColor;
+// }
+
+// // darken sb sections on hover
+// .blogSbSearchWrap:hover, .archiveListWrap:hover, .categoriesListWrap:hover {
+// 	background-color: rgba(0, 0, 0, .15);
+// }
+
+
+// //-----------------------------------| News Sidebar
+
+// // news sb wrap
+// .newsSb {
+// 	background: url($sidebarNewsBg);
+// 	border: solid 1px $gBorder;
+// 	padding: 10px 10px 0 10px;
+// }
+
+// // actual news post wrap
+// .newsArticleWrap {
+// 	@include sizeEl(inline-block, left, 100%, auto);
+// 	border: solid 1px $gBorder;
+// 	padding: 10px;
+// 	background: $w;
+// 	margin: 0 0 10px 0;
+// }
+
+// // wraps the cat / post date
+// .newsPostDate {
+// 	@include sizeEl(inline-block, left, 100%, 20px);
+// 	border-bottom: solid 1px $gBorder;
+// }
+
+// // news text wrap | article
+// .newsTextWrap {
+// 	@include sizeEl(inline-block, left, 100%, auto);
+// 	overflow: hidden;
+// }
+
+// // news cat / date
+// .newsPostDate a, .newsPostDate time {
+// 	text-transform: uppercase;
+// 	font-size: .5em;
+// 	letter-spacing: .2em;
+// }
+
+// // news cat
+// .newsPostDate a {
+// 	float: left;
+// 	padding: 2px 0 0 0;
+// 	color: $textColor;
+// }
+
+// // news date
+// .newsPostDate time {
+// 	float: right;
+// }
+
+// // wraps all text to prevent 
+// .newsTextWrap {
+// 	@include sizeEl(block, left, 100%, auto);
+// 	overflow: hidden;
+// 	padding: 10px 0 0 0;
+// }
+
+
+
+// /* 
+// ====================================================== Blog Archive Wrap
+// */
+
+// .postArchiveWrap {
+// 	@include sizeEl(block, left, 100%, auto);
+// 	border-left: solid 1px $gBorder;
+// 	border-right: solid 1px $gBorder;
+// 	border-bottom: solid 1px $gBorder;
+// 	position: relative;
+// }
+
+// .postArchiveWrap:last-child {
+// 	border-bottom: none;
+
+// }
+
+// .postArchiveWrap h4, .postArchiveWrap p {
+// 	float: left;
+// }
+
+// .crumbs {
+// 	@include sizeEl(block, left, 100%, 80px);
+// 	padding: 15px;
+// }
+
+// .crumbs a {
+// 	display: inline-block;
+// 	float: left;
+// 	font-size: .5em;
+// 	letter-spacing: .08em;
+// 	color: $crumbs;
+// 	padding: 0 0 0 2px;
+// }
+
+// .crumbs div {
+// 	@include sizeEl(block, left, 100%, auto);
+// }
+
+// .crumbs div h1 {
+// 	font-size: 1em;
+// }
+
+// .crumbs div span {
+// 	@include sizeEl(block, left, 100%, auto);
+// 	font-size: 1.5em;
+// }
+
+
+// // archive categories
+// .archiveCats {
+// 	@include sizeEl(block, left, 100%, auto);
+// }
+
+// // author full link
+// .archiveCats li  {
+// 	@include sizeEl(inline-block, left, auto, auto);
+// 	font-size: .8em;
+// 	letter-spacing: .05em;
+// 	position: relative;
+// 	padding: 15px 14px 15px 0;
+// }
+
+// .archiveCats li a {
+// 	color: $bGreen !important;
+// 	font-weight: 600;
+// 	font-style: italic;
+// }
+
+// // author full link
+// .archiveCats li:after  {
+// 	content: "";
+// 	@include sizeEl(block, none, 1px, 10px);
+// 	background-color: $bGreen;
+// 	position: absolute;
+// 	top: 21px;
+// 	right: 7px;
+// }
+
+// // author full link
+// .archiveCats li:last-child:after {
+// 	display: none;
+// }
+
+
+// .blogArchivePostWrap {
+// 	padding: 10px;
+// }
+
+// // blog side bar
+// .blogSb.archiveSb {
+// 	top: 80px;
+// 	right: 0px;
+// 	height: 100%;
+// }
+
+
+// /* 
+// ====================================================== Blog Search
+// */
+
+// .blogSearchWrap {
+// 	@include sizeEl(block, left, 100%, auto);
+// 	padding: 0px 10px 10px 10px;
+// }
+
+// .postSearchWrap {
+// 	border-left: solid 1px $gBorder;
+// 	border-right: solid 1px $gBorder;
+// 	border-bottom: solid 1px $gBorder;
+// 	display: block;
+// 	float: left;
+// }
+
+
+// // author full link
+// .blogSearchLink {
+// 	@include sizeEl(inline-block, left, auto, auto);
+// 	font-size: .8em;
+// 	letter-spacing: .05em;
+// 	position: relative;
+// 	padding: 15px 14px 15px 0;
+// 	color: $bGreen !important;
+// 	font-weight: 600;
+// 	font-style: italic;
+// }

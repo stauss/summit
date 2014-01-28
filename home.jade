@@ -1,0 +1,202 @@
+doctype
+//if lt IE 7
+  <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+//if IE 7
+  <html class="no-js lt-ie9 lt-ie8">
+//if IE 8
+  <html class="no-js lt-ie9">
+//[if gt IE 8]><!
+html.no-js
+  //<![endif]
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='assests/css/style.css')
+    link(rel='stylesheet', href='assests/css/icons.css')
+
+    // Google Font
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lato:100,400,700')
+
+    // custom modernizr
+    script(src='javascripts/vendor/modernizr.js')
+
+  body
+    //if lt IE 7
+      p.browsehappy
+        | You are using an <strong>outdated</strong> browser.
+        | Please <a href="http://browsehappy.com/">upgrade your browser</a>
+        | to improve your experience.
+
+    header.gHead           
+        div.gNav
+
+            a.gLogo(href="#")
+                h1 Summit Projects
+
+            i(class="fa fa-search offLittle")
+            a(href="#", id="menuIcon", class="menuIcon offLittle")
+
+            div.menuWrap
+                nav(role="navigation")
+                    div.mobileMenuHead
+                        h1 
+                            a(href="#") Summit Projects
+                        h2 Big Ideas for Great Breands
+                    ul
+                        li.firstLink
+                            a(href="#") Work
+                        li.secondLink
+                            a(href="#") Services
+                        li.thirdLink
+                            a(href="#") Contact
+                        li.forthLink
+                            a(href="#") Blog
+                        li.offLittle
+                            a(href="#") Newsletter Signup
+
+    div.indexHeroBg#indexHero
+        div
+    div.indexHero
+        h1 Big Ideas for Grat Brands
+
+
+    div.content
+        div.projectsWrap
+            ul.featuredProjects#projectGrid(style="min-height: 1500px !important;")
+                li#remington1816.featuredProject1
+                    a(href="#projectName", data-client="#")
+                        div.projectDeetsWrap
+                            div.proInnerWrap.onLittle
+                                div.projectHoverBg
+                                    span.proShawdow.proLeftShawdowBg
+                                    span.proShawdow.proRightShawdowBg
+                                    div.innerProBG
+                            h1.summitProjectLogo.onSmall
+                                span Summit Projects
+                            h2.clientProjectLogo
+                                span Remington 1816
+                            h5.tpyeOfProject.onSmall
+                                span.proTypeOne Ecommerce 
+                                span.proTypePluls + 
+                                span.proTypeTwo Lifestyle Site
+                            div.proBtnWrap.onLittle
+                                span.projectBtn View Work
+
+               
+
+
+
+
+
+    
+
+
+
+
+    footer.gFoot
+        div.footTop.nonM.onSmall
+            div.center
+                ul.footSocial
+                    li
+                        a(href="")
+                            span Facebook
+                            i(class="fa fa-facebook")
+                    li
+                        a(href="")
+                            span Twitter
+                            i(class="fa fa-twitter")
+                    li
+                        a(href="")
+                            span Pintrest
+                            i(class="fa fa-pinterest")
+                    li
+                        a(href="")
+                            span Instagram
+                            i(class="fa fa-instagram")
+                    li
+                        a(href="")
+                            span Email
+                            i(class="fa fa-envelope-o")
+                div.footSignUpWrap
+                    span newsletter
+                    input.darkInput(type='input', placeholder="Email Address")
+                    input.greenSubmit(type='submit', value='Sign Up')
+        div.footMid
+            h2.offSmall
+                span.offSmall Big Ideas for Great Brands
+            div.footLinkWrap.nonM.onSmall
+                nav
+                    ul
+                        li.footWork
+                            a(href="") Work
+                        li.footServices
+                            a(href="") Services
+                        li.footSummit
+                            a(href="") Summit Projects
+                        li.footContact
+                            a(href="") Contact
+                        li.footBlog
+                            a(href="") Blog
+            a(href="#")
+                address 101.5 Oak St. Hood River, OR
+            a.footTel(href="tel:") 541.399.4683
+        div.footBottom
+            a.footCenterLogo(href="test")
+                span Summit Projects
+            span.offSmall © Copyright 2014
+            a.legal(href="#") 
+                div.legalFootWrap
+                    span.onSmall © Copyright Summit Projects 2014 | 
+                    span Privacy policy
+
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script.
+      window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.10.2.min.js"><\/script>')
+
+    script(src='assests/js/vendor/menu.js')
+    script(src='assests/js/main.js')
+
+    script
+
+        $(document).ready(function() {
+
+            //Mobile Nav Logic
+            var $menuIcon = $('#menuIcon'),
+                $gNav = $('.gNav');
+
+            $menuIcon.on('click', function(){
+
+                // if mobile nav is not on
+                if(!$gNav.hasClass('on')){
+                    $gNav.addClass('on');
+                }
+                else {
+                    $gNav.removeClass('on');
+                }
+
+            });
+
+
+        });
+
+        //- $(document).ready(function() {
+        //-   $('#simple-menu').sidr();
+        //- });
+
+
+
+    //-script(src='javascripts/plugins.js')
+    //-script(src='javascripts/script.js')
+
+    //- Google Analytics: change UA-XXXXX-X to be your site's ID.
+    //-
+      script.
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');

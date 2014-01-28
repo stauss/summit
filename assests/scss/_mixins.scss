@@ -358,7 +358,15 @@ overflow: visible; } } }
 // Background Image Mix in
 
 @mixin backgroundImg($filename,$repeat,$position) {
-    background: transparent url(#{$imagedir}#{$filename}) $repeat $position;
+    background: transparent url(#{$bgDir}#{$filename}) $repeat $position;
+}
+
+@mixin marquesImg($filename,$repeat,$position) {
+    background: transparent url(#{$marqueDir}#{$filename}) $repeat $position;
+}
+
+@mixin projectImg($filename,$repeat,$position) {
+    background: transparent url(#{$projectDir}#{$filename}) $repeat $position;
 }
 
 // Sprite Mixin
@@ -394,7 +402,7 @@ overflow: visible; } } }
   content: "";
   width: $width;
   height: $height;
-  background: transparent url(#{$imagedir}#{$img}) $repeat $position;
+  background: transparent url(#{$bgDir}#{$img}) $repeat $position;
 }
 
 // this is the prefix settings for the scale animtations
@@ -426,6 +434,14 @@ overflow: visible; } } }
   font-style: normal;
   font-size: $size;
   color: $color;
+}
+
+
+@mixin cover() { 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 

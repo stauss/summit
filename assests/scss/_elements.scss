@@ -4,9 +4,30 @@ elements
 
 ============================================================ */
 
+/* 
+====================================================== Site Wrapper
+*/
+
+.wrap {
+	@include sizeEl(block, left, 100%, auto);
+	max-width: 1224px;
+
+	position: relative;
+	overflow: hidden;
+}
+
+// padding inside the wrap
+.innerWrap {
+	@include sizeEl(block, left, 100%, auto);
+	padding: 0;
+}
+
+
+
+
 
 /* 
-====================================================== Header
+========================================================================================================================== Header
 */
 
 // global header
@@ -18,7 +39,7 @@ elements
 
 // main branding
 .gLogo {
-	@include sizeEl(block, none, 85px, 50px);
+	@include sizeEl(block, none, 85px, 45px);
 	@include spritePos('sprite.png', 0px 16px);
 	margin: 0 auto;
 	overflow: hidden;
@@ -53,7 +74,7 @@ elements
 	text-indent: -99999px;
 	top: 18px;
 	left: 15px;
-	@include spritePos('sprite.png', -305px 0px);
+	@include spritePos('sprite.png', -96px 0px);
 	//background-color: $bA;
 }
 
@@ -61,16 +82,27 @@ elements
 	@include disNone();
 }
 
+.gNav li a {
+	color: #fff !important;
+}
+
+
+
+
+
+/* 
+========================================================================================================================== Crumbs
+*/
+
 // bread crumbs
-.mobileCrumbs {
-	@include sizeEl(block, left, 100%, 20px);
+.crumbs {
+	@include sizeEl(block, left, auto, 20px);
 	overflow: hidden;
-	padding: 6px 4px 4px 4px;
-	background-color: $w;
+	padding: 6px 4px 4px 10px;
 }
 
 // bread crumb links
-.mobileCrumbs a {
+.crumbs a {
 	display: inline-block;
 	float: left;
 	font-size: .5em;
@@ -106,7 +138,7 @@ elements
 // mid slogan sprite centered
 .footMid h2 span {
 	@include sizeEl(block, none, 285px, 20px);
-	@include spritePos('sprite.png', 0px -65px);
+	@include spritePos('sprite.png', 0px -26px);
 	margin: 0 auto;
 	overflow: hidden;
 	text-indent: -99999px;
@@ -133,19 +165,32 @@ elements
 	padding: 8px 10px;
 }
 
-// mid floating s logo
-.footBottom::before {
-	content: "";
+// mid floating s logo Wrap
+.footCenterLogo {
+	// content: "";
 	position: absolute;
-	top: -17px;
+	top: -18px;
 	left: 0px;
 	width: 100%;
 	height: 33px;
-	background-color: $bA;
 	z-index: 0;
-	background: url($diamondLogoFoot) no-repeat top center;
-
 }
+
+// actual dimond logo 
+// extra mark up is created to center shit
+.footCenterLogo span {
+	@include sizeEl(block, none, 45px, 45px);
+	@include spritePos('sprite.png', -138px -50px);
+	// override floats
+	float: none !important;
+	margin: 0 auto;
+	background-color: $headBg;
+	overflow: hidden;
+	text-indent: -9999999px;
+	border-left: solid 5px $headBg;
+	border-right: solid 5px $headBg;
+}
+
 
 // legal text / copyright
 .footBottom span, .footBottom a {
@@ -173,38 +218,3 @@ elements
 	max-width: 1200px;
 	margin: 0 auto;
 }
-
-/* 
-====================================================== Contact DropDown
-*/
-
-// .contactDd {
-// 	display: none;
-// }
-
-// .contactDd {
-// 	position: fixed;
-// 	top: 0px;
-// 	left: 0px;
-// 	width: 100%;
-// 	height: 100%;
-// 	background-color: rgba(0, 0, 0, .6);
-// 	display: block;
-// 	z-index:99999999999999999;
-// 	padding: 5%;
-// }
-
-// .contactWrap {
-// 	position: absolute;
-// 	height: 90%;
-// 	width: 90%;
-// 	background-color:#bada55;
-// }
-
-
-
-
-
-
-
-

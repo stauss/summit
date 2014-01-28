@@ -19,8 +19,6 @@
 	opacity: 1;
 }
 
-
-
 /* 
 ====================================================== Footer
 */
@@ -147,20 +145,116 @@ a.gLogo {
 }
 
 
+
 /* 
-====================================================== Blog Index
+====================================================== Home Page
 */
 
-.mobileCrumbs {
-	display: none;
+
+
+
+
+
+
+// the list of all the featured projects
+.featuredProjects li {
+	@include sizeEl(block, left, 33.333333%, 185px);
 }
 
-// blog posts
-.blogIndexPostWrap {
-	@include sizeEl(inline-block, left, 65%, inherit);
+// client logo wrap
+h2.clientProjectLogo {
+	top: -15px;
 }
 
-// blog hero
-.blogHero {
-	height: 250px;
+
+// on hover animation
+// this padding is to create the nice hover bow that shrinks
+li a:hover .projectDeetsWrap {
+	padding: 10px;
 }
+
+
+
+
+
+
+
+
+/* 
+====================================================== Project Backgrounds
+
+
+	this section is where all the project thumbnails on the homepage live.
+
+	these can be edited by just placing the name of the image at the last of the Background property.
+	
+	____________________________________________________________________
+	
+	EXAMPLE |  background: url(#{$projectDir}test.jpg);
+	___________________________________________________________________
+
+	
+	background: url( #{$projectDir}NAME-GOES-HERE.ext );
+				        ^       ^
+	Project Directry Var______|       |
+	                                  |___ The name of the actual file goes here!
+
+	____________________________________________________________________
+
+*/
+
+
+
+/* 
+====================================================== General Blog 
+*/
+
+// resize post wrap
+.postWrap {
+	width: 65%;
+}
+
+//-----------------------------------| Sidebar Archives
+
+// main sidebar wrap
+.sbWrap {
+	@include sizeEl(block, right, 35%, 100%);
+	margin: -20px 0 0 0;
+}
+
+// blog side bar
+.blogSb {
+	@include sizeEl(inline-block, left, 100%, 100%);
+}
+
+
+
+
+
+// /* 
+// ====================================================== Blog Index
+// */
+
+// .mobileCrumbs {
+// 	display: none;
+// }
+
+// // blog posts
+// .blogIndexPostWrap {
+// 	@include sizeEl(inline-block, left, 65%, inherit);
+// }
+
+// // blog hero
+// .blogHero {
+// 	height: 250px;
+// }
+
+
+// /* 
+// ====================================================== Blog Archive
+// */
+
+// .blogArchivePostWrap {
+// 	width: 65%;
+// }
+

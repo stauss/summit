@@ -5,31 +5,67 @@
 ============================================================ */
 
 
+
+/* 
+====================================================== Home Page
+*/
+
+.featuredProjects li {
+	@include sizeEl(block, left, 33.333333333%, 370px);
+
+}
+
+
+
+
 /* 
 ====================================================== Blog Index
 */
 
 // blog post wrap
-.blogIndexPostWrap {
+.postWrap {
 	@include sizeEl(block, left, 45%, auto);
 }
 
 // news side bar
 .newsSb {
-	@include sizeEl(block, left, 30%, auto);
+	@include sizeEl(block, left, 50%, auto);
 }
 
 // blog side bar
 .blogSb {
-	@include sizeEl(block, right, 25%, 100%);
+	@include sizeEl(block, right, 50%, 100%);
 	// Make side bar 100% of wrap
 	position: absolute;
 }
 
-.newsSb {
-	// Make side bar 100% of wrap
+
+.sbWrap {
+	width: 55%;
+}
+
+/* 
+====================================================== Blog Archive
+*/
+
+.blogArchivePostWrap {
+	width: 75%;
+}
+
+
+// author and date bar
+.postDate, .postDateSquare {
+	@include sizeEl(block, left, 100%, 25px);
+	border-bottom: solid 1px $gBorder;
+	position: relative;
+	margin: 0 0 10px 0;
+}
+
+// date posted
+.postDate time, .postDateSquare time {
 	position: absolute;
-	// .blogSb width from the right
-	right: 25%;
-	height: 100%;
+	font-size: .6em;
+	letter-spacing: .05em;
+	top: 6px;
+	left: 0px;
 }

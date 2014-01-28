@@ -1,0 +1,1 @@
+function parallax(){var e=$(window).scrollTop();$("#images").css("top",0-e*-0.1+"px")}$(document).ready(function(){$(window).bind("scroll",function(e){var t=$(window).scrollTop(),n=$(window).height(),r=$("#indexHero > div");n-200<t?r.addClass("transOverlay"):r.removeClass("transOverlay")})});

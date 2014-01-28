@@ -5,41 +5,42 @@
 ============================================================ */
 
 
-//============================================================================================ Delete Code Kit Fuck Up!!!!!!
-@mixin sizeEl($display, $float, $width, $height){
-  display: $display;
-  float: $float;
-  width: $width;
-  height: $height;
-}
-//============================================================================================ Delete Code Kit Fuck Up!!!!!!
 
 
 
 
-
-// on / off styles
-// things that are only mobile
-.offSmall {
-	display: none !important;
-	visibility: hidden !important;
-	opacity: 0 !important;
+// the actual hover state
+li a:hover .projectDeetsWrap, 
+li a:hover .projectHoverBg, 
+li a:hover .proShawdow  {
+	opacity: 1;
+	visibility: visible;
 }
 
-// els that turn on at this width
+
+
+
+
+// els that turn on at 650
 .onSmall {
 	display: block;
 	visibility: visible;
 	opacity: 1;
 }
 
+// els that turn on at 650
+.offSmall {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+}
 
 /* 
 ====================================================== Footer
 */
 
 .gFoot {
-	@include sizeEl(block, left, 100%, 400px);
+	@include sizeEl(block, left, 100%, 350px);
 }
 
 // mid foot bad=r
@@ -69,7 +70,7 @@
 	top: 82px;
 	left: 192px;
 	overflow: hidden;
-	@include spritePos('sprite.png', -58px -88px);
+	@include spritePos('sprite.png', 0px -49px);
 }
 
 // footer links
@@ -97,13 +98,13 @@ li.footBlog     { top: 100px; left: 386px; }
 .footMid address:before {
 	content: "";
 	display: block;
-	width: 352px;
+	width: 355px;
 	height: 15px;
 	position: absolute;
 	top: -20px;
 	left: -80px;
 	overflow: hidden;
-	@include spritePos('sprite.png', -345px 0px);
+	@include spritePos('sprite.png', -129px -2px)
 }
 
 // adress footer
@@ -112,6 +113,10 @@ li.footBlog     { top: 100px; left: 386px; }
 	margin: 0 auto;
 	position: relative;
 	letter-spacing: .15em;
+}
+
+.footMid li a {
+	color: $w !important;
 }
 
 // hide small s logo
@@ -127,13 +132,29 @@ li.footBlog     { top: 100px; left: 386px; }
 
 .legalFootWrap {
 	@include sizeEl(inline-block, none, auto, 20px);
-	background-color: #000;
 	margin: 0 auto;
 }
+
+
+/* 
+====================================================== Home Page
+*/
+
+.featuredProjects li {
+	@include sizeEl(block, left, 33.333333333%, 280px);
+
+}
+
 
 /* 
 ====================================================== Blog Index
 */
+
+// main sidebar wrap
+.sbWrap {
+	background: url($sidebarNewsBg);
+	border-left: solid 1px $gBorder;
+}
 
 // blog hero
 .blogHero {
@@ -141,18 +162,44 @@ li.footBlog     { top: 100px; left: 386px; }
 }
 
 // blog post wrap
-.blogIndexPostWrap {
+.postWrap {
 	@include sizeEl(block, left, 65%, auto);
-}
-
-// news side bar
-.newsSb {
-	@include sizeEl(block, left, 35%, auto);
 }
 
 // blog side bar
 .blogSb {
-	@include sizeEl(block, left, 35%, auto);
-	// creates room at bottom for news stories
+	@include sizeEl(inline-block, left, 100%, auto);
 	position: relative;
 }
+
+// news side bar
+// .newsSb {
+// 	@include sizeEl(block, left, 35%, auto);
+// }
+
+// blog side bar
+// .blogSb {
+// 	@include sizeEl(block, right, 35%, auto);
+// 	// creates room at bottom for news stories
+// 	position: relative;
+// 	// fixes the top margin bread crumbs
+// 	margin-top: -20px;
+// }
+
+
+/* 
+====================================================== Blog Archive
+*/
+
+// news side bar
+// .blogArchivePostWrap {
+// 	width: 65%;
+// }
+
+// // blog side bar
+// .blogSb.archiveSb {
+// 	position: absolute;
+// 	top: 80px;
+// 	right: 0px;
+// 	height: 100%;
+// }

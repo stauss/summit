@@ -4,39 +4,61 @@
 
 ============================================================ */
 
+
+
+/* 
+====================================================== Home Page
+*/
+
+.featuredProjects li {
+	@include sizeEl(block, left, 25%, 400px);
+
+}
+
 /* 
 ====================================================== Blog Index
 */
+
+.wrap {
+	float: none;
+	margin: 0 auto;
+}
 
 // blog hero
 .blogHero {
 	height: 450px;
 }
 
+.crumbs {
+	overflow: visible;
+	padding: 11px 4px 4px 18px;
+}
+
 // blog post wrap
-.blogIndexPostWrap {
+.postWrap {
 	@include sizeEl(block, left, 50%, auto);
+	padding: 10px 20px 20px 20px;
+}
+
+.postImgWrap {
+	height: 275px;
 }
 
 
-// news side bar
-.newsSb {
-	@include sizeEl(block, left, 28%, auto);
+.sbWrap {
+	width: 50%;
 }
 
-
-// blog side bar
-.blogSb {
-	@include sizeEl(block, right, 22%, 100%);
-	// Make side bar 100% of wrap
-	position: absolute;
+.innerNewsSbWrap {
+	position: normal !important;
+	top: 10px;
+	left: 10px;
+	width: 100%;
 }
 
-.newsSb {
-	// Make side bar 100% of wrap
-	position: absolute;
-	// .blogSb width from the right
-	right: 22%;
-	height: 100%;
-}
-
+// #images {
+// 	position: fixed;
+// 	top: 510px;
+// 	width: 100%;
+// 	z-index: 200;
+// }

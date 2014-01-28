@@ -5,6 +5,8 @@ URL: summitprojects.com
 
 ============================================================ */
 
+// charset makes shit faster
+@charset "UTF-8";
 
 // CSS reset
 @import "reset";
@@ -15,50 +17,36 @@ URL: summitprojects.com
 @import "variables";
 @import "mixins";
 
+// // Type
+@import "type";
+
 // Global Elemnets - Header / Footer
 @import "elements";
 
-// Type
-@import "type";
-
-// Type
+// // Type
 @import "buttons";
 
-// Type
-@import "menu";
-
-// Base Site Styles
+// // Base Site Styles
 @import "site";
 
-// Type
+// // Type
 @import "page";
 
 // Forms
 @import "forms";
 
-
-
-// @import "typography";
-
-// @import "colour";
-
-// @import "texture";
-
-// @import "elements";
-
-
-
-// @import "buttons";
-
-// @import "tables";
-
-// @import "page";
+// All project styles
+@import "projects";
 
 
 /* =========================| MQ |========================= */
 
 @media print { 
 	@import "print"; 
+}
+
+@media only screen and (min-width: 450px) {
+	@import "450";
 }
 
 @media only screen and (min-width: 550px) {

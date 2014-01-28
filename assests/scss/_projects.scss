@@ -1,0 +1,142 @@
+
+
+// Static vars |---------------------------------------------
+
+// Projects Directory
+$projectDir: '../../projects/';
+
+
+// Background image vars
+$mThumb: '/mThumb.jpg';   // mobile 
+$tThumb: '/tThumb.jpg';   // mobile / small tablet
+$thumb: '/thumb.jpg';   //  desktop
+
+//----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+// Project Folder Names |---------------------------------------------
+
+$project1Folder: '1816'; // project 1 | 1816
+
+//----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+// General Logo bg |---------------------------------------------
+
+h2.clientProjectLogo span {background: url(#{$projectDir}/thumb.png);}
+
+.featuredProjects li > a {@include cover(); background-position: top right;}
+
+
+//----------------------------------------------------------------
+
+
+
+
+
+
+// Featured Project 1 |---------------------------------------------
+
+// thumbnail Bg
+.featuredProject1 > a {
+	background: url(#{$projectDir}#{$project1Folder}#{$mThumb});
+}
+
+// client logo position
+.featuredProject1 h2.clientProjectLogo span { background-position: 0px 0px; }
+
+//----------------------------------------------------------------
+
+
+
+
+
+
+
+// Featured Project  2 |---------------------------------------------
+// Featured Project  3 |---------------------------------------------
+// Featured Project  4 |---------------------------------------------
+// Featured Project  5 |---------------------------------------------
+// Featured Project  6 |---------------------------------------------
+// Featured Project  7 |---------------------------------------------
+// Featured Project  8 |---------------------------------------------
+// Featured Project  9 |---------------------------------------------
+// Featured Project 10 |---------------------------------------------
+// Featured Project 11 |---------------------------------------------
+// Featured Project 12 |---------------------------------------------
+// Featured Project 13 |---------------------------------------------
+// Featured Project 14 |---------------------------------------------
+// Featured Project 15 |---------------------------------------------
+// Featured Project 16 |---------------------------------------------
+
+
+
+
+
+
+
+
+// // Directory Vars Paths
+// $proFolder: '../../projects';
+// $proConfigFile: '/_config';
+
+
+
+
+
+
+// @mixin renderProject( $proLogoPos,  $proThumbMobile, $proThumb, $proSlideBg, $proBrandImg, $proBrandImgPos) {
+	
+// 	// client logo
+// 	h2.clientProjectLogo span {
+// 		background-position: $proLogoPos;
+// 	}
+
+// 	.featuredProject {
+// 		background-image: $proThumbMobile;
+// 	}
+
+// }
+
+// // Project 1 ----------------------------------------------------------------------------------
+
+// #project1816 {
+
+// 	@import $proFolder + '/1816'  + $proConfigFile;
+// 	@mixin renderProject($pro1LogoBg, $pro1ThumbBg, $pro1SlideBg);
+
+// }
+
+
+
+
+
+
+
+
+
+// $proLogoPos      : 100px 100px;
+
+// $proThumbMobile  : 'mThumb.jpg';
+// $proThumb        : 'thumb.jpg';
+
+// $proSlideBg      : 'slideBg.jpg';
+
+// $proBrandImg     : 'brandImg.png';
+// $proBrandImgPos  : 100px 100px;

@@ -1,0 +1,133 @@
+/* ============================================================
+
+Client Varables 
+
+============================================================ */
+
+
+
+/* 
+====================================================== Project Logo Thumbnails
+*/
+
+// all project logos get the logo sprite bg
+h2.clientProjectLogo span { background-image: url(../#{$spriteDir}#{$filename}); }
+
+// all of the client logo logo background positions left to right ROW 1 - 1 | 2 | 3 | 4 - ROW 2 - 5 | 6 | 7 | 8 ect
+$pro1BgPos  : 100px 100px ;
+$pro2BgPos  :;
+$pro3BgPos  :;
+$pro4BgPos  :;
+$pro5BgPos  :;
+$pro6BgPos  :;
+$pro7BgPos  :;
+$pro8BgPos  :;
+$pro9BgPos  :;
+$pro10BgPos :;
+$pro11BgPos :;
+$pro12BgPos :;
+$pro13BgPos :;
+$pro14BgPos :;
+$pro15BgPos :;
+$pro16BgPos :;
+
+
+
+
+
+$proListItem1 :;
+$proListItem2 :;
+$proListItem3 :;
+$proListItem4 :;
+$proListItem5 :;
+$proListItem6 :;
+$proListItem7 :;
+$proListItem8 :;
+$proListItem9 :;
+$proListItem10:;
+$proListItem11:;
+$proListItem12:;
+$proListItem13:;
+$proListItem14:;
+$proListItem15:;
+$proListItem16:;
+
+
+
+
+// stand alon tpl
+
+$pro1LogoBg     : 100px 100px ; // logo
+$pro1ThumbBg :;		        // Thumb
+$pro1SlideBg :;		        // Slider
+$pro1CutomImage :;		  // Slider
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// the folder that contains all the project folders
+$proDirectory: '../../projects/';
+
+// this var refers the the project folder
+$proFoldername1: '1816';
+$proFoldername1: '1816';
+$proFoldername1: '1816';
+$proFoldername1: '1816';
+$proFoldername1: '1816';
+$proFoldername1: '1816';
+$proFoldername1: '1816';
+$proFoldername1: '1816';
+$proFoldername1: '1816';
+$proFoldername1: '1816';
+$proFoldername1: '1816';
+$proFoldername1: '1816';
+$proFoldername1: '1816';
+$proFoldername1: '1816';
+$proFoldername1: '1816';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

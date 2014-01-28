@@ -19,9 +19,11 @@ $f0: #00ff00; // Pink
 
 //-----------------------------------| Image Paths
 
-$globalDir: 'global/';    // Global
+$globalDir: 'img/global/';    // Global
 $spriteDir: 'img/sprite/';   // Sprites
-$bgDir: 'img/backgrounds/';  // Backgrounds
+$bgDir: '../img/backgrounds/';  // Backgrounds
+$marqueDir: '../img/marquee/'; // marquee images
+$projectDir: '../../projects/'; // project images
 
 
 //-----------------------------------| Global Styles
