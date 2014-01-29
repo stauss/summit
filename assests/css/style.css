@@ -1176,6 +1176,11 @@ input.darkInput:focus::-webkit-input-placeholder {
   color: #505050;
   position: relative; }
 
+/* ============================================================
+
+projects
+
+============================================================ */
 h2.clientProjectLogo span {
   background: url(../../projects//_thumb.png); }
 
@@ -1187,10 +1192,52 @@ h2.clientProjectLogo span {
   background-position: top right; }
 
 .featuredProject1 > a {
-  background: url(../../projects/1816/mThumb.jpg); }
+  background: url(../../projects/test1816/mobileThumb.jpg); }
 
 .featuredProject2 > a {
-  background: url(../../projects/vega/mThumb.jpg); }
+  background: url(../../projects/testvega/mobileThumb.jpg); }
+
+.featuredProject3 > a {
+  background: url(../../projects/folderName/mobileThumb.jpg); }
+
+.featuredProject4 > a {
+  background: url(../../projects/folderName/mobileThumb.jpg); }
+
+.featuredProject5 > a {
+  background: url(../../projects/folderName/mobileThumb.jpg); }
+
+.featuredProject6 > a {
+  background: url(../../projects/folderName/mobileThumb.jpg); }
+
+.featuredProject7 > a {
+  background: url(../../projects/folderName/mobileThumb.jpg); }
+
+.featuredProject8 > a {
+  background: url(../../projects/folderName/mobileThumb.jpg); }
+
+.featuredProject9 > a {
+  background: url(../../projects/folderName/mobileThumb.jpg); }
+
+.featuredProject10 > a {
+  background: url(../../projects/folderName/mobileThumb.jpg); }
+
+.featuredProject11 > a {
+  background: url(../../projects/folderName/mobileThumb.jpg); }
+
+.featuredProject12 > a {
+  background: url(../../projects/folderName/mobileThumb.jpg); }
+
+.featuredProject13 > a {
+  background: url(../../projects/folderName/mobileThumb.jpg); }
+
+.featuredProject14 > a {
+  background: url(../../projects/folderName/mobileThumb.jpg); }
+
+.featuredProject15 > a {
+  background: url(../../projects/folderName/mobileThumb.jpg); }
+
+.featuredProject16 > a {
+  background: url(../../projects/folderName/mobileThumb.jpg); }
 
 /* =========================| MQ |========================= */
 @media print {
@@ -1277,15 +1324,99 @@ h2.clientProjectLogo span {
     margin: 32px auto; }
 
   .featuredProject1 > a {
-    background: url(../../projects/1816/tThumb.jpg); }
+    background: url(../../projects/test1816/tabletThumb.jpg); }
 
   .featuredProject2 > a {
-    background: url(../../projects/vega/tThumb.jpg); }
+    background: url(../../projects/testvega/tabletThumb.jpg); }
+
+  .featuredProject3 > a {
+    background: url(../../projects/folderName/tabletThumb.jpg); }
+
+  .featuredProject4 > a {
+    background: url(../../projects/folderName/tabletThumb.jpg); }
+
+  .featuredProject5 > a {
+    background: url(../../projects/folderName/tabletThumb.jpg); }
+
+  .featuredProject6 > a {
+    background: url(../../projects/folderName/tabletThumb.jpg); }
+
+  .featuredProject7 > a {
+    background: url(../../projects/folderName/tabletThumb.jpg); }
+
+  .featuredProject8 > a {
+    background: url(../../projects/folderName/tabletThumb.jpg); }
+
+  .featuredProject9 > a {
+    background: url(../../projects/folderName/tabletThumb.jpg); }
+
+  .featuredProject10 > a {
+    background: url(../../projects/folderName/tabletThumb.jpg); }
+
+  .featuredProject11 > a {
+    background: url(../../projects/folderName/tabletThumb.jpg); }
+
+  .featuredProject12 > a {
+    background: url(../../projects/folderName/tabletThumb.jpg); }
+
+  .featuredProject13 > a {
+    background: url(../../projects/folderName/tabletThumb.jpg); }
+
+  .featuredProject14 > a {
+    background: url(../../projects/folderName/tabletThumb.jpg); }
+
+  .featuredProject15 > a {
+    background: url(../../projects/folderName/tabletThumb.jpg); }
+
+  .featuredProject16 > a {
+    background: url(../../projects/folderName/tabletThumb.jpg); }
 
   .featuredProject1 h2.clientProjectLogo span {
     background-position: 10px 15px; }
 
   .featuredProject2 h2.clientProjectLogo span {
+    background-position: -122px 15px; }
+
+  .featuredProject3 h2.clientProjectLogo span {
+    background-position: -122px 15px; }
+
+  .featuredProject4 h2.clientProjectLogo span {
+    background-position: -122px 15px; }
+
+  .featuredProject5 h2.clientProjectLogo span {
+    background-position: -122px 15px; }
+
+  .featuredProject6 h2.clientProjectLogo span {
+    background-position: -122px 15px; }
+
+  .featuredProject7 h2.clientProjectLogo span {
+    background-position: -122px 15px; }
+
+  .featuredProject8 h2.clientProjectLogo span {
+    background-position: -122px 15px; }
+
+  .featuredProject9 h2.clientProjectLogo span {
+    background-position: -122px 15px; }
+
+  .featuredProject10 h2.clientProjectLogo span {
+    background-position: -122px 15px; }
+
+  .featuredProject11 h2.clientProjectLogo span {
+    background-position: -122px 15px; }
+
+  .featuredProject12 h2.clientProjectLogo span {
+    background-position: -122px 15px; }
+
+  .featuredProject13 h2.clientProjectLogo span {
+    background-position: -122px 15px; }
+
+  .featuredProject14 h2.clientProjectLogo span {
+    background-position: -122px 15px; }
+
+  .featuredProject15 h2.clientProjectLogo span {
+    background-position: -122px 15px; }
+
+  .featuredProject16 h2.clientProjectLogo span {
     background-position: -122px 15px; } }
 @media only screen and (min-width: 550px) {
   /* ============================================================
@@ -1466,6 +1597,9 @@ h2.clientProjectLogo span {
     display: block;
     opacity: 1;
     visibility: visible; }
+
+  .lastFeaturedProject {
+    display: none !important; }
 
   /* 
   ====================================================== Project Backgrounds
@@ -1681,10 +1815,58 @@ h2.clientProjectLogo span {
     margin: -4px 0 0 0; }
 
   .featuredProject1 > a {
-    background: url(../../projects/1816/thumb.jpg); }
+    background: url(../../projects/test1816/thumb.jpg); }
 
   .featuredProject2 > a {
-    background: url(../../projects/vega/thumb.jpg); }
+    background: url(../../projects/testvega/thumb.jpg); }
+
+  .featuredProject1 > a {
+    background: url(../../projects/test1816/thumb.jpg); }
+
+  .featuredProject2 > a {
+    background: url(../../projects/testvega/thumb.jpg); }
+
+  .featuredProject3 > a {
+    background: url(../../projects/folderName/thumb.jpg); }
+
+  .featuredProject4 > a {
+    background: url(../../projects/folderName/thumb.jpg); }
+
+  .featuredProject5 > a {
+    background: url(../../projects/folderName/thumb.jpg); }
+
+  .featuredProject6 > a {
+    background: url(../../projects/folderName/thumb.jpg); }
+
+  .featuredProject7 > a {
+    background: url(../../projects/folderName/thumb.jpg); }
+
+  .featuredProject8 > a {
+    background: url(../../projects/folderName/thumb.jpg); }
+
+  .featuredProject9 > a {
+    background: url(../../projects/folderName/thumb.jpg); }
+
+  .featuredProject10 > a {
+    background: url(../../projects/folderName/thumb.jpg); }
+
+  .featuredProject11 > a {
+    background: url(../../projects/folderName/thumb.jpg); }
+
+  .featuredProject12 > a {
+    background: url(../../projects/folderName/thumb.jpg); }
+
+  .featuredProject13 > a {
+    background: url(../../projects/folderName/thumb.jpg); }
+
+  .featuredProject14 > a {
+    background: url(../../projects/folderName/thumb.jpg); }
+
+  .featuredProject15 > a {
+    background: url(../../projects/folderName/thumb.jpg); }
+
+  .featuredProject16 > a {
+    background: url(../../projects/folderName/thumb.jpg); }
 
   /* 
   ====================================================== Blog Index
@@ -1761,6 +1943,48 @@ h2.clientProjectLogo span {
     background-position: -12px 0px; }
 
   .featuredProject2 h2.clientProjectLogo span {
+    background-position: -188px 0px; }
+
+  .featuredProject3 h2.clientProjectLogo span {
+    background-position: -188px 0px; }
+
+  .featuredProject4 h2.clientProjectLogo span {
+    background-position: -188px 0px; }
+
+  .featuredProject5 h2.clientProjectLogo span {
+    background-position: -188px 0px; }
+
+  .featuredProject6 h2.clientProjectLogo span {
+    background-position: -188px 0px; }
+
+  .featuredProject7 h2.clientProjectLogo span {
+    background-position: -188px 0px; }
+
+  .featuredProject8 h2.clientProjectLogo span {
+    background-position: -188px 0px; }
+
+  .featuredProject9 h2.clientProjectLogo span {
+    background-position: -188px 0px; }
+
+  .featuredProject10 h2.clientProjectLogo span {
+    background-position: -188px 0px; }
+
+  .featuredProject11 h2.clientProjectLogo span {
+    background-position: -188px 0px; }
+
+  .featuredProject12 h2.clientProjectLogo span {
+    background-position: -188px 0px; }
+
+  .featuredProject13 h2.clientProjectLogo span {
+    background-position: -188px 0px; }
+
+  .featuredProject14 h2.clientProjectLogo span {
+    background-position: -188px 0px; }
+
+  .featuredProject15 h2.clientProjectLogo span {
+    background-position: -188px 0px; }
+
+  .featuredProject16 h2.clientProjectLogo span {
     background-position: -188px 0px; }
 
   /* 
@@ -1843,14 +2067,8 @@ h2.clientProjectLogo span {
   .proTypePluls, .proTypeTwo {
     margin: 3px 0 0 0; }
 
-  .projectDeetsWrap,
-  .projectHoverBg,
-  .proShawdow,
-  h1.summitProjectLogo,
-  h5.tpyeOfProject,
-  .proBtnWrap {
-    opacity: 1;
-    visibility: visible; }
+  .lastFeaturedProject {
+    display: Block !important; }
 
   /* 
   ====================================================== Blog Index

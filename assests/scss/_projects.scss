@@ -1,36 +1,58 @@
+/* ============================================================
+
+projects
+
+============================================================ */
 
 
-// Static vars |---------------------------------------------
+
+
+
+
+// Static vars ------------------------------------------------------------------------------------------------|
 
 // Projects Directory
 $projectDir: '../../projects/';
 
-
 // Background image vars
-$mThumb: '/mThumb.jpg';   // mobile 
-$tThumb: '/tThumb.jpg';   // mobile / small tablet
+$mThumb: '/mobileThumb.jpg';   // mobile 
+$tThumb: '/tabletThumb.jpg';   // mobile / small tablet
 $thumb: '/thumb.jpg';   //  desktop
 
-//----------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------|
 
 
 
 
 
 
+// Project Folder Names |------------------------------------------------------------------------------------|
+
+$project1Folder   : 'test1816';    // project  1 | Test Project 1
+$project2Folder   : 'testvega';    // project  2 | Test Project 2
+$project3Folder   : 'folderName';  // project  3 |
+$project4Folder   : 'folderName';  // project  4 |
+$project5Folder   : 'folderName';  // project  5 |
+$project6Folder   : 'folderName';  // project  6 |
+$project7Folder   : 'folderName';  // project  7 |
+$project8Folder   : 'folderName';  // project  8 |
+$project9Folder   : 'folderName';  // project  9 |
+$project10Folder  : 'folderName';  // project 10 |
+$project11Folder  : 'folderName';  // project 11 |
+$project12Folder  : 'folderName';  // project 12 | 
+$project13Folder  : 'folderName';  // project 13 |
+$project14Folder  : 'folderName';  // project 14 |
+$project15Folder  : 'folderName';  // project 15 |
+$project16Folder  : 'folderName';  // project 16 |
+
+//-----------------------------------------------------------------------------------------------------------|
 
 
 
-// Project Folder Names |---------------------------------------------
-
-$project1Folder: '1816'; // project 1 | 1816
-$project2Folder: 'vega'; // project 1 | 1816
-
-//----------------------------------------------------------------
 
 
 
-// Client Logo Posisions |---------------------------------------------
+// Client Logo Posisions | 450 / 755 |------------------------------------------------------------------------|
 
 $p1LogoPos          :   10px 15px ;
 $p1LogoPosShift     :   -12px 0px ;
@@ -38,122 +60,87 @@ $p1LogoPosShift     :   -12px 0px ;
 $p2LogoPos          : -122px 15px ;
 $p2LogoPosShift     : -188px 0px ;
 
+$p3LogoPos          : -122px 15px ;
+$p3LogoPosShift     : -188px 0px ;
 
-//----------------------------------------------------------------
+$p4LogoPos          : -122px 15px ;
+$p4LogoPosShift     : -188px 0px ;
+
+$p5LogoPos          : -122px 15px ;
+$p5LogoPosShift     : -188px 0px ;
+
+$p6LogoPos          : -122px 15px ;
+$p6LogoPosShift     : -188px 0px ;
+
+$p7LogoPos          : -122px 15px ;
+$p7LogoPosShift     : -188px 0px ;
+
+$p8LogoPos          : -122px 15px ;
+$p8LogoPosShift     : -188px 0px ;
+
+$p9LogoPos          : -122px 15px ;
+$p9LogoPosShift     : -188px 0px ;
+
+$p10LogoPos          : -122px 15px ;
+$p10LogoPosShift     : -188px 0px ;
+
+$p11LogoPos          : -122px 15px ;
+$p11LogoPosShift     : -188px 0px ;
+
+$p12LogoPos          : -122px 15px ;
+$p12LogoPosShift     : -188px 0px ;
+
+$p13LogoPos          : -122px 15px ;
+$p13LogoPosShift     : -188px 0px ;
+
+$p14LogoPos          : -122px 15px ;
+$p14LogoPosShift     : -188px 0px ;
+
+$p15LogoPos          : -122px 15px ;
+$p15LogoPosShift     : -188px 0px ;
+
+$p16LogoPos          : -122px 15px ;
+$p16LogoPosShift     : -188px 0px ;
+
+//-----------------------------------------------------------------------------------------------------------|
 
 
 
 
 
 
+// General logo / bg styles |-------------------------------------------------------------------------------|
 
-// General Logo bg |---------------------------------------------
-
+// assign the logo sprite
 h2.clientProjectLogo span {background: url(#{$projectDir}/_thumb.png);}
 
+// cover the bg image and pos top right
 .featuredProjects li > a {@include cover(); background-position: top right;}
 
-
-//----------------------------------------------------------------
-
-
-
-
-
-
-// Featured Project 1 |---------------------------------------------
-
-// thumbnail Bg
-.featuredProject1 > a {
-	background: url(#{$projectDir}#{$project1Folder}#{$mThumb});
-}
-
-//----------------------------------------------------------------
-
-
-
-
-// Featured Project 2 |---------------------------------------------
-
-// thumbnail Bg
-.featuredProject2 > a {
-	background: url(#{$projectDir}#{$project2Folder}#{$mThumb});
-}
-
-//----------------------------------------------------------------
-
-
-
-
-
-// Featured Project  2 |---------------------------------------------
-// Featured Project  3 |---------------------------------------------
-// Featured Project  4 |---------------------------------------------
-// Featured Project  5 |---------------------------------------------
-// Featured Project  6 |---------------------------------------------
-// Featured Project  7 |---------------------------------------------
-// Featured Project  8 |---------------------------------------------
-// Featured Project  9 |---------------------------------------------
-// Featured Project 10 |---------------------------------------------
-// Featured Project 11 |---------------------------------------------
-// Featured Project 12 |---------------------------------------------
-// Featured Project 13 |---------------------------------------------
-// Featured Project 14 |---------------------------------------------
-// Featured Project 15 |---------------------------------------------
-// Featured Project 16 |---------------------------------------------
+//-----------------------------------------------------------------------------------------------------------|
 
 
 
 
 
 
+// Project Thumbs | 450 / 650 |-----------------------------------------------------------------------------|
 
+.featuredProject1  > a { background: url(#{$projectDir}#{$project1Folder}#{$mThumb}) ; }
+.featuredProject2  > a { background: url(#{$projectDir}#{$project2Folder}#{$mThumb}) ; }
+.featuredProject3  > a { background: url(#{$projectDir}#{$project3Folder}#{$mThumb}) ; }
+.featuredProject4  > a { background: url(#{$projectDir}#{$project4Folder}#{$mThumb}) ; }
+.featuredProject5  > a { background: url(#{$projectDir}#{$project5Folder}#{$mThumb}) ; }
+.featuredProject6  > a { background: url(#{$projectDir}#{$project6Folder}#{$mThumb}) ; }
+.featuredProject7  > a { background: url(#{$projectDir}#{$project7Folder}#{$mThumb}) ; }
+.featuredProject8  > a { background: url(#{$projectDir}#{$project8Folder}#{$mThumb}) ; }
+.featuredProject9  > a { background: url(#{$projectDir}#{$project9Folder}#{$mThumb}) ; }
+.featuredProject10 > a { background: url(#{$projectDir}#{$project10Folder}#{$mThumb}); }
+.featuredProject11 > a { background: url(#{$projectDir}#{$project11Folder}#{$mThumb}); }
+.featuredProject12 > a { background: url(#{$projectDir}#{$project12Folder}#{$mThumb}); }
+.featuredProject13 > a { background: url(#{$projectDir}#{$project13Folder}#{$mThumb}); }
+.featuredProject14 > a { background: url(#{$projectDir}#{$project14Folder}#{$mThumb}); }
+.featuredProject15 > a { background: url(#{$projectDir}#{$project15Folder}#{$mThumb}); }
+.featuredProject16 > a { background: url(#{$projectDir}#{$project16Folder}#{$mThumb}); }
 
-// // Directory Vars Paths
-// $proFolder: '../../projects';
-// $proConfigFile: '/_config';
-
-
-
-
-
-
-// @mixin renderProject( $proLogoPos,  $proThumbMobile, $proThumb, $proSlideBg, $proBrandImg, $proBrandImgPos) {
-	
-// 	// client logo
-// 	h2.clientProjectLogo span {
-// 		background-position: $proLogoPos;
-// 	}
-
-// 	.featuredProject {
-// 		background-image: $proThumbMobile;
-// 	}
-
-// }
-
-// // Project 1 ----------------------------------------------------------------------------------
-
-// #project1816 {
-
-// 	@import $proFolder + '/1816'  + $proConfigFile;
-// 	@mixin renderProject($pro1LogoBg, $pro1ThumbBg, $pro1SlideBg);
-
-// }
-
-
-
-
-
-
-
-
-
-// $proLogoPos      : 100px 100px;
-
-// $proThumbMobile  : 'mThumb.jpg';
-// $proThumb        : 'thumb.jpg';
-
-// $proSlideBg      : 'slideBg.jpg';
-
-// $proBrandImg     : 'brandImg.png';
-// $proBrandImgPos  : 100px 100px;
+//-----------------------------------------------------------------------------------------------------------|

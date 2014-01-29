@@ -29,17 +29,21 @@ h5.tpyeOfProject span { font-size: 13px !important; letter-spacing: 0.35em; }
 
 
 // Hover state's
-.projectDeetsWrap, 
-.projectHoverBg, 
-.proShawdow,
-h1.summitProjectLogo,
-h5.tpyeOfProject,
-.proBtnWrap,
-{
-	opacity: 1;
-	visibility: visible;
-}
+// .projectDeetsWrap, 
+// .projectHoverBg, 
+// .proShawdow,
+// h1.summitProjectLogo,
+// h5.tpyeOfProject,
+// .proBtnWrap,
+// {
+// 	opacity: 1;
+// 	visibility: visible;
+// }
 
+// Show that last project 
+.lastFeaturedProject {
+	display: Block !important;
+}
 
 /* 
 ====================================================== Blog Index

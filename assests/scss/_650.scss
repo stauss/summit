@@ -202,7 +202,22 @@ h5.tpyeOfProject span {
 .featuredProject2 > a { background: url(#{$projectDir}#{$project2Folder}#{$thumb}); } // abkchound thumb | dynamic
 
 
-
+.featuredProject1  > a { background: url(#{$projectDir}#{$project1Folder}#{$thumb}) ; }
+.featuredProject2  > a { background: url(#{$projectDir}#{$project2Folder}#{$thumb}) ; }
+.featuredProject3  > a { background: url(#{$projectDir}#{$project3Folder}#{$thumb}) ; }
+.featuredProject4  > a { background: url(#{$projectDir}#{$project4Folder}#{$thumb}) ; }
+.featuredProject5  > a { background: url(#{$projectDir}#{$project5Folder}#{$thumb}) ; }
+.featuredProject6  > a { background: url(#{$projectDir}#{$project6Folder}#{$thumb}) ; }
+.featuredProject7  > a { background: url(#{$projectDir}#{$project7Folder}#{$thumb}) ; }
+.featuredProject8  > a { background: url(#{$projectDir}#{$project8Folder}#{$thumb}) ; }
+.featuredProject9  > a { background: url(#{$projectDir}#{$project9Folder}#{$thumb}) ; }
+.featuredProject10 > a { background: url(#{$projectDir}#{$project10Folder}#{$thumb}); }
+.featuredProject11 > a { background: url(#{$projectDir}#{$project11Folder}#{$thumb}); }
+.featuredProject12 > a { background: url(#{$projectDir}#{$project12Folder}#{$thumb}); }
+.featuredProject13 > a { background: url(#{$projectDir}#{$project13Folder}#{$thumb}); }
+.featuredProject14 > a { background: url(#{$projectDir}#{$project14Folder}#{$thumb}); }
+.featuredProject15 > a { background: url(#{$projectDir}#{$project15Folder}#{$thumb}); }
+.featuredProject16 > a { background: url(#{$projectDir}#{$project16Folder}#{$thumb}); }
 
 
 /* 

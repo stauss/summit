@@ -9,18 +9,19 @@
 ====================================================== Home page
 */
 
+
 // the list of all the featured projects
 .featuredProjects li {
 	@include sizeEl(block, left, 50%, 185px);
 }
 
+// fix the bg to cover the whole el
 .featuredProjects li > a {
 	-webkit-background-size: cover !important;
 	-moz-background-size: cover !important;
 	-o-background-size: cover !important;
 	background-size: cover !important;
 }
-
 
 // client logo wrap
 h2.clientProjectLogo {
@@ -45,7 +46,6 @@ h2.clientProjectLogo span {
 	text-indent: -99999px;
 	margin: 32px auto;
 
-	//background-color: #bada55;
 }
 
 
@@ -57,36 +57,42 @@ h2.clientProjectLogo span {
 
 // Featured Project Thumbnails |---------------------------------------------
 
-// this is where the image gets swapped out 
+// Mobile / Tab Background Images
+.featuredProject1   > a { background: url(#{$projectDir}#{$project1Folder}#{$tThumb});  } // Project Bg 1
+.featuredProject2   > a { background: url(#{$projectDir}#{$project2Folder}#{$tThumb});  } // Project Bg 2
+.featuredProject3   > a { background: url(#{$projectDir}#{$project3Folder}#{$tThumb});  } // Project Bg 3
+.featuredProject4   > a { background: url(#{$projectDir}#{$project4Folder}#{$tThumb});  } // Project Bg 4
+.featuredProject5   > a { background: url(#{$projectDir}#{$project5Folder}#{$tThumb});  } // Project Bg 5
+.featuredProject6   > a { background: url(#{$projectDir}#{$project6Folder}#{$tThumb});  } // Project Bg 6
+.featuredProject7   > a { background: url(#{$projectDir}#{$project7Folder}#{$tThumb});  } // Project Bg 7
+.featuredProject8   > a { background: url(#{$projectDir}#{$project8Folder}#{$tThumb});  } // Project Bg 8
+.featuredProject9   > a { background: url(#{$projectDir}#{$project9Folder}#{$tThumb});  } // Project Bg 9
+.featuredProject10  > a { background: url(#{$projectDir}#{$project10Folder}#{$tThumb}); } // Project Bg 10
+.featuredProject11  > a { background: url(#{$projectDir}#{$project11Folder}#{$tThumb}); } // Project Bg 11
+.featuredProject12  > a { background: url(#{$projectDir}#{$project12Folder}#{$tThumb}); } // Project Bg 12
+.featuredProject13  > a { background: url(#{$projectDir}#{$project13Folder}#{$tThumb}); } // Project Bg 13
+.featuredProject14  > a { background: url(#{$projectDir}#{$project14Folder}#{$tThumb}); } // Project Bg 14
+.featuredProject15  > a { background: url(#{$projectDir}#{$project15Folder}#{$tThumb}); } // Project Bg 15
+.featuredProject16  > a { background: url(#{$projectDir}#{$project16Folder}#{$tThumb}); } // Project Bg 16
 
-.featuredProject1 > a { background: url(#{$projectDir}#{$project1Folder}#{$tThumb}); } // abkchound thumb | dynamic
-.featuredProject2 > a { background: url(#{$projectDir}#{$project2Folder}#{$tThumb}); } // abkchound thumb | dynamic
 
 // Featured Project Client Logos |---------------------------------------------
 
 // client logo position
-.featuredProject1 h2.clientProjectLogo span { background-position: $p1LogoPos ; }
-.featuredProject2 h2.clientProjectLogo span { background-position: $p2LogoPos ; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.featuredProject1  h2.clientProjectLogo span { background-position: $p1LogoPos  ; } // Logo Project 1
+.featuredProject2  h2.clientProjectLogo span { background-position: $p2LogoPos  ; } // Logo Project 2
+.featuredProject3  h2.clientProjectLogo span { background-position: $p3LogoPos  ; } // Logo Project 3
+.featuredProject4  h2.clientProjectLogo span { background-position: $p4LogoPos  ; } // Logo Project 4
+.featuredProject5  h2.clientProjectLogo span { background-position: $p5LogoPos  ; } // Logo Project 5
+.featuredProject6  h2.clientProjectLogo span { background-position: $p6LogoPos  ; } // Logo Project 6
+.featuredProject7  h2.clientProjectLogo span { background-position: $p7LogoPos  ; } // Logo Project 7
+.featuredProject8  h2.clientProjectLogo span { background-position: $p8LogoPos  ; } // Logo Project 8
+.featuredProject9  h2.clientProjectLogo span { background-position: $p9LogoPos  ; } // Logo Project 9
+.featuredProject10 h2.clientProjectLogo span { background-position: $p10LogoPos ; } // Logo Project 10
+.featuredProject11 h2.clientProjectLogo span { background-position: $p11LogoPos ; } // Logo Project 11
+.featuredProject12 h2.clientProjectLogo span { background-position: $p12LogoPos ; } // Logo Project 12
+.featuredProject13 h2.clientProjectLogo span { background-position: $p13LogoPos ; } // Logo Project 13
+.featuredProject14 h2.clientProjectLogo span { background-position: $p14LogoPos ; } // Logo Project 14
+.featuredProject15 h2.clientProjectLogo span { background-position: $p15LogoPos ; } // Logo Project 15
+.featuredProject16 h2.clientProjectLogo span { background-position: $p16LogoPos ; } // Logo Project 16
+ 

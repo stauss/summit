@@ -177,12 +177,16 @@ li a:hover .projectHoverBg {
 	border: solid 1px rgba(255,255,255,.2);
 }
 
-
 // Show Project btn
 .projectBtn {
 	@include disBlock(); // hide everything
 }
 
+
+// Hide that last project 
+.lastFeaturedProject {
+	display: none !important;
+}
 
 
 
