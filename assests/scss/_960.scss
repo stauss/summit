@@ -15,6 +15,32 @@
 
 }
 
+// position all thumb elements
+h1.summitProjectLogo {    top: 55px; }  // s logo
+h2.clientProjectLogo {    top: 70px; } // client logo
+h5.tpyeOfProject     {   top: 205px; } // type of pro
+.proBtnWrap          { bottom: 55px; } // btn
+
+// size up the type font
+h5.tpyeOfProject span { font-size: 13px !important; letter-spacing: 0.35em; }
+
+//last 2 lines | correct leading
+.proTypePluls, .proTypeTwo { margin: 3px 0 0 0; }
+
+
+// Hover state's
+.projectDeetsWrap, 
+.projectHoverBg, 
+.proShawdow,
+h1.summitProjectLogo,
+h5.tpyeOfProject,
+.proBtnWrap,
+{
+	opacity: 1;
+	visibility: visible;
+}
+
+
 /* 
 ====================================================== Blog Index
 */

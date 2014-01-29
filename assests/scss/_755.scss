@@ -6,14 +6,49 @@
 
 
 
+
+
+
 /* 
 ====================================================== Home Page
 */
 
 .featuredProjects li {
-	@include sizeEl(block, left, 33.333333333%, 370px);
+	@include sizeEl(block, left, 33.333333333%, 350px);
 
 }
+
+// position all thumb elements
+h1.summitProjectLogo {    top: 45px; }  // s logo
+h2.clientProjectLogo {    top: 45px; } // client logo
+h5.tpyeOfProject     {   top: 175px; } // type of pro
+.proBtnWrap          { bottom: 45px; } // btn
+
+// make the s logo bigger
+h1.summitProjectLogo span { background-position: -78px -49px; }
+
+// size client logos 100%
+h2.clientProjectLogo span { background-size: 700px 480px; }
+
+// size up the type font
+h5.tpyeOfProject span { font-size: 12px !important; letter-spacing: .25em; }
+
+//last 2 lines | correct leading
+.proTypePluls, .proTypeTwo { margin: 5px 0 0 0; }
+
+.proBtnWrap span { font-size: 11px !important; letter-spacing: .3em; padding: 6px 15px;  }
+
+
+
+
+
+
+
+// Featured Project Client Logos |---------------------------------------------
+
+// client logo position
+.featuredProject1 h2.clientProjectLogo span { background-position: $p1LogoPosShift ; }
+.featuredProject2 h2.clientProjectLogo span { background-position: $p2LogoPosShift ; }
 
 
 

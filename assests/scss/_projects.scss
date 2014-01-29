@@ -24,6 +24,20 @@ $thumb: '/thumb.jpg';   //  desktop
 // Project Folder Names |---------------------------------------------
 
 $project1Folder: '1816'; // project 1 | 1816
+$project2Folder: 'vega'; // project 1 | 1816
+
+//----------------------------------------------------------------
+
+
+
+// Client Logo Posisions |---------------------------------------------
+
+$p1LogoPos          :   10px 15px ;
+$p1LogoPosShift     :   -12px 0px ;
+
+$p2LogoPos          : -122px 15px ;
+$p2LogoPosShift     : -188px 0px ;
+
 
 //----------------------------------------------------------------
 
@@ -33,13 +47,9 @@ $project1Folder: '1816'; // project 1 | 1816
 
 
 
-
-
-
-
 // General Logo bg |---------------------------------------------
 
-h2.clientProjectLogo span {background: url(#{$projectDir}/thumb.png);}
+h2.clientProjectLogo span {background: url(#{$projectDir}/_thumb.png);}
 
 .featuredProjects li > a {@include cover(); background-position: top right;}
 
@@ -58,12 +68,19 @@ h2.clientProjectLogo span {background: url(#{$projectDir}/thumb.png);}
 	background: url(#{$projectDir}#{$project1Folder}#{$mThumb});
 }
 
-// client logo position
-.featuredProject1 h2.clientProjectLogo span { background-position: 0px 0px; }
-
 //----------------------------------------------------------------
 
 
+
+
+// Featured Project 2 |---------------------------------------------
+
+// thumbnail Bg
+.featuredProject2 > a {
+	background: url(#{$projectDir}#{$project2Folder}#{$mThumb});
+}
+
+//----------------------------------------------------------------
 
 
 

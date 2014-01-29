@@ -465,6 +465,11 @@ p {
   font-size: 75%;
   line-height: 1.4em; }
 
+.onMed {
+  display: none;
+  visibility: hidden;
+  opacity: 0; }
+
 /* ============================================================
 
 page
@@ -473,12 +478,9 @@ page
 /* 
 ====================================================== Turn off non mobile els
 */
-.onLittle {
-  display: none;
-  visibility: hidden;
-  opacity: 0; }
-
-.onSmall {
+.onLittle,
+.onSmall,
+.onMed {
   display: none;
   visibility: hidden;
   opacity: 0; }
@@ -558,15 +560,17 @@ page
   background-position: top right;
   position: relative; }
 
+.projectDeetsWrap, .projectHoverBg, h1.summitProjectLogo, h2.clientProjectLogo, h5.tpyeOfProject, .proBtnWrap {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
+
 .projectDeetsWrap {
   display: inherit;
   float: left;
   width: 100%;
   height: 100%;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
   -webkit-box-shadow: inset 0 0 43px rgba(1, 1, 1, 0.2);
   -moz-box-shadow: inset 0 0 43px rgba(1, 1, 1, 0.2);
   box-shadow: inset 0 0 43px rgba(1, 1, 1, 0.2); }
@@ -580,15 +584,10 @@ page
   background: transparent url(../img/backgrounds/proHoverBase.png) repeat top center;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: inset 0 0 43px rgba(1, 1, 1, 0.4);
   -moz-box-shadow: inset 0 0 43px rgba(1, 1, 1, 0.4);
   box-shadow: inset 0 0 43px rgba(1, 1, 1, 0.4);
-  border: solid 1px rgba(255, 255, 255, 0.2);
-  -webkit-transition: all 0.6s ease-in-out;
-  -moz-transition: all 0.6s ease-in-out;
-  -o-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
   position: relative;
   overflow: hidden; }
 
@@ -639,12 +638,33 @@ page
 -----------------------------------------------------------------------------*/
 h1.summitProjectLogo, h2.clientProjectLogo, h5.tpyeOfProject {
   position: absolute;
+  left: 0;
   color: white; }
 
 .summitProjectLogo, .tpyeOfProject, .projectBtn {
   position: absolute;
   font-family: 'Lato', sans-serif, Arial, serif;
-  font-weight: 400; }
+  font-weight: 400;
+  visibility: hidden;
+  opacity: 0; }
+
+h1.summitProjectLogo {
+  display: block;
+  float: none;
+  width: 100%;
+  height: 50px; }
+
+h1.summitProjectLogo span {
+  background-image: url(../img/sprite/sprite.png);
+  background-repeat: no-repeat;
+  background-position: -130px -49px;
+  display: block;
+  float: none;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  text-indent: -99999px;
+  margin: 0 auto; }
 
 .clientProjectLogo {
   display: block;
@@ -659,30 +679,23 @@ h1.summitProjectLogo, h2.clientProjectLogo, h5.tpyeOfProject {
 
 h5.tpyeOfProject {
   width: 100%;
-  top: 230px;
   text-align: center;
-  text-shadow: -2px 1px 8px rgba(2, 2, 2, 0.45);
   font-weight: 100 !important;
-  color: transparent;
-  text-shadow: 0 0 5px white;
-  -webkit-transition: all 0.6s ease-in-out;
-  -moz-transition: all 0.6s ease-in-out;
-  -o-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
+  color: white;
   font-family: 'Lato', sans-serif, Arial, serif;
   font-weight: 400; }
 
 li a:hover h5.tpyeOfProject {
-  color: white;
-  text-shadow: 0 0 0 rgba(255, 255, 255, 0); }
+  color: white; }
 
 h5.tpyeOfProject span {
   display: block;
   float: left;
   width: 100%;
   height: 100%;
-  letter-spacing: .4em;
+  font-size: .9em;
   padding: 0 0 6px 0;
+  padding: 0 0 0 0;
   font-weight: 100 !important; }
 
 .proBtnWrap {
@@ -1164,7 +1177,7 @@ input.darkInput:focus::-webkit-input-placeholder {
   position: relative; }
 
 h2.clientProjectLogo span {
-  background: url(../../projects//thumb.png); }
+  background: url(../../projects//_thumb.png); }
 
 .featuredProjects li > a {
   -webkit-background-size: cover;
@@ -1176,8 +1189,8 @@ h2.clientProjectLogo span {
 .featuredProject1 > a {
   background: url(../../projects/1816/mThumb.jpg); }
 
-.featuredProject1 h2.clientProjectLogo span {
-  background-position: 0px 0px; }
+.featuredProject2 > a {
+  background: url(../../projects/vega/mThumb.jpg); }
 
 /* =========================| MQ |========================= */
 @media print {
@@ -1266,8 +1279,14 @@ h2.clientProjectLogo span {
   .featuredProject1 > a {
     background: url(../../projects/1816/tThumb.jpg); }
 
+  .featuredProject2 > a {
+    background: url(../../projects/vega/tThumb.jpg); }
+
   .featuredProject1 h2.clientProjectLogo span {
-    background-position: 10px 15px; } }
+    background-position: 10px 15px; }
+
+  .featuredProject2 h2.clientProjectLogo span {
+    background-position: -122px 15px; } }
 @media only screen and (min-width: 550px) {
   /* ============================================================
   
@@ -1440,6 +1459,14 @@ h2.clientProjectLogo span {
   li a:hover .projectDeetsWrap {
     padding: 10px; }
 
+  li a:hover .projectHoverBg {
+    border: solid 1px rgba(255, 255, 255, 0.2); }
+
+  .projectBtn {
+    display: block;
+    opacity: 1;
+    visibility: visible; }
+
   /* 
   ====================================================== Project Backgrounds
   
@@ -1486,12 +1513,6 @@ h2.clientProjectLogo span {
   650
   
   ============================================================ */
-  li a:hover .projectDeetsWrap,
-  li a:hover .projectHoverBg,
-  li a:hover .proShawdow {
-    opacity: 1;
-    visibility: visible; }
-
   .onSmall {
     display: block;
     visibility: visible;
@@ -1624,6 +1645,47 @@ h2.clientProjectLogo span {
     width: 33.33333%;
     height: 280px; }
 
+  .projectHoverBg, .proBtnWrap, h1.summitProjectLogo, h5.tpyeOfProject {
+    opacity: 0;
+    visibility: none; }
+
+  li a:hover .projectDeetsWrap,
+  li a:hover .projectHoverBg,
+  li a:hover .proShawdow,
+  li a:hover h1.summitProjectLogo,
+  li a:hover h5.tpyeOfProject,
+  li a:hover .proBtnWrap {
+    opacity: 1;
+    visibility: visible; }
+
+  li a:hover .projectHoverBg {
+    padding: 15px; }
+
+  h1.summitProjectLogo {
+    top: 35px; }
+
+  h2.clientProjectLogo {
+    top: 17px; }
+
+  h5.tpyeOfProject {
+    top: 140px; }
+
+  .proBtnWrap {
+    bottom: 45px; }
+
+  h5.tpyeOfProject span {
+    font-size: 10px !important;
+    letter-spacing: .2em; }
+
+  .proTypePluls, .proTypeTwo {
+    margin: -4px 0 0 0; }
+
+  .featuredProject1 > a {
+    background: url(../../projects/1816/thumb.jpg); }
+
+  .featuredProject2 > a {
+    background: url(../../projects/vega/thumb.jpg); }
+
   /* 
   ====================================================== Blog Index
   */
@@ -1663,7 +1725,43 @@ h2.clientProjectLogo span {
     display: block;
     float: left;
     width: 33.33333%;
-    height: 370px; }
+    height: 350px; }
+
+  h1.summitProjectLogo {
+    top: 45px; }
+
+  h2.clientProjectLogo {
+    top: 45px; }
+
+  h5.tpyeOfProject {
+    top: 175px; }
+
+  .proBtnWrap {
+    bottom: 45px; }
+
+  h1.summitProjectLogo span {
+    background-position: -78px -49px; }
+
+  h2.clientProjectLogo span {
+    background-size: 700px 480px; }
+
+  h5.tpyeOfProject span {
+    font-size: 12px !important;
+    letter-spacing: .25em; }
+
+  .proTypePluls, .proTypeTwo {
+    margin: 5px 0 0 0; }
+
+  .proBtnWrap span {
+    font-size: 11px !important;
+    letter-spacing: .3em;
+    padding: 6px 15px; }
+
+  .featuredProject1 h2.clientProjectLogo span {
+    background-position: -12px 0px; }
+
+  .featuredProject2 h2.clientProjectLogo span {
+    background-position: -188px 0px; }
 
   /* 
   ====================================================== Blog Index
@@ -1725,6 +1823,34 @@ h2.clientProjectLogo span {
     float: left;
     width: 25%;
     height: 400px; }
+
+  h1.summitProjectLogo {
+    top: 55px; }
+
+  h2.clientProjectLogo {
+    top: 70px; }
+
+  h5.tpyeOfProject {
+    top: 205px; }
+
+  .proBtnWrap {
+    bottom: 55px; }
+
+  h5.tpyeOfProject span {
+    font-size: 13px !important;
+    letter-spacing: 0.35em; }
+
+  .proTypePluls, .proTypeTwo {
+    margin: 3px 0 0 0; }
+
+  .projectDeetsWrap,
+  .projectHoverBg,
+  .proShawdow,
+  h1.summitProjectLogo,
+  h5.tpyeOfProject,
+  .proBtnWrap {
+    opacity: 1;
+    visibility: visible; }
 
   /* 
   ====================================================== Blog Index

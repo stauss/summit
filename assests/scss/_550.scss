@@ -162,17 +162,26 @@ a.gLogo {
 }
 
 // client logo wrap
-h2.clientProjectLogo {
-	top: -15px;
-}
+h2.clientProjectLogo { 
+ top: -15px; 
+} 
 
-
-// on hover animation
-// this padding is to create the nice hover bow that shrinks
+// on hover animation | this padding is to create the nice hover bow that shrinks
 li a:hover .projectDeetsWrap {
 	padding: 10px;
 }
 
+// add the border to the hover background box
+// has to be on hover or it will always have a border and look 1px off
+li a:hover .projectHoverBg {
+	border: solid 1px rgba(255,255,255,.2);
+}
+
+
+// Show Project btn
+.projectBtn {
+	@include disBlock(); // hide everything
+}
 
 
 

@@ -16,22 +16,14 @@ page
 ====================================================== Turn off non mobile els
 */
 
-// 550
-.onLittle {
-	display: none;
-	visibility: hidden;
+.onLittle, //---------------------------| 550    
+.onSmall,  //---------------------------| 650  
+.onMed     //---------------------------| 750  
+{ 
+	display: none; 
+	visibility: hidden; 
 	opacity: 0;
 }
-
-// 650
-.onSmall {
-	display: none;
-	visibility: hidden;
-	opacity: 0;
-}
-
-
-
 
 /* 
 ====================================================== Index Page
@@ -107,13 +99,17 @@ page
 
 //-----------------------------------| Project Hover Backgrounds
 
+// transision syles
+.projectDeetsWrap, .projectHoverBg, h1.summitProjectLogo, h2.clientProjectLogo, h5.tpyeOfProject, .proBtnWrap {
+	@include simpleTransAni(all, .4s, ease-in-out);
+}
+
 
 // div that holds all the hover content
 .projectDeetsWrap {
 	@include sizeEl(inherit, left, 100%, 100%);
 
 	//@include backgroundImg('proHoverBase.png', repeat, top center);
-	@include simpleTransAni(all, .4s, ease-in-out);
 
 	-webkit-box-shadow: inset 0 0 43px rgba(1,1,1,.2);
 	-moz-box-shadow:inset 0 0 43px rgba(1,1,1,.2);
@@ -135,15 +131,15 @@ page
 	@include backgroundImg('proHoverBase.png', repeat, top center);
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0,0,0,.2);
+	background-color: rgba(0,0,0,.4);
 	-webkit-box-shadow: inset 0 0 43px rgba(1,1,1,.4);
 	-moz-box-shadow:inset 0 0 43px rgba(1,1,1,.4);
 	box-shadow: inset 0 0 43px rgba(1,1,1,.4);
-	border: solid 1px rgba(255,255,255,.2);
-	@include simpleTransAni(all, .6s, ease-in-out);
 	position: relative;
 	overflow: hidden;
 }
+
+
 
 // adds noise to the backgrouns
 .projectHoverBg:before {
@@ -169,6 +165,8 @@ page
 	background-position: -344px -50px;
 	right: 0px;
 }
+
+
 
 
 
@@ -235,6 +233,7 @@ page
 // using the element for overiting base styles (h1.summitProjectLogo)
 h1.summitProjectLogo, h2.clientProjectLogo, h5.tpyeOfProject{
 	position: absolute; // position absolute for layout
+	left: 0;
 	color: $w;
 }
 
@@ -242,11 +241,32 @@ h1.summitProjectLogo, h2.clientProjectLogo, h5.tpyeOfProject{
 .summitProjectLogo, .tpyeOfProject, .projectBtn {
 	//@include disNone(); // hide everything
 	position: absolute; // position absolute for layout
-	font-family: 'Lato', sans-serif, Arial, serif; font-weight: 400; 
+	font-family: 'Lato', sans-serif, Arial, serif; font-weight: 400;
+	
+	visibility: hidden;
+	opacity: 0;
 }
 
 
-//-----------------------------------| Type of project
+
+//-----------------------------------| Summit logo
+
+h1.summitProjectLogo {
+	@include sizeEl(block, none, 100%, 50px);
+}
+
+// the logo itself
+h1.summitProjectLogo span {
+	@include spritePos('sprite.png', -130px -49px);
+	@include sizeEl(block, none, 50px, 50px);
+	overflow: hidden;
+	text-indent: -99999px;
+	margin: 0 auto;
+}
+
+
+
+//-----------------------------------| Client Logo
 
 // show the client project
 .clientProjectLogo {
@@ -263,15 +283,16 @@ h1.summitProjectLogo, h2.clientProjectLogo, h5.tpyeOfProject{
 // text desribing what type of project
 h5.tpyeOfProject {
 	width: 100%;
-	top: 230px;
 	text-align: center;
-	text-shadow: -2px 1px 8px rgba(2,2,2,.45);
+
+	//text-shadow: -2px 1px 8px rgba(2,2,2,.45);
+	
 	font-weight: 100 !important;
 
-	color: transparent;
-   	text-shadow: 0 0 5px rgba(255,255,255, 1);
+	color: $w;
+	//color: transparent;
+   	//text-shadow: 0 0 5px rgba(255,255,255, 1);
 
-   	@include simpleTransAni(all, .6s, ease-in-out);
 
 	font-family: 'Lato', sans-serif, Arial, serif; font-weight: 400; 
 }
@@ -279,19 +300,30 @@ h5.tpyeOfProject {
 // type hover state | Focus in
 li a:hover h5.tpyeOfProject {
 	color: $w;
-	text-shadow: 0 0 0 rgba(255,255,255,0);
+	//text-shadow: 0 0 0 rgba(255,255,255,0);
 }
+
+
+
 
 
 // all lines in the type 
 h5.tpyeOfProject span {
 	@include sizeEl(block, left, 100%, 100%);
-	letter-spacing: .4em;
+
+	//letter-spacing: .2em;
+
+	font-size: .9em;    // ------------------------------------------------------------------- Watch this on mobile / tab and other browsers
+
 	padding: 0 0 6px 0;
+
+	padding: 0 0 0 0;
+
 	font-weight: 100 !important; 
 }
 
-
+// two bottom spans to fix ledding
+//.proTypePluls, .proTypeTwo { margin: -3px 0 0 0;}
 
 //-----------------------------------| Project Button
 

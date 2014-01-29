@@ -4,23 +4,6 @@
 
 ============================================================ */
 
-
-
-
-
-
-// the actual hover state
-li a:hover .projectDeetsWrap, 
-li a:hover .projectHoverBg, 
-li a:hover .proShawdow  {
-	opacity: 1;
-	visibility: visible;
-}
-
-
-
-
-
 // els that turn on at 650
 .onSmall {
 	display: block;
@@ -136,6 +119,15 @@ li.footBlog     { top: 100px; left: 386px; }
 }
 
 
+
+
+
+
+
+
+
+
+
 /* 
 ====================================================== Home Page
 */
@@ -144,6 +136,73 @@ li.footBlog     { top: 100px; left: 386px; }
 	@include sizeEl(block, left, 33.333333333%, 280px);
 
 }
+
+// hide the hover bg
+// .projectHoverBg {
+// 	opacity: 1;
+// 	visibility: visibility;
+// }
+
+.projectHoverBg, .proBtnWrap, h1.summitProjectLogo, h5.tpyeOfProject  {
+	opacity: 0;
+	visibility: none;
+}
+
+
+// display logo and tpye of project
+//h1.summitProjectLogo, h5.tpyeOfProject { opacity: 1; visibility: visible; }
+
+
+// Hover state's
+li a:hover .projectDeetsWrap, 
+li a:hover .projectHoverBg, 
+li a:hover .proShawdow,
+li a:hover h1.summitProjectLogo,
+li a:hover h5.tpyeOfProject,
+li a:hover .proBtnWrap,
+{
+	opacity: 1;
+	visibility: visible;
+}
+
+// add more padding onto the hover animation
+li a:hover .projectHoverBg { padding: 15px; }
+
+// position all thumb elements
+h1.summitProjectLogo {    top: 35px; }  // s logo
+h2.clientProjectLogo {    top: 17px; } // client logo
+h5.tpyeOfProject     {   top: 140px; } // type of pro
+.proBtnWrap          { bottom: 45px; } // btn
+
+
+// make type smaller 
+// type on this site needs to be looked at and coded correctly
+h5.tpyeOfProject span {
+	font-size: 10px !important;
+	letter-spacing: .2em;
+}
+// tighten up the leading
+// this is the + and the last word
+.proTypePluls, .proTypeTwo { margin: -4px 0 0 0; }
+
+
+
+//-----------------------------------| Projects
+
+// the client logo itself
+//h2.clientProjectLogo span { background-size: 700px 480px; } // resize the background logo sprite to full size
+
+
+
+
+// Featured Project Thumbnails |---------------------------------------------
+
+
+.featuredProject1 > a { background: url(#{$projectDir}#{$project1Folder}#{$thumb}); } // babkchound thumb | dynamic
+.featuredProject2 > a { background: url(#{$projectDir}#{$project2Folder}#{$thumb}); } // abkchound thumb | dynamic
+
+
+
 
 
 /* 

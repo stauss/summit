@@ -59,9 +59,34 @@ h2.clientProjectLogo span {
 
 // this is where the image gets swapped out 
 
-.featuredProject1 > a { background: url(#{$projectDir}#{$project1Folder}#{$tThumb}); } // abkchound thumb | should be dynamic
-
+.featuredProject1 > a { background: url(#{$projectDir}#{$project1Folder}#{$tThumb}); } // abkchound thumb | dynamic
+.featuredProject2 > a { background: url(#{$projectDir}#{$project2Folder}#{$tThumb}); } // abkchound thumb | dynamic
 
 // Featured Project Client Logos |---------------------------------------------
 
-.featuredProject1 h2.clientProjectLogo span { background-position: 10px 15px; } // client logo position
+// client logo position
+.featuredProject1 h2.clientProjectLogo span { background-position: $p1LogoPos ; }
+.featuredProject2 h2.clientProjectLogo span { background-position: $p2LogoPos ; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
