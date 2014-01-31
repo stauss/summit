@@ -1,0 +1,73 @@
+
+<footer class="gFoot">
+  <div class="footTop nonM onSmall">
+    <div class="center">
+      <ul class="footSocial">
+        <li><a href=""><span>Facebook</span><i class="fa fa-facebook"></i></a></li>
+        <li><a href=""><span>Twitter</span><i class="fa fa-twitter"></i></a></li>
+        <li><a href=""><span>Pintrest</span><i class="fa fa-pinterest"></i></a></li>
+        <li><a href=""><span>Instagram</span><i class="fa fa-instagram"></i></a></li>
+        <li><a href=""><span>Email</span><i class="fa fa-envelope-o"></i></a></li>
+      </ul>
+      <div class="footSignUpWrap"><span>newsletter</span>
+        <form method="post" action="" class="darkInputs">
+          <input type="input" placeholder="Email Address"/>
+          <input type="submit" value="Sign Up" class="greenSubmit"/>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="footMid">
+    <h2 class="offSmall"><span class="offSmall">Big Ideas for Great Brands</span></h2>
+    <div class="footLinkWrap nonM onSmall">
+      <nav>
+        <ul>
+          <li class="footWork"><a href="">Work</a></li>
+          <li class="footServices"><a href="">Services</a></li>
+          <li class="footSummit"><a href="">Summit Projects</a></li>
+          <li class="footContact"><a href="">Contact</a></li>
+          <li class="footBlog"><a href="">Blog</a></li>
+        </ul>
+      </nav>
+    </div><a href="#">
+      <address>101.5 Oak St. Hood River, OR</address></a><a href="tel:" class="footTel">541.399.4683</a>
+  </div>
+  <div class="footBottom"><a href="test" class="footCenterLogo"><span>Summit Projects</span></a><span class="offSmall">© Copyright 2014</span><a href="#" class="legal"> 
+      <div class="legalFootWrap"><span class="onSmall">© Copyright Summit Projects 2014 | </span><span>Privacy policy</span></div></a></div>
+</footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+  window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.10.2.min.js"><\/script>')
+  
+</script>
+<script src="assests/js/vendor/menu.js"></script>
+<script src="assests/js/main.js"></script>
+<script>
+  $(document).ready(function() {
+  
+      //Mobile Nav Logic
+      var $menuIcon = $('#menuIcon'),
+          $gNav = $('.gNav');
+          
+      $menuIcon.on('click', function(){
+      
+          // if mobile nav is not on
+          if(!$gNav.hasClass('on')){
+              $gNav.addClass('on');
+          }
+          else {
+              $gNav.removeClass('on');
+          }
+          
+      });
+      
+      
+  });
+  
+  //- $(document).ready(function() {
+  //-   $('#simple-menu').sidr();
+  //- });
+  
+  
+  
+</script>

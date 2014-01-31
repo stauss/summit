@@ -118,6 +118,8 @@ li.footBlog     { top: 100px; left: 386px; }
 	margin: 0 auto;
 }
 
+// hide triangle logo
+.footCenterLogo { display: none; }
 
 
 
@@ -220,31 +222,86 @@ h5.tpyeOfProject span {
 .featuredProject16 > a { background: url(#{$projectDir}#{$project16Folder}#{$thumb}); }
 
 
-/* 
-====================================================== Blog Index
-*/
 
-// main sidebar wrap
-.sbWrap {
-	background: url($sidebarNewsBg);
-	border-left: solid 1px $gBorder;
-}
+
+
+
+
+
+
+
+//==========================================================================================================| Blog Index |========|
+
 
 // blog hero
-.blogHero {
-	height: 300px;
+.blogHero { height: 300px; }
+
+// remove padding on top because crumbs are now showing
+.postWrap { width: 65%; padding: 0 15px 15px 15px; }
+
+
+//================================================================================================================================|
+
+
+
+
+
+//=========================================================================================================| Single Post |========|
+
+
+// keep padding for single post
+.singlePostWrap { padding:15px; }
+
+.sbWrap.singleSidebarWrap { width: 35%; padding: 15px 15px 0 0; }
+
+
+//================================================================================================================================|
+
+
+
+
+
+
+//==========================================================================================================| PDP Page |==========|
+
+
+//----------------------------------------------------------------| PDP Hero
+// set new maxW and maxH
+.pdpHero, .pdpHeroContentWrap { min-height: 520px; max-height: 650px; }
+
+//----------------------------------------------------------------| PDP Hero!
+
+
+// the custom brand image wrap
+.pdpElsCenterWrap .pdpBrandImg  {
+	display: block;
+	height: 320px;
+	width: 380px;
+	background-size: 240px 325px;
+	left: -150px;
 }
 
-// blog post wrap
-.postWrap {
-	@include sizeEl(block, left, 65%, auto);
-}
+//================================================================================================================================|
 
-// blog side bar
-.blogSb {
-	@include sizeEl(inline-block, left, 100%, auto);
-	position: relative;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // news side bar
 // .newsSb {

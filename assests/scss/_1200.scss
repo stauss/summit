@@ -6,7 +6,17 @@
 
 
 .content {
-	display: block;
-	width: 1224px;
-	margin: 0 auto;
+	width: 1200px;
 }
+
+
+
+//==========================================================================================================| Blog Index |========|
+// remove padding on left to alisg site
+.postWrap {
+	padding: 0 15px 15px 0px;
+}
+
+
+
+.sbWrap.sbWrapLeft  { padding:0px 0px 0px 0px; }

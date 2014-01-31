@@ -35,6 +35,7 @@ elements
 	@include sizeEl(block, left, 100%, 50px);
 	position: relative;
 	background-color: $headBg;
+	z-index: 1;
 }
 
 // main branding
@@ -95,21 +96,35 @@ elements
 */
 
 // bread crumbs
-.crumbs {
-	@include sizeEl(block, left, auto, 20px);
-	overflow: hidden;
-	padding: 6px 4px 4px 10px;
+// .crumbs {
+// 	@include sizeEl(block, left, auto, 20px);
+// 	overflow: hidden;
+// 	padding: 6px 4px 4px 10px;
+// }
+
+// // bread crumb links
+// .crumbs a {
+// 	display: inline-block;
+// 	float: left;
+// 	font-size: .5em;
+// 	letter-spacing: .08em;
+// 	color: $crumbs;
+// 	padding: 0 0 0 2px;
+// }
+
+
+
+/* 
+========================================================================================================================== Hero
+*/
+
+.fullScreenHero {
+	@include sizeEl(block, left, 100%, 100%);
+	@include cover();
+	position: fixed;
+	z-index: -1;
 }
 
-// bread crumb links
-.crumbs a {
-	display: inline-block;
-	float: left;
-	font-size: .5em;
-	letter-spacing: .08em;
-	color: $crumbs;
-	padding: 0 0 0 2px;
-}
 
 
 /* 

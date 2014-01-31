@@ -5,7 +5,11 @@
 ============================================================ */
 
 
-
+.onMed {
+	display: block;
+	visibility: visible;
+	opacity: 1;
+}
 
 
 
@@ -42,8 +46,6 @@ h5.tpyeOfProject span { font-size: 12px !important; letter-spacing: .25em; }
 
 
 
-
-
 // Featured Project Client Logos |---------------------------------------------
 
 // client logo position
@@ -64,31 +66,46 @@ h5.tpyeOfProject span { font-size: 12px !important; letter-spacing: .25em; }
 .featuredProject15 h2.clientProjectLogo span { background-position: $p15LogoPosShift ; } // Logo Project 15
 .featuredProject16 h2.clientProjectLogo span { background-position: $p16LogoPosShift ; } // Logo Project 16
 
-/* 
-====================================================== Blog Index
-*/
-
-// blog post wrap
-.postWrap {
-	@include sizeEl(block, left, 45%, auto);
-}
-
-// news side bar
-.newsSb {
-	@include sizeEl(block, left, 50%, auto);
-}
-
-// blog side bar
-.blogSb {
-	@include sizeEl(block, right, 50%, 100%);
-	// Make side bar 100% of wrap
-	position: absolute;
-}
 
 
-.sbWrap {
-	width: 55%;
-}
+
+//==========================================================================================================| Blog Index |========|
+
+
+// resize muti post wrap
+.mutiPostWrap { width: 45%; }
+
+// featured post image
+.postFeaturedImgWrap { height: 180px; }
+
+// resize sidebar wrapper to include news sidebar
+.sbWrap { width: 55%; }
+
+// dark side bar
+.blogSb.darkSb { float: right; width: 45%;}
+
+
+//================================================================================================================================|
+
+
+
+
+//=========================================================================================================| Single Post |========|
+
+
+// keep padding for single post
+.singlePostWrap { padding:15px; }
+
+// mian single post image
+.singlePostWrap .postFeaturedImgWrap { height: 200px; }
+
+.singleSidebarWrap .blogSb { width: 100%; }
+
+
+//================================================================================================================================|
+
+
+
 
 /* 
 ====================================================== Blog Archive
@@ -115,3 +132,70 @@ h5.tpyeOfProject span { font-size: 12px !important; letter-spacing: .25em; }
 	top: 6px;
 	left: 0px;
 }
+
+
+
+
+
+
+//==========================================================================================================| PDP Page |==========|
+
+
+// pdp header sizes
+.pdpHero, .pdpHeroContentWrap { min-height: 700px !important; max-height: 1024px;}
+
+
+//----------------------------------------------------------------| PDP Body
+
+// resize so the grid can be 2 by 2
+div.pdpImgPrev { height: 350px; }
+
+// elementwrap
+.pdpProjectEls { height: 500px; }
+
+// elemtent center 
+.pdpProjectEls > .pdpElsCenterWrap { width: 450px; }
+
+
+// brand img / screen shot ---------------------------------
+// the custom brand image wrap
+.pdpElsCenterWrap .pdpBrandImg  {
+	display: block;
+	height: 400px;
+	width: 320px;
+	background-size: 300px 406px;
+	left: -170px;
+}
+
+// Screen Shopt
+.pdpElsCenterWrap .pdpScreenShot {
+	background-size: 420px 345px;
+	height: 500px;
+	width: 450px;
+}
+// --------------------------------- brand img / screen shot!
+
+
+//----------------------------------------------------------------| PDP Body!
+
+
+
+//================================================================================================================================|
+
+
+
+.stickyArticleNav .centerStickyNav {
+	position: fixed;
+}
+
+
+.stickyShow {
+	display: block;
+}
+
+.stickyHide {
+	display: block;
+}
+
+
+

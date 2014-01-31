@@ -365,9 +365,15 @@ overflow: visible; } } }
     background: transparent url(#{$marqueDir}#{$filename}) $repeat $position;
 }
 
-@mixin projectImg($filename,$repeat,$position) {
-    background: transparent url(#{$projectDir}#{$filename}) $repeat $position;
+@mixin spiteImg($filename,$repeat,$position) {
+    background: transparent url(../#{$spriteDir}#{$filename}) $repeat $position;
 }
+
+// @mixin projectImg($filename,$repeat,$position) {
+//     background: transparent url(#{$projectDir}#{$filename}) $repeat $position;
+// }
+
+
 
 // Sprite Mixin
 @mixin spritePos($filename, $position) {

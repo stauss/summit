@@ -22,7 +22,9 @@ textarea:focus, input:focus{
 
 
 // dark inputs 
-.darkInput {
+.darkInputs input[type='search'],
+.darkInputs input[type='input'], 
+.darkInputs input[type='textarea']{
   width: 100%;
   background-color: $darkInputBackground !important;
   border: 1px solid $darkInputBorder;
@@ -38,7 +40,7 @@ textarea:focus, input:focus{
 }
 
 // on focus change bg and color
-input.darkInput:focus {
+.darkInputs input:focus {
   border: 1px solid $darkInputBorder;
   background-color: $darkInputBackground;
   color: $w;
@@ -46,39 +48,24 @@ input.darkInput:focus {
 
 
 // html5 place holder styling
-.darkInput::-webkit-input-placeholder {
+.darkInputs input::-webkit-input-placeholder {
   color: $darkInputColor;
   position: relative;
   @include simpleTransAni(all, .3s, ease-in-out);
 }
 
-input.darkInput:focus::-webkit-input-placeholder {
+.darkInputs input:focus::-webkit-input-placeholder {
    color: $darkInputColor;
    position: relative;
    color: $w;
 }
 
-
-
-
-.greenSubmit {
+input[type='submit'] {
   display: block;
   background-color: $bGreen;
   color: $w;
   border: none;
-  padding: 8px 12px 8px 12px;
-}
-
-
-
-
-
-
-
-// search input
-.darkInput::-webkit-input-placeholder {
-   color: $darkInputColor;
-   position: relative;
+  padding: 8px 12px 9px 12px;
 }
 
 

@@ -229,11 +229,6 @@ li a:hover .projectHoverBg {
 
 //-----------------------------------| Sidebar Archives
 
-// main sidebar wrap
-.sbWrap {
-	@include sizeEl(block, right, 35%, 100%);
-	margin: -20px 0 0 0;
-}
 
 // blog side bar
 .blogSb {
@@ -243,31 +238,62 @@ li a:hover .projectHoverBg {
 
 
 
-
-// /* 
-// ====================================================== Blog Index
-// */
-
-// .mobileCrumbs {
-// 	display: none;
-// }
-
-// // blog posts
-// .blogIndexPostWrap {
-// 	@include sizeEl(inline-block, left, 65%, inherit);
-// }
-
-// // blog hero
-// .blogHero {
-// 	height: 250px;
-// }
+//==========================================================================================================| PDP Page |==========|
 
 
-// /* 
-// ====================================================== Blog Archive
-// */
 
-// .blogArchivePostWrap {
-// 	width: 65%;
-// }
+
+//----------------------------------------------------------------| PDP Hero
+
+
+// set new maxW and maxH of wrap 
+.pdpHero, .pdpHeroContentWrap { min-height: 400px; max-height: 550px; }
+
+// cetner wrap of elements
+.pdpProjectEls > .pdpElsCenterWrap { width: 300px; }
+
+// size up background and visually center
+.pdpElsCenterWrap .pdpScreenShot { background-size: 300px 246px; right: -18px; }
+
+
+//----------------------------------------------------------------| PDP Hero!
+
+
+
+
+//----------------------------------------------------------------| PDP Body
+
+
+// pdp content -------------------------------------------
+// image wrappers 2 col layout
+.galleryThumbImgWrap {
+	width: 48%;
+	margin: 15px 1% 0;
+}
+// ------------------------------------------- pdp content!
+
+
+// slogan header -------------------------------------------
+// make taller and create for visual white space
+.pageSlogan h2 { height: 60px; padding: 35px 0 0 0; }
+
+// move sprite to show bigger slogan
+.pageSlogan h2 em { width: 418px; background-position: 16px -195px;}
+
+// less padding on the bottom evens out the edits from the top
+.pageSlogan h6 { padding: 0 0 18px 0; }
+// ------------------------------------------- slogan header!
+
+
+//----------------------------------------------------------------| PDP Body!
+
+
+
+
+//================================================================================================================================|
+
+
+
+
+
 

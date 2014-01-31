@@ -14,10 +14,16 @@ projects
 // Projects Directory
 $projectDir: '../../projects/';
 
-// Background image vars
+// Thumb Project Vars Vars
 $mThumb: '/mobileThumb.jpg';   // mobile 
 $tThumb: '/tabletThumb.jpg';   // mobile / small tablet
-$thumb: '/thumb.jpg';   //  desktop
+$thumb: '/thumb.jpg';          //  desktop
+
+// Slider / PDP Image Vars
+$brandImg: '/brandImg.png';    // custom brand image
+$screenShots: '/screenShots.png';       // slider background
+$slideBg: '/slideBg.jpg';       // slider background
+
 
 //-----------------------------------------------------------------------------------------------------------|
 
@@ -30,11 +36,11 @@ $thumb: '/thumb.jpg';   //  desktop
 
 $project1Folder   : 'test1816';    // project  1 | Test Project 1
 $project2Folder   : 'testvega';    // project  2 | Test Project 2
-$project3Folder   : 'folderName';  // project  3 |
+$project3Folder   : 'testsvelte';  // project  3 |
 $project4Folder   : 'folderName';  // project  4 |
 $project5Folder   : 'folderName';  // project  5 |
 $project6Folder   : 'folderName';  // project  6 |
-$project7Folder   : 'folderName';  // project  7 |
+$project7Folder   : 'awesome';  // project  7 |
 $project8Folder   : 'folderName';  // project  8 |
 $project9Folder   : 'folderName';  // project  9 |
 $project10Folder  : 'folderName';  // project 10 |
@@ -72,16 +78,16 @@ $p5LogoPosShift     : -188px 0px ;
 $p6LogoPos          : -122px 15px ;
 $p6LogoPosShift     : -188px 0px ;
 
-$p7LogoPos          : -122px 15px ;
+$p7LogoPos          : -122px 15px;
 $p7LogoPosShift     : -188px 0px ;
 
-$p8LogoPos          : -122px 15px ;
+$p8LogoPos          : -122px 15px;
 $p8LogoPosShift     : -188px 0px ;
 
-$p9LogoPos          : -122px 15px ;
+$p9LogoPos          : -122px 15px;
 $p9LogoPosShift     : -188px 0px ;
 
-$p10LogoPos          : -122px 15px ;
+$p10LogoPos          : -122px 15px;
 $p10LogoPosShift     : -188px 0px ;
 
 $p11LogoPos          : -122px 15px ;
@@ -124,7 +130,7 @@ h2.clientProjectLogo span {background: url(#{$projectDir}/_thumb.png);}
 
 
 
-// Project Thumbs | 450 / 650 |-----------------------------------------------------------------------------|
+// Project Thumbs | 450 / 650 |------------------------------------------------------------------------------|
 
 .featuredProject1  > a { background: url(#{$projectDir}#{$project1Folder}#{$mThumb}) ; }
 .featuredProject2  > a { background: url(#{$projectDir}#{$project2Folder}#{$mThumb}) ; }
@@ -144,3 +150,23 @@ h2.clientProjectLogo span {background: url(#{$projectDir}/_thumb.png);}
 .featuredProject16 > a { background: url(#{$projectDir}#{$project16Folder}#{$mThumb}); }
 
 //-----------------------------------------------------------------------------------------------------------|
+
+
+
+
+// PDP Site Screenshot |-------------------------------------------------------------------------------------|
+
+.pdpElsCenterWrap .pdpScreenShot { background: url(#{$projectDir}#{$project1Folder}#{$screenShots}) ; }
+
+//-----------------------------------------------------------------------------------------------------------|
+
+
+
+// PDP Site Screenshot |-------------------------------------------------------------------------------------|
+
+.pdpElsCenterWrap .pdpBrandImg { background: url(#{$projectDir}#{$project1Folder}#{$brandImg}) ; }
+
+//-----------------------------------------------------------------------------------------------------------|
+
+
+

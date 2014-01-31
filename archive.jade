@@ -1,330 +1,71 @@
-doctype
-//if lt IE 7
-  <html class="no-js lt-ie9 lt-ie8 lt-ie7">
-//if IE 7
-  <html class="no-js lt-ie9 lt-ie8">
-//if IE 8
-  <html class="no-js lt-ie9">
-//[if gt IE 8]><!
-html.no-js
-  //<![endif]
-  head
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    title
-    meta(name='description', content='')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='assests/css/style.css')
-    link(rel='stylesheet', href='assests/css/icons.css')
+extends layout
+    
+block content
 
-    // Google Font
-    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lato:400,700')
-    //-script(src='javascripts/vendor/modernizr-2.6.2.min.js')
-  body
-    //if lt IE 7
-      p.browsehappy
-        | You are using an <strong>outdated</strong> browser.
-        | Please <a href="http://browsehappy.com/">upgrade your browser</a>
-        | to improve your experience.
 
-    header.gHead           
-        div.gNav
-
-            a.gLogo(href="#")
-                h1 Summit Projects
-
-            i(class="fa fa-search offLittle")
-            a(href="#", id="menuIcon", class="menuIcon offLittle")
-
-            div.menuWrap
-                nav(role="navigation")
-                    div.mobileMenuHead
-                        h1 
-                            a(href="#") Summit Projects
-                        h2 Big Ideas for Great Breands
-                    ul
-                        li.firstLink
-                            a(href="#") Work
-                        li.secondLink
-                            a(href="#") Services
-                        li.thirdLink
-                            a(href="#") Contact
-                        li.forthLink
-                            a(href="#") Blog
-                        li.offLittle
-                            a(href="#") Newsletter Signup
-
-    div.blogHero
+    //- Bread Crumbs
+    nav.gCrumbs.wBg.borderB.mobileCrumbs.offSmall
+        ul
+            li
+                a(href="#") Blog  
+            li
+                span /
+            li 
+                a(href="#") Web Design
+            li
+                span /
+            li
+                 a(href="#")  Something Awesome
 
     div.content
 
         //- Start All Content
         div.wrap
+            
             //- Bread Crumbs
-            div.crumbs
-                    a(href="#") Home / 
-                    a(href="#") Big Ideas Blog
-
-            //- Creates padding / fixes cols
-            div.innerWrap
-
-                div.sbWrap.onLittle
-                    //- Main Sidebar
-                    aside.blogSb
-                        div.innerSbWrap
-
-                            //- Search Section
-                            div.blogSbSearchWrap
-                                h6 Search Summit Blog
-                                div
-                                    form(method="get", action="")
-                                        input.darkInput.sbSearch(type='search', placeholder="Search")
-                                        input.sbSearchInput.greenSubmit(type='submit', value='Search')
-
-                            //- Archive Section
-                            div.archiveListWrap
-                                h6 Blog Post Archives
-                                ul.sbLinkList
-                                    li
-                                        a(href="#") December
-                                    li
-                                        a(href="#") November
-                                    li
-                                        a(href="#") October
-
-                                a.sbSeeAllLink(href="#") View all Archives
-
-                            //- Categories Section
-                            div.categoriesListWrap
-                                h6 Categories
-                                ul.sbLinkList
-                                    li
-                                        a(href="#") Web Design
-                                    li
-                                        a(href="#") Web Development
-                                    li
-                                        a(href="#") Technology
-
-                                a.sbSeeAllLink(href="#") View all Categories
-
-                            //- Sidebar Project Wrap
-                            div.sbProjectWrap
-                                div
-
-
-                //- wraps all posts
-                div.postWrap
-
-                    //- Blog Post
-                    section.postSection
-                        //- main post image with bg cover
-                        a(href="#")
-                            div(class="postImgWrap", style="background-image: url('assests/img/delete/blogImg.jpg');")
-                        div.postTextWrap
-                            div.postDate
-                                time 1 / 6 / 2014
-                                a(href="http://johnsplace.com", rel="author") Author: 
-                                    span Caleb Stauss
-                            article
-                                a(href="#")
-                                    h2 Curabb itur blandit tem abipus portt itor.
-                                p Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                                a(href="#", class="btn btnG ") Read More
-                                a(href="#", class="btn btnB Share") Share This
-
-                    //- Blog Post
-                    section.postSection
-                        //- main post image with bg cover
-                        a(href="#")
-                            div(class="postImgWrap", style="background-image: url('assests/img/delete/blogImg.jpg');")
-                        div.postTextWrap
-                            div.postDate
-                                time 1 / 6 / 2014
-                                a(href="http://johnsplace.com", rel="author") Author: 
-                                    span Caleb Stauss
-                            article
-                                a(href="#")
-                                    h2 Curabb itur blandit tem abipus portt itor.
-                                p Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                                a(href="#", class="btn btnG ") Read More
-                                a(href="#", class="btn btnB Share") Share This
-
-                    //- Blog Post
-                    section.postSection
-                        //- main post image with bg cover
-                        a(href="#")
-                            div(class="postImgWrap", style="background-image: url('assests/img/delete/blogImg.jpg');")
-                        div.postTextWrap
-                            div.postDate
-                                time 1 / 6 / 2014
-                                a(href="http://johnsplace.com", rel="author") Author: 
-                                    span Caleb Stauss
-                            article
-                                a(href="#")
-                                    h2 Curabb itur blandit tem abipus portt itor.
-                                p Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                                a(href="#", class="btn btnG ") Read More
-                                a(href="#", class="btn btnB Share") Share This
-
-                    //- Blog Post
-                    section.postSection
-                        //- main post image with bg cover
-                        a(href="#")
-                            div(class="postImgWrap", style="background-image: url('assests/img/delete/blogImg.jpg');")
-                        div.postTextWrap
-                            div.postDate
-                                time 1 / 6 / 2014
-                                a(href="http://johnsplace.com", rel="author") Author: 
-                                    span Caleb Stauss
-                            article
-                                a(href="#")
-                                    h2 Curabb itur blandit tem abipus portt itor.
-                                p Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                                a(href="#", class="btn btnG ") Read More
-                                a(href="#", class="btn btnB Share") Share This
-
-                    //- Blog Post
-                    section.postSection
-                        //- main post image with bg cover
-                        a(href="#")
-                            div(class="postImgWrap", style="background-image: url('assests/img/delete/blogImg.jpg');")
-                        div.postTextWrap
-                            div.postDate
-                                time 1 / 6 / 2014
-                                a(href="http://johnsplace.com", rel="author") Author: 
-                                    span Caleb Stauss
-                            article
-                                a(href="#")
-                                    h2 Curabb itur blandit tem abipus portt itor.
-                                p Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                                a(href="#", class="btn btnG ") Read More
-                                a(href="#", class="btn btnB Share") Share This
-
-                    //- Blog Pagination
-                    div.paginationWrap
-                        div.innerPagination
-                            ul
-                                li
-                                    a(href="#", class="prevArrow pageArrow")
-                                        span Prev
-                                div.pageNumWrap
-                                    div
-                                        li
-                                            a(href="#", class="activePageLink") 1
-                                        li
-                                            a(href="#") 2
-                                        li
-                                            a(href="#") 3
-                                        li
-                                            a(href="#") 4
-                                        li
-                                            a(href="#") 5
-                                li
-                                    a(href="#", class="nextArrow pageArrow")
-                                        span Next
-
-
-
-
-    footer.gFoot
-        div.footTop.nonM.onSmall
-            div.center
-                ul.footSocial
+            nav.gCrumbs.onSmall
+                ul
                     li
-                        a(href="")
-                            span Facebook
-                            i(class="fa fa-facebook")
+                        a(href="#") Blog  
                     li
-                        a(href="")
-                            span Twitter
-                            i(class="fa fa-twitter")
+                        span /
+                    li 
+                        a(href="#") Web Design
                     li
-                        a(href="")
-                            span Pintrest
-                            i(class="fa fa-pinterest")
+                        span /
                     li
-                        a(href="")
-                            span Instagram
-                            i(class="fa fa-instagram")
-                    li
-                        a(href="")
-                            span Email
-                            i(class="fa fa-envelope-o")
-                div.footSignUpWrap
-                    span newsletter
-                    input.darkInput(type='input', placeholder="Email Address")
-                    input.greenSubmit(type='submit', value='Sign Up')
-        div.footMid
-            h2.offSmall
-                span.offSmall Big Ideas for Great Brands
-            div.footLinkWrap.nonM.onSmall
-                nav
+                         a(href="#")  Something Awesome
+
+            h1 Summit Archives
+
+            //- wraps all posts
+            div.postWrap.fullPostResultsWrap
+                div.resultsWrapInner.border.toutShowdow
+                    //- Post Layout | includes pagination
+                    include templates/blog/archivelist.jade
+
+            //-div.sbWrap.onLittle 
+            div.sbWrap.singleSidebarWrap.sbWrapRight.onSmall
+                //- Main Sidebar
+                include templates/blog/sidebars/main.jade
+
+
+
+
+    div.paginationWrap.stickyArticleNav#singlePostArticleNav
+        div.innerPagination
+            div.stickyCenterWrap
+                div.centerStickyNav
                     ul
-                        li.footWork
-                            a(href="") Work
-                        li.footServices
-                            a(href="") Services
-                        li.footSummit
-                            a(href="") Summit Projects
-                        li.footContact
-                            a(href="") Contact
-                        li.footBlog
-                            a(href="") Blog
-            a(href="#")
-                address 101.5 Oak St. Hood River, OR
-            a.footTel(href="tel:") 541.399.4683
-        div.footBottom
-            span.offSmall © Copyright 2014
-            a.legal(href="#") 
-                div.legalFootWrap
-                    span.onSmall © Copyright Summit Projects 2014 | 
-                    span Privacy policy
-
-    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
-    script.
-      window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.10.2.min.js"><\/script>')
-
-    script(src='assests/js/vendor/menu.js')
-    script(src='assests/js/main.js')
-
-    script
-
-        $(document).ready(function() {
-
-            //Mobile Nav Logic
-            var $menuIcon = $('#menuIcon'),
-                $gNav = $('.gNav');
-
-            $menuIcon.on('click', function(){
-
-                // if mobile nav is not on
-                if(!$gNav.hasClass('on')){
-                    $gNav.addClass('on');
-                }
-                else {
-                    $gNav.removeClass('on');
-                }
-
-            });
-
-
-        });
-
-        //- $(document).ready(function() {
-        //-   $('#simple-menu').sidr();
-        //- });
+                        li
+                            a(href="#", class="prevArrow pageArrow")
+                                span Prev
+                        div.pageGridIcon
+                                li
+                                    a(href="#", class="gridIconBtn") Back To Projects
+                        li
+                            a(href="#", class="nextArrow pageArrow")
+                                span Next
 
 
 
-    //-script(src='javascripts/plugins.js')
-    //-script(src='javascripts/script.js')
-
-    //- Google Analytics: change UA-XXXXX-X to be your site's ID.
-    //-
-      script.
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X');ga('send','pageview');

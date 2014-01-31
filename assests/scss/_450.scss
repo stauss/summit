@@ -95,4 +95,21 @@ h2.clientProjectLogo span {
 .featuredProject14 h2.clientProjectLogo span { background-position: $p14LogoPos ; } // Logo Project 14
 .featuredProject15 h2.clientProjectLogo span { background-position: $p15LogoPos ; } // Logo Project 15
 .featuredProject16 h2.clientProjectLogo span { background-position: $p16LogoPos ; } // Logo Project 16
+
+
+
+
+
+//==========================================================================================================| PDP Page |==========|
+
+
+//----------------------------------------------------------------| PDP Hero
+// set new maxW and maxH
+.pdpHero, .pdpHeroContentWrap { min-height: 400px; max-height: 550px; }
+
+//----------------------------------------------------------------| PDP Hero!
+
+
+//================================================================================================================================|
+
  

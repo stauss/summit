@@ -1,0 +1,42 @@
+//- Main Sidebar
+aside.blogSb.darkSb
+    div.innerSbWrap
+
+        //- Search Section
+        section.sbSearch
+            a.sbSearchTriggerM#searchMobileTrigger(href="#") Search
+            // h6 Search Summit Blog
+            div.sbSearchWrap
+                form.darkInputs.searchForm(method="get", action="")
+                    input(type='search', placeholder="Search")
+                    input(type='submit', value='Search')
+
+        //-Archive Section
+        section.sbListWrap
+            h6 Blog Post Archives
+            ul
+                li
+                    a(href="#") December
+                li
+                    a(href="#") November
+                li
+                    a(href="#") October
+
+            a.sbViewAll(href="#") View all Archives
+
+        //- Categories Section
+        section.sbListWrap
+            h6 Categories
+            ul
+                li
+                    a(href="#") Web Design
+                li
+                    a(href="#") Web Development
+                li
+                    a(href="#") Technology
+
+            a.sbViewAll(href="#") View all Categories
+
+        //- //- Sidebar Project Wrap
+        //- section.sbToutWrap
+        //-     div

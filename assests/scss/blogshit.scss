@@ -1,0 +1,971 @@
+/* 
+====================================================== General Blog 
+*/
+
+
+// Main Post Wrap
+.postWrap {
+	@include sizeEl(block, left, 100%, auto);
+	padding: 0 10px;
+
+	background-color: $w;
+}
+
+.postWrap h2:hover {
+	color: $bGreen;
+}
+
+
+
+//-----------------------------------| Main Blog Sidebar |-----------------------------------\\
+
+// main sidebar wrap
+.sbWrap {
+	position: absolute;
+	right: 0px;
+	right: 0px;
+	height: 100%;
+}
+
+
+// Main Blog Sidebar
+.blogSb {
+	overflow: hidden;
+	height: 100%;
+	
+	// set min height or else on small pages the sidebar will be to small vert.
+	// min-height: 500px;
+
+	border-left: solid 1px #000000;
+	border-right: solid 1px #000000;
+
+	border-top: solid 1px $sidebarTopBorder;
+
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+// Main Blog Sidebar Inner Wrap
+.innerSbWrap {
+	overflow: hidden;
+	height: 100%;
+
+	background:$headBg url($sidebarBg);
+
+	border-left: solid 1px #000000;
+	border-right: solid 1px #000000;
+}
+
+// titles in the sidebar
+.innerSbWrap h6 {
+	@include sizeEl(inline-block, left, 100%, auto);
+	padding: 0 0 15px 0;
+	letter-spacing: .2em;
+	font-size: .5em !important;
+}
+
+// turn sidebar text white (General)
+.innerSbWrap ul, .innerSbWrap ul li, .innerSbWrap ul li a, .innerSbWrap h6, .innerSbWrap a {
+	color: $w;
+}
+
+
+
+//-----------------------------------| Blog Sidebar * Search Section
+
+
+
+// sb search section wrap
+.blogSbSearchWrap {
+	@include sizeEl(inline-block, right, 100%, auto);
+	overflow: hidden;
+	padding: 17px 10px 15px;
+	border-bottom: solid 1px $b;
+	@include simpleTransAni(all, .6s, ease-in-out);
+}
+
+// Sidebar Search icon
+.darkInput.sbSearch {
+	position: relative;
+	width: 100%;
+	background-color: $darkInputBackground;
+	border: 1px solid $darkInputBorder;
+	color: $darkInputColor;
+	font-style: italic;
+	font-size: .6em;
+	letter-spacing: .05em;
+	padding: 8px 0 8px 20px;
+	@include spritePos('sprite.png', -493px 9px);
+}
+
+// blog search from wrap
+.blogSbSearchWrap div {
+	display: block;
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+// submit btn
+.sbSearchInput {
+	position: absolute;
+	top: -2px;
+	right: -2px;
+	cursor: pointer;
+}
+
+
+
+//-----------------------------------| Blog Sidebar * Archives Section
+
+
+
+// archive sb wrapper
+.archiveListWrap {
+	@include sizeEl(inline-block, left, 100%, auto);
+	overflow: hidden;
+	padding: 17px 10px 15px;
+	border-bottom: solid 1px $b;
+	border-top: solid 1px $sidebarTopBorder;
+	@include simpleTransAni(all, .6s, ease-in-out);
+}
+
+// all side bar link / list bars
+.sbLinkList li {
+	@include sizeEl(block, left, 100%, auto);
+	@include simpleTransAni(all, .3s, ease-in-out);
+	background-color: $sidebarCatBg;
+	border: solid 1px $sidebarTopBorder;
+	margin-bottom: 5px;
+	padding: 0 0 0 6px;
+}
+
+// background color change on hover
+.sbLinkList li:hover {
+	background-color: #282828;
+}
+
+// all side bar link / list bars
+.sbLinkList li a {
+	text-transform: uppercase;
+	font-size: 9px !important;
+	letter-spacing: .2em;
+	color: $sidebarCatColor !important;
+	@include simpleTransAni(all, .3s, ease-in-out);
+}
+
+// hover animation
+.sbLinkList li:hover a {
+	color: #fff !important;
+}
+
+// // veiw all links
+a.sbSeeAllLink {
+	display: block;
+	width: 100%;
+	float: right;
+	text-align: right;
+	text-transform: uppercase;
+	font-size: .5em;
+	letter-spacing: .2em;
+	color: $sidebarCatColor !important;
+	padding: 5px 0 0 0;
+}
+
+
+
+//-----------------------------------| Sidebar Categories
+
+
+
+// sb cat wrap
+.categoriesListWrap {
+	@include sizeEl(block, left, 100%, auto);
+	padding: 17px 10px 15px;
+	border-bottom: solid 1px $b;
+	border-top: solid 1px $sidebarTopBorder;
+	overflow: hidden;
+	@include simpleTransAni(all, .3s, ease-in-out);
+}
+
+
+
+
+//-----------------------------------| Sidebar Project Wrap
+
+
+
+
+// project wrap sb
+.sbProjectWrap {
+	@include sizeEl(block, left, 100%, auto);
+	border-top: solid 1px $sidebarTopBorder;
+	padding: 17px 10px 15px;
+}
+
+// project itself
+.sbProjectWrap div {
+	@include sizeEl(block, left, 100%, 400px);
+	background-color: $sidebarCatColor;
+}
+
+// darken sb sections on hover
+.blogSbSearchWrap:hover, .archiveListWrap:hover, .categoriesListWrap:hover {
+	background-color: rgba(0, 0, 0, .15);
+}
+
+
+
+//-----------------------------------| News Blog Sidebar |-----------------------------------\\
+
+// // news sb wrap
+.newsSb {
+	@include sizeEl(inline-block, right, 100%, auto);
+	padding: 10px 10px 0 10px;
+}
+
+// // actual news post wrap
+.newsArticleWrap {
+	@include sizeEl(inline-block, left, 100%, auto);
+	border: solid 1px $gBorder;
+	padding: 10px;
+	background: $w;
+	margin: 0 0 10px 0;
+
+ 	box-shadow: 0px 1px 0px 0px rgba( 189, 185, 185, .4 );
+ 	@include simpleTransAni(all, .2s, ease-in-out);
+
+
+}
+
+.newsArticleWrap:hover {
+	box-shadow: none;
+}
+
+// wraps the cat / post date
+.newsPostDate {
+	@include sizeEl(inline-block, left, 100%, 20px);
+	border-bottom: solid 1px $gBorder;
+}
+
+// news text wrap | article
+.newsTextWrap {
+	@include sizeEl(inline-block, left, 100%, auto);
+	overflow: hidden;
+}
+
+// news cat / date
+.newsPostDate a, .newsPostDate time {
+	text-transform: uppercase;
+	font-size: .5em;
+	letter-spacing: .2em;
+}
+
+// news cat
+.newsPostDate a {
+	float: left;
+	padding: 2px 0 0 0;
+	color: $textColor;
+}
+
+// news date
+.newsPostDate time {
+	float: right;
+}
+
+// wraps all text to prevent 
+.newsTextWrap {
+	@include sizeEl(block, left, 100%, auto);
+	overflow: hidden;
+	padding: 10px 0 0 0;
+}
+
+
+
+
+
+
+/* 
+====================================================== Blog Index
+*/
+
+
+// blog marque image
+.blogHero {
+	@include sizeEl(block, left, 100%, 200px);
+	background-color: black;
+}
+
+// Main Post Wrap
+section.postSection {
+	@include sizeEl(block, left, 100%, auto);
+	border: solid 1px $gBorder;
+	margin: 0 0 10px 0;
+
+ 	box-shadow: 0px 1px 0px 0px rgba( 189, 185, 185, .4 );
+ 	@include simpleTransAni(all, .2s, ease-in-out);
+
+
+}
+
+section.postSection:hover {
+	box-shadow: none;
+}
+
+//-----------------------------------| Post Wrap Children
+
+// post image thumb
+.postImgWrap {
+	@include sizeEl(block, left, 100%, 165px);
+	@include cover();
+	background-color: $bA
+}
+
+// text wrap giving article padding
+.postTextWrap {
+	@include sizeEl(inline-block, left, 100%, auto);
+	padding: 5px 10px 10px 10px;
+}
+
+
+
+// date post / article author wrap
+.postDate {
+	@include sizeEl(block, left, 100%, auto);
+	border-bottom: solid 1px $gBorder;
+	padding: 0 0 5px 0;
+	position: relative;
+}
+
+// date posted
+.postDate time{
+	font-size: .6em;
+	letter-spacing: .05em;
+	top: 5px;
+	left: 0px;
+}
+
+// // author full link
+.postDate a  {
+	position: absolute;
+	font-size: .6em;
+	letter-spacing: .05em;
+	top: 5px;
+	right: 0px;
+	color: $textColor;
+}
+
+// // author name
+.postDate a span {
+	color: $bGreen !important;
+	font-weight: 600;
+	font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+//-----------------------------------| Pagination
+
+// Pagination Wrap
+.paginationWrap {
+	@include sizeEl(inline-block, left, 100%, 50px);
+	overflow: hidden;
+	position: relative;
+
+	border: solid 1px $gBorder;
+
+	background-color: $w;
+}
+
+.paginationWrap:hover { box-shadow: none; }
+
+
+// pagination ul
+.paginationWrap ul {
+	@include sizeEl(block, left, 100%, 100%);
+}
+
+
+
+
+// wrap all the numbers | centers them
+.pageNumWrap {
+	@include sizeEl(block, none, 200px, 50px);
+	margin: 0 auto;
+}
+
+// numbers wrap uesed to center things
+.pageNumWrap div {
+	@include sizeEl(block, none, 140px, 50px);
+	padding: 15px 0 0 0;
+	margin: 0 auto;
+}
+
+
+
+// pagination numbers 1-5
+.paginationWrap ul li a {
+	@include sizeEl(block, left, 20%, 10%);
+	font-size: .8em;
+	color: $textColor;
+	position: relative;
+	z-index: 1;
+}
+
+// arrows 
+.paginationWrap a.pageArrow {
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	overflow: hidden;
+
+}
+
+a.pageArrow span {
+	text-transform: uppercase;
+	position: absolute;
+	letter-spacing: .2em;
+}
+
+a.prevArrow span {
+	top: 14px;
+	right: 20px;
+}
+
+a.nextArrow span {
+	top: 14px;
+	left: 20px;
+}
+
+// prev and nex arrow pos / borders
+.paginationWrap a.prevArrow { top: 0; left: 0;  }
+.paginationWrap a.nextArrow { top: 0; right: 0; }
+
+// arrow images
+.paginationWrap a.pageArrow::after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 55px;
+	height: 50px;
+	top: 0px;
+	@include spritePos('sprite.png', 0px 0px);
+}
+
+
+.paginationWrap a.pageArrow.prevArrow::after { background-position: -296px -12px;  left: 0px; }
+.paginationWrap a.pageArrow.nextArrow::after { background-position: -346px -12px; right: 0px; }
+
+
+
+
+
+// grid icon
+// ---------------------------------------------
+
+.pageGridIcon {
+	@include sizeEl(block, none, 55px, 55px);
+	margin: 0 auto;
+	border-right: solid 1px $gBorder;
+	border-left: solid 1px $gBorder;
+	padding: 12px 0 0 0 ;
+}
+
+// grid icon link
+.pageGridIcon li a.gridIconBtn {
+	float: none;
+	margin: 0 auto;
+	width: 25px !important;
+	height: 25px !important;
+	overflow: hidden;
+	text-indent: -99999px;
+	@include spritePos('sprite.png', -408px -24px);
+}
+
+// ---------------------------------------------
+
+
+
+
+// arrows only
+// ---------------------------------------------
+.paginationWrap a.pageArrow.pageArrowOnly {
+	width: 55px;
+	height: 50px;
+	text-indent: -99999px;
+}
+
+.paginationWrap a.pageArrow.pageArrowOnly.prevArrow { border-right: solid 1px $gBorder; }
+.paginationWrap a.pageArrow.pageArrowOnly.nextArrow { border-left: solid 1px $gBorder; }
+
+// ---------------------------------------------
+
+
+
+
+
+
+// active page link
+a.activePageLink::before {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: -6px;
+	width: 19px;
+	height: 19px;
+	border: solid 2px $bGreen;
+	z-index: 0;
+
+	-ms-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+
+	// IE8 filter magic
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0.45);
+}
+
+
+
+
+
+
+
+
+
+
+
+// //-----------------------------------| Blog index posts
+
+// .blogIndexPostWrap {
+// 	padding: 10px;
+// }
+
+// // poast wraps | wraps index posts
+// .postWrap {
+// 	@include sizeEl(inline-block, left, 100%, auto);
+// 	border: solid 1px $gBorder;
+// 	background-color: $w;
+// 	margin: 0 0 15px 0;
+// }
+
+// // featured img on post
+// .postImgWrap {
+// 	@include sizeEl(inline-block, left, 100%, 165px);
+	
+// 	//---------------------------------------------------------------------------------------------------------- DELETE THIS
+// 	background-color: #ccc;
+// 	//---------------------------------------------------------------------------------------------------------- END DELETE THIS
+// }
+
+// // wraps index post text
+// .postTextWrap {
+// 	padding: 10px 10px 10px 10px;
+// }
+
+// // author and date bar
+// .postDate, .postDateSquare {
+// 	@include sizeEl(block, left, 100%, 25px);
+// 	border-bottom: solid 1px $gBorder;
+// 	position: relative;
+// 	margin: 0 0 10px 0;
+// }
+
+// // date posted
+// .postDate time, .postDateSquare time {
+// 	position: absolute;
+// 	font-size: .6em;
+// 	letter-spacing: .05em;
+// 	top: 6px;
+// 	left: 0px;
+// }
+
+// // author full link
+// .postDate a  {
+// 	position: absolute;
+// 	font-size: .6em;
+// 	letter-spacing: .05em;
+// 	top: 7px;
+// 	right: 0px;
+// 	color: $textColor;
+// }
+
+// // author name
+// .postDate a span {
+// 	color: $bGreen !important;
+// 	font-weight: 600;
+// 	text-decoration: underline;
+// 	font-style: italic;
+// }
+
+// // post type
+// .postWrap h2, .postWrap p {
+// 	@include sizeEl(inline-block, left, 100%, auto);
+// }
+
+
+// /* 
+// ==============================================================
+// */
+
+
+
+
+// /* 
+// ====================================================== Blog Index
+// */
+
+// // blog side bar
+// .blogSb {
+// 	@include sizeEl(inline-block, right, 35%, inherit);
+// 	border: solid 1px #000000;
+// 	margin: 0;
+// 	padding: 0;
+// 	overflow: hidden;
+// 	position: absolute;
+// 	top: 0px;
+// 	right: 0px;
+// 	height: 100%;
+// }
+
+// // inner wrap
+// .innerSbWrap {
+// 	background:$headBg url($sidebarBg);
+// 	border: solid 1px #000000;
+// 	overflow: hidden;
+// 	border-top: solid 1px $sidebarTopBorder;
+// 	height: 100%;
+// }
+
+// .innerSbWrap h6 {
+// 	padding: 0 0 15px 0;
+// }
+
+// .innerSbWrap ul, .innerSbWrap ul li, .innerSbWrap ul li a, .innerSbWrap h6, .innerSbWrap a {
+// 	color: $w;
+// }
+
+// .innerSbWrap h6 {
+// 	font-size: 10%;
+// 	letter-spacing: .2em;
+// }
+
+
+// //-----------------------------------| Sidebar Search
+
+// // sb search section wrap
+// .blogSbSearchWrap {
+// 	@include sizeEl(block, right, 100%, auto);
+// 	padding: 17px 10px 15px;
+// 	border-bottom: solid 1px $b;
+// 	@include simpleTransAni(all, .6s, ease-in-out);
+// }
+
+// // Sidebar Search icon
+// .darkInput.sbSearch {
+// 	position: relative;
+// 	width: 100%;
+// 	background-color: $darkInputBackground;
+// 	border: 1px solid $darkInputBorder;
+// 	color: $darkInputColor;
+// 	font-style: italic;
+// 	font-size: .6em;
+// 	letter-spacing: .05em;
+// 	padding: 8px 0 8px 20px;
+// 	@include spritePos('sprite.png', -493px 9px);
+// 	// background: url(../img/global/searchMag.png) no-repeat 8px 9px;
+// }
+
+// // blog search from wrap
+// .blogSbSearchWrap div {
+// 	display: block;
+// 	float: left;
+// 	position: relative;
+// 	width: 100%;
+// }
+
+// // submit btn
+// .sbSearchInput {
+// 	position: absolute;
+// 	top: -2px;
+// 	right: -2px;
+// 	cursor: pointer;
+// }
+
+// //-----------------------------------| Sidebar Archives
+
+// // archive sb wrapper
+// .archiveListWrap {
+// 	@include sizeEl(inline-block, left, 100%, auto);
+// 	padding: 17px 10px 15px;
+// 	border-bottom: solid 1px $b;
+// 	border-top: solid 1px $sidebarTopBorder;
+// 	@include simpleTransAni(all, .6s, ease-in-out);
+// }
+
+// // all side bar link / list bars
+// .sbLinkList li {
+// 	@include sizeEl(block, left, 100%, 26px);
+// 	@include simpleTransAni(all, .3s, ease-in-out);
+// 	background-color: $sidebarCatBg;
+// 	border: solid 1px $sidebarTopBorder;
+// 	margin-bottom: 5px;
+// 	padding: 2px 0px 0px 6px;
+// }
+
+// .sbLinkList li:hover {
+// 	background-color: #282828;
+// }
+
+
+// // all side bar link / list bars
+// .sbLinkList li a {
+// 	text-transform: uppercase;
+// 	font-size: .5em;
+// 	letter-spacing: .2em;
+// 	color: $sidebarCatColor !important;
+// 	@include simpleTransAni(all, .3s, ease-in-out);
+// }
+
+// // hover animation
+// .sbLinkList li:hover a {
+// 	color: #fff !important;
+// }
+
+// // veiw all links
+// a.sbSeeAllLink {
+// 	display: block;
+// 	width: 100%;
+// 	float: right;
+// 	text-align: right;
+// 	text-transform: uppercase;
+// 	font-size: .5em;
+// 	letter-spacing: .2em;
+// 	color: $sidebarCatColor !important;
+// 	padding: 5px 0 0 0;
+// }
+
+// //-----------------------------------| Sidebar Categories
+
+// // sb cat wrap
+// .categoriesListWrap {
+// 	@include sizeEl(block, left, 100%, auto);
+// 	padding: 17px 10px 15px;
+// 	border-bottom: solid 1px $b;
+// 	border-top: solid 1px $sidebarTopBorder;
+// 	overflow: hidden;
+// 	@include simpleTransAni(all, .3s, ease-in-out);
+// }
+
+// //-----------------------------------| Sidebar Project Wrap
+
+// // project wrap sb
+// .sbProjectWrap {
+// 	@include sizeEl(block, left, 100%, auto);
+// 	border-top: solid 1px $sidebarTopBorder;
+// 	padding: 17px 10px 15px;
+// }
+
+// // project itself
+// .sbProjectWrap div {
+// 	@include sizeEl(block, left, 100%, 400px);
+// 	background-color: $sidebarCatColor;
+// }
+
+// // darken sb sections on hover
+// .blogSbSearchWrap:hover, .archiveListWrap:hover, .categoriesListWrap:hover {
+// 	background-color: rgba(0, 0, 0, .15);
+// }
+
+
+// //-----------------------------------| News Sidebar
+
+// // news sb wrap
+// .newsSb {
+// 	background: url($sidebarNewsBg);
+// 	border: solid 1px $gBorder;
+// 	padding: 10px 10px 0 10px;
+// }
+
+// // actual news post wrap
+// .newsArticleWrap {
+// 	@include sizeEl(inline-block, left, 100%, auto);
+// 	border: solid 1px $gBorder;
+// 	padding: 10px;
+// 	background: $w;
+// 	margin: 0 0 10px 0;
+// }
+
+// // wraps the cat / post date
+// .newsPostDate {
+// 	@include sizeEl(inline-block, left, 100%, 20px);
+// 	border-bottom: solid 1px $gBorder;
+// }
+
+// // news text wrap | article
+// .newsTextWrap {
+// 	@include sizeEl(inline-block, left, 100%, auto);
+// 	overflow: hidden;
+// }
+
+// // news cat / date
+// .newsPostDate a, .newsPostDate time {
+// 	text-transform: uppercase;
+// 	font-size: .5em;
+// 	letter-spacing: .2em;
+// }
+
+// // news cat
+// .newsPostDate a {
+// 	float: left;
+// 	padding: 2px 0 0 0;
+// 	color: $textColor;
+// }
+
+// // news date
+// .newsPostDate time {
+// 	float: right;
+// }
+
+// // wraps all text to prevent 
+// .newsTextWrap {
+// 	@include sizeEl(block, left, 100%, auto);
+// 	overflow: hidden;
+// 	padding: 10px 0 0 0;
+// }
+
+
+
+// /* 
+// ====================================================== Blog Archive Wrap
+// */
+
+// .postArchiveWrap {
+// 	@include sizeEl(block, left, 100%, auto);
+// 	border-left: solid 1px $gBorder;
+// 	border-right: solid 1px $gBorder;
+// 	border-bottom: solid 1px $gBorder;
+// 	position: relative;
+// }
+
+// .postArchiveWrap:last-child {
+// 	border-bottom: none;
+
+// }
+
+// .postArchiveWrap h4, .postArchiveWrap p {
+// 	float: left;
+// }
+
+// .crumbs {
+// 	@include sizeEl(block, left, 100%, 80px);
+// 	padding: 15px;
+// }
+
+// .crumbs a {
+// 	display: inline-block;
+// 	float: left;
+// 	font-size: .5em;
+// 	letter-spacing: .08em;
+// 	color: $crumbs;
+// 	padding: 0 0 0 2px;
+// }
+
+// .crumbs div {
+// 	@include sizeEl(block, left, 100%, auto);
+// }
+
+// .crumbs div h1 {
+// 	font-size: 1em;
+// }
+
+// .crumbs div span {
+// 	@include sizeEl(block, left, 100%, auto);
+// 	font-size: 1.5em;
+// }
+
+
+// // archive categories
+// .archiveCats {
+// 	@include sizeEl(block, left, 100%, auto);
+// }
+
+// // author full link
+// .archiveCats li  {
+// 	@include sizeEl(inline-block, left, auto, auto);
+// 	font-size: .8em;
+// 	letter-spacing: .05em;
+// 	position: relative;
+// 	padding: 15px 14px 15px 0;
+// }
+
+// .archiveCats li a {
+// 	color: $bGreen !important;
+// 	font-weight: 600;
+// 	font-style: italic;
+// }
+
+// // author full link
+// .archiveCats li:after  {
+// 	content: "";
+// 	@include sizeEl(block, none, 1px, 10px);
+// 	background-color: $bGreen;
+// 	position: absolute;
+// 	top: 21px;
+// 	right: 7px;
+// }
+
+// // author full link
+// .archiveCats li:last-child:after {
+// 	display: none;
+// }
+
+
+// .blogArchivePostWrap {
+// 	padding: 10px;
+// }
+
+// // blog side bar
+// .blogSb.archiveSb {
+// 	top: 80px;
+// 	right: 0px;
+// 	height: 100%;
+// }
+
+
+// /* 
+// ====================================================== Blog Search
+// */
+
+// .blogSearchWrap {
+// 	@include sizeEl(block, left, 100%, auto);
+// 	padding: 0px 10px 10px 10px;
+// }
+
+// .postSearchWrap {
+// 	border-left: solid 1px $gBorder;
+// 	border-right: solid 1px $gBorder;
+// 	border-bottom: solid 1px $gBorder;
+// 	display: block;
+// 	float: left;
+// }
+
+
+// // author full link
+// .blogSearchLink {
+// 	@include sizeEl(inline-block, left, auto, auto);
+// 	font-size: .8em;
+// 	letter-spacing: .05em;
+// 	position: relative;
+// 	padding: 15px 14px 15px 0;
+// 	color: $bGreen !important;
+// 	font-weight: 600;
+// 	font-style: italic;
+// }

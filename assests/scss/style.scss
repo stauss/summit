@@ -26,6 +26,9 @@ URL: summitprojects.com
 // // Type
 @import "buttons";
 
+// All project styles
+@import "projects";
+
 // // Base Site Styles
 @import "site";
 
@@ -35,8 +38,6 @@ URL: summitprojects.com
 // Forms
 @import "forms";
 
-// All project styles
-@import "projects";
 
 
 /* =========================| MQ |========================= */
@@ -62,12 +63,16 @@ URL: summitprojects.com
 	@import "755";
 }
 
+@media only screen and (min-width: 900px) {
+	@import "900";
+}
+
 @media only screen and (min-width: 960px) {
 	@import "960";
 }
 
-@media only screen and (min-width: 1200px) {
-	@import "1200";
+@media only screen and (min-width: 1220px) {
+	@import "1220";
 }
 
 /*-------------------------------

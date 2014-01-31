@@ -4,7 +4,11 @@
 
 ============================================================ */
 
-
+.onFull {
+	display: block;
+	visibility: visible;
+	opacity: 1;
+}
 
 /* 
 ====================================================== Home Page
@@ -45,50 +49,112 @@ h5.tpyeOfProject span { font-size: 13px !important; letter-spacing: 0.35em; }
 	display: Block !important;
 }
 
-/* 
-====================================================== Blog Index
-*/
-
 .wrap {
 	float: none;
 	margin: 0 auto;
 }
 
-// blog hero
-.blogHero {
-	height: 450px;
-}
 
-.crumbs {
-	overflow: visible;
-	padding: 11px 4px 4px 18px;
-}
+//======================================================================================================| Blog Index |============|
+
+
+// blog hero
+.blogHero { height: 450px; }
 
 // blog post wrap
-.postWrap {
-	@include sizeEl(block, left, 50%, auto);
-	padding: 10px 20px 20px 20px;
+.mutiPostWrap { @include sizeEl(block, left, 50%, auto); }
+
+// featured post image
+.postFeaturedImgWrap { height: 300px; }
+
+// side bar wrap
+.sbWrap { width: 50%; }
+
+// size up the news article font
+.newsArticlePrevWrap p {  font-size: 12px; }
+
+
+//================================================================================================================================|
+
+
+
+
+
+//==========================================================================================================| PDP Page |==========|
+
+
+
+// gallery thumbnail wrap
+.galleryThumbImgWrap { height: 350px; }
+
+//----------------------------------------------------------------| PDP Hero
+
+
+// resize header
+.pdpHero, .pdpHeroContentWrap { max-height: 800px; min-height: 768px; }
+
+
+// brand img / screen shot ---------------------------------
+// update size | custom brand image wrap
+.pdpBrandImg { width: 330px; height: 440px; }
+
+// update size | Screen Shot Wrap
+.pdpElsCenterWrap .pdpScreenShot {
+	width: 471px;
+	height: 500px;
+	background-size: 471px 386px;
+	right: -38px;
+}
+// --------------------------------- brand img / screen shot!
+
+
+//----------------------------------------------------------------| PDP Hero!
+
+
+
+//================================================================================================================================|
+
+
+
+
+
+
+
+
+
+
+
+//=========================================================================================================| Single Post |========|
+
+.postWrap.singlePostWrap { width: 56%; padding: 15px; }
+
+// related sb & main sb
+.sbWrap.sbWrapLeft, .sbWrap.sbWrapRight { width: 22%; }
+
+.singlePostWrap .postFeaturedImgWrap { height: 300px; }
+
+.sinlgePostPrev a.author { left: 85px;}
+
+.sinlgePostPrev ul {
+	@include sizeEl(block, none, 250px, 100%); 
+	right: 10px;
 }
 
-.postImgWrap {
-	height: 275px;
+.sinlgePostPrev ul li {
+	@include sizeEl(block, right, auto, auto); 
 }
 
-
-.sbWrap {
-	width: 50%;
+.postDateWrap a {
+	position: relative;
+	padding: 0 0 0 10px;
 }
 
-.innerNewsSbWrap {
-	position: normal !important;
-	top: 10px;
-	left: 10px;
-	width: 100%;
-}
+.newsSbDateWrap a { position: absolute; }
 
-// #images {
-// 	position: fixed;
-// 	top: 510px;
-// 	width: 100%;
-// 	z-index: 200;
-// }
+//================================================================================================================================|
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+extends layout
+    
+block content
+
+
+    //- Bread Crumbs
+    nav.gCrumbs.wBg.borderB.mobileCrumbs.offSmall
+        ul
+            li
+                a(href="#") Blog  
+            li
+                span /
+            li 
+                a(href="#") Web Design
+            li
+                span /
+            li
+                 a(href="#")  Something Awesome
+
+    div.content
+
+        //- Start All Content
+        div.wrap
+            
+            //- Bread Crumbs
+            nav.gCrumbs.onSmall
+                ul
+                    li
+                        a(href="#") Blog  
+                    li
+                        span /
+                    li 
+                        a(href="#") Web Design
+                    li
+                        span /
+                    li
+                         a(href="#")  Something Awesome
+
+            div.sbWrap.singleSidebarWrap.relatedSbWrap.sbWrapLeft.onLittle
+                //- Main Sidebar
+                include templates/blog/sidebars/related.jade
+
+            //- wraps all posts
+            div.postWrap.singlePostWrap
+
+                //- Post Layout | includes pagination
+                include templates/blog/singlepost.jade
+
+            //-div.sbWrap.onLittle 
+            div.sbWrap.singleSidebarWrap.sbWrapRight.onSmall
+                //- Main Sidebar
+                include templates/blog/sidebars/main.jade
+
+
+
+
+    div.paginationWrap.stickyArticleNav#singlePostArticleNav
+        div.innerPagination
+            div.stickyCenterWrap
+                div.centerStickyNav
+                    ul
+                        li
+                            a(href="#", class="prevArrow pageArrow")
+                                span Prev
+                        div.pageGridIcon
+                                li
+                                    a(href="#", class="gridIconBtn") Back To Projects
+                        li
+                            a(href="#", class="nextArrow pageArrow")
+                                span Next
+
+
+

@@ -1,0 +1,52 @@
+extends layout
+    
+block content
+
+    //- Bread Crumbs
+    nav.gCrumbs.wBg.borderB.mobileCrumbs.offSmall
+        ul
+            li
+                a(href="#") Home
+            li
+                span /
+            li 
+                a(href="#") Big Ideas Blog
+
+    //- Blog Header
+    include templates/headers/blogheader.jade
+
+    div.content
+
+        //- Start All Content
+        div.wrap
+            
+            //- Bread Crumbs
+            nav.gCrumbs.onSmall
+                ul
+                    li
+                        a(href="#") Home
+                    li
+                        span /
+                    li 
+                        a(href="#") Big Ideas Blog
+
+            //-div.sbWrap.onLittle
+            div.sbWrap.dblSidebarWrap.onLittle 
+                //- Main Sidebar
+                include templates/blog/sidebars/main.jade
+
+
+                //- News Sidebar
+                include templates/blog/sidebars/news.jade
+
+            //- wraps all posts
+            div.postWrap.mutiPostWrap.iPostWrap
+
+                //- Post Layout | includes pagination
+                include templates/blog/posts.jade
+
+
+
+
+
+
