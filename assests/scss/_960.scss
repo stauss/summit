@@ -126,35 +126,33 @@ h5.tpyeOfProject span { font-size: 13px !important; letter-spacing: 0.35em; }
 
 //=========================================================================================================| Single Post |========|
 
+
+// resize the single post wrap
 .postWrap.singlePostWrap { width: 56%; padding: 15px; }
 
 // related sb & main sb
 .sbWrap.sbWrapLeft, .sbWrap.sbWrapRight { width: 22%; }
 
+// size up the featured image
 .singlePostWrap .postFeaturedImgWrap { height: 300px; }
 
+// move author to the left
 .sinlgePostPrev a.author { left: 85px;}
 
-.sinlgePostPrev ul {
-	@include sizeEl(block, none, 250px, 100%); 
-	right: 10px;
-}
+// fix cat list padding and pos for single post
+.sinlgePostPrev ul { padding: 7px 0 0 0; right: 10px; }
 
-.sinlgePostPrev ul li {
-	@include sizeEl(block, right, auto, auto); 
-}
+// repad the post dae links
+.postDateWrap a { position: relative; padding: 0 0 0 10px; }
 
-.postDateWrap a {
-	position: relative;
-	padding: 0 0 0 10px;
-}
+// not sure what i created this for so its commented out
+//.newsSbDateWrap a { position: absolute; }
 
-.newsSbDateWrap a { position: absolute; }
 
 //================================================================================================================================|
 
 
-
+.notFoundHeader { height: 400px; }
 
 
 

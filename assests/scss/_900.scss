@@ -12,6 +12,7 @@
 
 //=========================================================================================================| Single Post |========|
 
+
 // single
 .postWrap.singlePostWrap { width: 56%; }
 
@@ -24,4 +25,67 @@
 
 .stickyArticleNav .centerStickyNav { position: relative; }
 
+
 //================================================================================================================================|
+
+
+
+
+//========================================================================================================| Archive Page |========|
+
+
+// results wrap
+.fullPostResultsWrap { width: 78%; }
+
+// clear out padding to create 100% height of border
+.resultsWrapInner .postTextWrap { padding: 0; }
+
+// add padding to article and place border
+.resultsWrapInner article {
+	@include sizeEl(block, left, 80%, auto);
+	border-right: solid 1px $gBorder;
+	padding: 20px;
+}
+
+// post date wrap but with only the date
+.postDateOnly {
+	@include sizeEl(block, left, 100%, 100%);
+	padding: 0;
+	background: $bA;
+}
+
+// clear post date border
+.postDateOnly .postDateInnerWrap { border: none; }
+
+// move the date wrap to the right
+.resultsWrapInner .postDateOnly, { @include sizeEl(block, right, 20%, 20%); }
+
+// size the time width to center text and pad T/B to verticle align
+.postDateOnly time { 
+	width: 100%; 
+	padding: 50% 0;
+	min-height: 100%;
+	text-align: center;
+}
+
+
+//================================================================================================================================|
+
+
+
+
+
+.mainOffice { 
+	display: inline-block; 
+	float: left;
+	width: 35%;
+	// location section
+	max-width: 175px;
+}
+
+.notFoundSignUpWrap {
+	width: 65%;
+	float: left;
+	padding-top: 20px;
+}
+

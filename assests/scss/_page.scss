@@ -644,7 +644,7 @@ span.projectBtn {
 // general post wrap
 .postWrap {
 	@include sizeEl(inline-block, left, auto, 100%);
-	padding: 15px;
+	padding: 0 15px;
 }
 
 // index post wrap
@@ -939,6 +939,12 @@ section.sbToutWrap { border-bottom: none; }
 
 // space at the bottom
 .newsArticlePrevWrap { margin: 0 0 10px 0;}
+
+
+.newsArticlePrevWrap .newsSbDateWrap a {
+	position: absolute;
+	right: 10px;
+}
 
 // news date / cat heading
 .newsSbDateWrap { height: 28px; }
@@ -1330,16 +1336,180 @@ div.stickyCenterWrap {
 
 
 
-.resultsWrapInner { display: inline-block; } 
 
 
-.catList {
-	 @include sizeEl(block, left, 100%, auto);
-	 padding: 20px 0;
+
+
+
+
+
+
+
+.smallHeader { @include sizeEl(block, left, 100%, 170px); }
+
+
+
+
+
+
+
+
+
+.secondaryHeader { 
+	@include sizeEl(block, left, 100%, 135px); 
+	//background-color: #bada55;
 }
 
+
+.bodyBgWrap {
+	@include sizeEl(block, none, 100%, 100%);
+	@include marquesImg('fpoSubTemp.jpg', no-repeat, top center);
+	position: absolute;
+	@include cover();
+}
+
+.notFoundBg {
+	@include marquesImg('notFound.jpg', no-repeat, top center);
+	@include cover();
+}
+
+
+
+
+
+
+
+
+
+//=================================================================================================================| 404 |========|
+
+.notFoundHeader {
+	text-align: center;
+}
+
+
+.notFoundHeadWrap {
+	@include sizeEl(block, none, 100%,  100px);
+	padding: 25px 0 0 0;
+}
+
+.notFoundHeadWrap h1, .notFoundHeadWrap h2 { color: $w; }
+
+
+
+//------------------------------------------------ Search Section
+.notFoundSearchWrap {
+	@include sizeEl(block, none, 100%,  auto);
+	margin: 0 auto;
+	position: relative;
+	padding:0 15px;
+	max-width: 350px;
+}
+
+.notFoundSearchWrap input.lightInputs {
+	height: 35px;
+	padding: 8px 10px 8px 10px;
+}
+
+
+.notFoundSearchWrap input.lightInputs[type='submit']{
+	position: absolute;
+	top: 0px;
+	right: 13px;
+	padding: 8px 18px 8px 18px;
+}
+//------------------------------------------------ Gird Section!
+
+
+
+//------------------------------------------------ Side Content Section
+
+// wraps al side content
+.notFoundSideWrap {
+	@include sizeEl(inline-block, right, 100%,  auto);
+	padding: 15px;
+}
+
+// turn error copy / main office copy white
+.notFoundMessageWrap h5, 
+.notFoundMessageWrap p,
+.mainOffice h5,
+.mainOffice ul li { 
+	color: $w; 
+}
+
+
+//------------------------------------------------ Error Message
+// error copy section
+.notFoundMessageWrap {
+	background: rgba(0, 0, 0, .8);
+	padding: 15px;
+}
+
+// location section
+.mainOffice {
+	background-color: $bGreen;
+	padding: 15px;
+	margin: 0 0 15px 0;
+	min-height: 105px;
+}
+//------------------------------------------------  Error Message!
+
+
+
+
+.notFoundContactWrap {
+	@include sizeEl(inline-block, left, 100%,  auto);
+}
+
+
+//------------------------------------------------ News Letter
+.notFoundSignUpWrap {
+	position: relative;
+	padding: 15px;
+}
+
+.notFoundSignUpWrap input[type='text'] {
+	height: 30px;
+	padding: 8px 10px 8px 10px;
+}
+
+.notFoundSignUpWrap form {
+	position: relative;
+}
+
+.notFoundSignUpWrap .greenSubmit {
+	position: absolute;
+	top: -2px;
+	right: -2px;
+}
+
+.notFoundSignUpWrap a {
+	font-style: italic;
+	text-align: right;
+	font-size: 11px;
+	padding: 8px 0 0 0;
+}
+
+.notFoundSignUpWrap a span {
+	color: $bGreen;
+	font-weight: 700;
+}
+//------------------------------------------------ News Letter!
+
+
+//------------------------------------------------ Side Content Section!
+
+
+//================================================================================================================================|
+
+
+
+
+//======================================================================================================| CatList Module |========|
+
+
 .catList li, .catList a {
-	display: block;
 	float: left;
 	height: 10px;
 	font-weight: 700;
@@ -1350,19 +1520,66 @@ div.stickyCenterWrap {
  	position: relative;
 }
 
-.catList a {
-	display: block;
-	width: 100%;
-	top: -6px;
+// align links with the border
+.catList a { width: 100%; top: -6px; }
+
+// add padding and make the cats green links
+.catList li { border-left: 1px solid $catListBorderColor; padding: 0 5px 0 5px; }
+
+// remove the padding and border for the first el in the cat list
+.catList li:first-child { border-left: none; padding-left: 0px; }
+
+
+//================================================================================================================================|
+
+
+
+
+//========================================================================================================| Archive Page |========|
+
+
+// wrapper of all returned articles
+.resultsWrapInner { display: inline-block; } 
+
+// cat list padding adjustment
+.resultsWrapInner .catList { padding: 20px 0; }
+
+// override section margin
+.resultsWrapInner .postSection { margin: 0; }
+
+// post date wrap but with only the date
+.postDateOnly { height: 25px; padding: 0; }
+
+// override time pos
+.sinlgePostPrev.postDateOnly time { left: 0px; top: 0px; }
+
+.resultsWrapInner .paginationWrap a.pageArrow { 
+	width: 55px;
+	height: 50px;
+	text-indent: -99999px;
 }
 
-.catList li {
-	border-left: 1px solid $catListBorderColor;
-	padding: 0 10px 0 10px;
+
+//================================================================================================================================|
+
+
+
+
+//=================================================================================================| Search Results Page |========|
+
+
+// link to the post that people can copy
+.blogPostUrl {
+	padding: 20px 0 5px 0;
+	font-weight: 700;
+	font-style: italic;
+	letter-spacing: .05em;
+	color: $bGreen;
+	font-size: 13px;
 }
 
-.catList li:first-child {
-	border-left: none;
-	padding-left: 0px;
+.searchResultWrap .resultsWrapInner {
+	border-bottom: none;
 }
+//================================================================================================================================|
 

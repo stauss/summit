@@ -1,0 +1,85 @@
+extends layout
+    
+block content
+
+    div.bodyBgWrap.notFoundBg
+
+
+    //- Bread Crumbs
+    nav.gCrumbs.wBg.borderB.mobileCrumbs.offSmall
+        ul
+            li
+                a(href="#") Blog  
+            li
+                span /
+            li 
+                a(href="#") Web Design
+            li
+                span /
+            li
+                 a(href="#")  Something Awesome
+
+    div.content
+
+        //- Start All Content
+        div.wrap
+            
+            //- Bread Crumbs
+            nav.gCrumbs.onSmall
+                ul
+                    li
+                        a(href="#") Blog  
+                    li
+                        span /
+                    li 
+                        a(href="#") Web Design
+                    li
+                        span /
+                    li
+                         a(href="#")  Something Awesome
+            
+
+            header.secondaryHeader.notFoundHeader
+                div.notFoundHeadWrap
+                    h1 Sorry 404
+                    h2.onLittle This is not the page you are looking for
+
+                div.notFoundSearchWrap
+                    form.searchForm(method="get", action="")
+                        input.lightInputs(type='search', placeholder="Search")
+                        input.lightInputs(type='submit', value='Search')
+
+
+            //wraps the right side content
+            div.notFoundSideWrap
+                section.notFoundMessageWrap
+                    div
+                        h5 Reached this page in error?
+                        p Donec sed odio dui. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas egt quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                        a(href="#", class="btn btnG ") Email Us
+
+                section.notFoundContactWrap
+
+                    div.mainOffice
+                        h5 Main Office
+                        ul
+                            li 101.5 Oak Street
+                            li Hood River OR. 97031
+
+                    div.notFoundSignUpWrap.wBg.border
+                        h5 News Letter Sign up
+                        form(method="post", action="")
+                            input.grayInputs(type='text', placeholder="Email Address")
+                            input.greenSubmit(type='submit', value='Sign Up')
+                        a(href="") Questions about our 
+                            span Privacy Policy?
+
+
+
+
+            //- wraps all posts
+            div.postWrap.notFoundPostWrap
+                include templates/blog/posts.jade
+
+
+
