@@ -18,14 +18,71 @@ html.no-js
     link(rel='stylesheet', href='assests/css/icons.css')
 
     // Google Font
-    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lato:400,700')
-    //-script(src='javascripts/vendor/modernizr-2.6.2.min.js')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lato:100,400,700')
+
+    // custom modernizr
+    script(src='javascripts/vendor/modernizr.js')
+
   body
     //if lt IE 7
       p.browsehappy
         | You are using an <strong>outdated</strong> browser.
         | Please <a href="http://browsehappy.com/">upgrade your browser</a>
         | to improve your experience.
+
+
+    div#contactHeadWrap.contactDropWrap
+        div.contactDropCenterWrap
+
+            div.contactFormWrap
+                h4 Send us a message
+                div.contactFromInner
+                    form.darkInputs(name="input", action="", method="post")
+                        input.contactDropName(type="text", name="name", placeholder="Full Name")
+                        input.contactDropEmail(type="text", name="email", placeholder="Email Address")
+                        textarea(name="message", placeholder="Message", rows="4", rows="4", cols="50")
+                        input.greenSubmit(type="submit", name="submit", value='Send Message')
+                        a(href="#").contactPrivacyLink Read our 
+                            span privacy policy?
+
+            div.contactDropTextWrap
+                div.onSmall
+                    h3 Don’t be shy. Hit us up and we’ll be sure to hit back
+                    p Donec sed odio dui. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. 
+
+                div.contactLocationWrap
+                    h4 Main Office
+                    ul.contactLocationList
+                        li 
+                            a(href="") 541.399.4683
+                        li 
+                            a(href="") 101.5 Oak Street,
+                        li 
+                            a(href="") Hood River OR, 97031
+                        li 
+                            a.contactViewLink(href="") View Map
+
+
+                div.contactSocialWrap
+                    ul
+                        li.contactIcon
+                            a.ciFace(href="") Facebook
+                        li.contactIcon
+                            a.ciIgram(href="") Instagram
+                        li.contactIcon
+                            a.ciTwit(href="") Twitter
+                        li.contactIcon
+                            a.ciPin(href="") Pintrest
+                        li.contactIcon
+                            a.ciPlus(href="") Google Plus
+
+        a#contactCloseBtn.contactDropCloseBtn(href="#") Close
+
+
+
+
+
+
 
     header.gHead           
         div.gNav
@@ -54,258 +111,343 @@ html.no-js
                         li.offLittle
                             a(href="#") Newsletter Signup
 
-    div.blogHero
+    div.fullPageHeroBg#indexHero
+        div
+    div.indexHero
+        //- div.brandingWrap
+        //-     h1 Big Ideas for Grat Brands
+
 
     div.content
+        div.projectsWrap
+            ul.featuredProjects#projectGrid
 
-        //- Start All Content
-        div.wrap
-            //- Bread Crumbs
-            div.crumbs
-                    a(href="#") Home / 
-                    a(href="#") Big Ideas Blog
+                //- Begin Row 1
 
-            //- Creates padding / fixes cols
-            div.innerWrap
-
-                div.sbWrap.onLittle
-                    //- Main Sidebar
-                    aside.blogSb
-                        div.innerSbWrap
-
-                            //- Search Section
-                            div.blogSbSearchWrap
-                                h6 Search Summit Blog
-                                div
-                                    form(method="get", action="")
-                                        input.darkInput.sbSearch(type='search', placeholder="Search")
-                                        input.sbSearchInput.greenSubmit(type='submit', value='Search')
-
-                            //- Archive Section
-                            div.archiveListWrap
-                                h6 Blog Post Archives
-                                ul.sbLinkList
-                                    li
-                                        a(href="#") December
-                                    li
-                                        a(href="#") November
-                                    li
-                                        a(href="#") October
-
-                                a.sbSeeAllLink(href="#") View all Archives
-
-                            //- Categories Section
-                            div.categoriesListWrap
-                                h6 Categories
-                                ul.sbLinkList
-                                    li
-                                        a(href="#") Web Design
-                                    li
-                                        a(href="#") Web Development
-                                    li
-                                        a(href="#") Technology
-
-                                a.sbSeeAllLink(href="#") View all Categories
-
-                            //- Sidebar Project Wrap
-                            div.sbProjectWrap
-                                div
-
-
-                    //- News Sidebar 
-                    aside.newsSb.onSmall
-                        div.innerNewsSbWrap
-
-                            //- News Article
-                            section.newsArticleWrap
-                                article
-                                    div.newsPostDate
-                                        a(href="#") Web News
-                                        time 1 / 6 / 2014
-                                    div.newsTextWrap
-                                        h5 Aenean lacinia biben nulla sed consectetur.
-                                        p Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Nean lacinia bibendum nulla sed consectetur. Nulla tae elit lero, a pharetra augue.
-                                        p Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dinascetur ridiculus mus.
-                                        a(href="#", class="btn btnG ") Read More
-                                        a(href="#", class="btn btnB Share") Share
-
-                            //- News Article
-                            section.newsArticleWrap
-                                article
-                                    div.newsPostDate
-                                        a(href="#") Web News
-                                        time 1 / 6 / 2014
-                                    div.newsTextWrap
-                                        h5 Aenean lacinia biben nulla sed consectetur.
-                                        p Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Nean lacinia bibendum nulla sed consectetur. Nulla tae elit lero, a pharetra augue.
-                                        p Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dinascetur ridiculus mus.
-                                        a(href="#", class="btn btnG ") Read More
-                                        a(href="#", class="btn btnB Share") Share
-
-                            //- News Article
-                            section.newsArticleWrap
-                                article
-                                    div.newsPostDate
-                                        a(href="#") Web News
-                                        time 1 / 6 / 2014
-                                    div.newsTextWrap
-                                        h5 Aenean lacinia biben nulla sed consectetur.
-                                        p Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Nean lacinia bibendum nulla sed consectetur. Nulla tae elit lero, a pharetra augue.
-                                        p Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dinascetur ridiculus mus.
-                                        a(href="#", class="btn btnG ") Read More
-                                        a(href="#", class="btn btnB Share") Share
-
-                            //- News Article
-                            section.newsArticleWrap
-                                article
-                                    div.newsPostDate
-                                        a(href="#") Web News
-                                        time 1 / 6 / 2014
-                                    div.newsTextWrap
-                                        h5 Aenean lacinia biben nulla sed consectetur.
-                                        p Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Nean lacinia bibendum nulla sed consectetur. Nulla tae elit lero, a pharetra augue.
-                                        p Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dinascetur ridiculus mus.
-                                        a(href="#", class="btn btnG ") Read More
-                                        a(href="#", class="btn btnB Share") Share
-
-                            //- News Article
-                            section.newsArticleWrap
-                                article
-                                    div.newsPostDate
-                                        a(href="#") Web News
-                                        time 1 / 6 / 2014
-                                    div.newsTextWrap
-                                        h5 Aenean lacinia biben nulla sed consectetur.
-                                        p Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Nean lacinia bibendum nulla sed consectetur. Nulla tae elit lero, a pharetra augue.
-                                        p Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dinascetur ridiculus mus.
-                                        a(href="#", class="btn btnG ") Read More
-                                        a(href="#", class="btn btnB Share") Share
-
-                            //- News Article
-                            section.newsArticleWrap
-                                article
-                                    div.newsPostDate
-                                        a(href="#") Web News
-                                        time 1 / 6 / 2014
-                                    div.newsTextWrap
-                                        h5 Aenean lacinia biben nulla sed consectetur.
-                                        p Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Nean lacinia bibendum nulla sed consectetur. Nulla tae elit lero, a pharetra augue.
-                                        p Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dinascetur ridiculus mus.
-                                        a(href="#", class="btn btnG ") Read More
-                                        a(href="#", class="btn btnB Share") Share
-
-                //- wraps all posts
-                div.postWrap
-
-                    //- Blog Post
-                    section.postSection
-                        //- main post image with bg cover
-                        a(href="#")
-                            div(class="postImgWrap", style="background-image: url('assests/img/delete/blogImg.jpg');")
-                        div.postTextWrap
-                            div.postDate
-                                time 1 / 6 / 2014
-                                a(href="http://johnsplace.com", rel="author") Author: 
-                                    span Caleb Stauss
-                            article
-                                a(href="#")
-                                    h2 Curabb itur blandit tem abipus portt itor.
-                                p Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                                a(href="#", class="btn btnG ") Read More
-                                a(href="#", class="btn btnB Share") Share This
-
-                    //- Blog Post
-                    section.postSection
-                        //- main post image with bg cover
-                        a(href="#")
-                            div(class="postImgWrap", style="background-image: url('assests/img/delete/blogImg.jpg');")
-                        div.postTextWrap
-                            div.postDate
-                                time 1 / 6 / 2014
-                                a(href="http://johnsplace.com", rel="author") Author: 
-                                    span Caleb Stauss
-                            article
-                                a(href="#")
-                                    h2 Curabb itur blandit tem abipus portt itor.
-                                p Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                                a(href="#", class="btn btnG ") Read More
-                                a(href="#", class="btn btnB Share") Share This
-
-                    //- Blog Post
-                    section.postSection
-                        //- main post image with bg cover
-                        a(href="#")
-                            div(class="postImgWrap", style="background-image: url('assests/img/delete/blogImg.jpg');")
-                        div.postTextWrap
-                            div.postDate
-                                time 1 / 6 / 2014
-                                a(href="http://johnsplace.com", rel="author") Author: 
-                                    span Caleb Stauss
-                            article
-                                a(href="#")
-                                    h2 Curabb itur blandit tem abipus portt itor.
-                                p Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                                a(href="#", class="btn btnG ") Read More
-                                a(href="#", class="btn btnB Share") Share This
-
-                    //- Blog Post
-                    section.postSection
-                        //- main post image with bg cover
-                        a(href="#")
-                            div(class="postImgWrap", style="background-image: url('assests/img/delete/blogImg.jpg');")
-                        div.postTextWrap
-                            div.postDate
-                                time 1 / 6 / 2014
-                                a(href="http://johnsplace.com", rel="author") Author: 
-                                    span Caleb Stauss
-                            article
-                                a(href="#")
-                                    h2 Curabb itur blandit tem abipus portt itor.
-                                p Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                                a(href="#", class="btn btnG ") Read More
-                                a(href="#", class="btn btnB Share") Share This
-
-                    //- Blog Post
-                    section.postSection
-                        //- main post image with bg cover
-                        a(href="#")
-                            div(class="postImgWrap", style="background-image: url('assests/img/delete/blogImg.jpg');")
-                        div.postTextWrap
-                            div.postDate
-                                time 1 / 6 / 2014
-                                a(href="http://johnsplace.com", rel="author") Author: 
-                                    span Caleb Stauss
-                            article
-                                a(href="#")
-                                    h2 Curabb itur blandit tem abipus portt itor.
-                                p Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                                a(href="#", class="btn btnG ") Read More
-                                a(href="#", class="btn btnB Share") Share This
-
-                    //- Blog Pagination
-                    div.paginationWrap
-                        div.innerPagination
-                            ul
-                                li
-                                    a(href="#", class="prevArrow pageArrow pageArrowOnly")
-                                        span Prev
-                                div.pageNumWrap
-                                    div
-                                        li
-                                            a(href="#", class="activePageLink") 1
-                                        li
-                                            a(href="#") 2
-                                        li
-                                            a(href="#") 3
-                                        li
-                                            a(href="#") 4
-                                        li
-                                            a(href="#") 5
-                                li
-                                    a(href="#", class="nextArrow pageArrow pageArrowOnly")
-                                        span Next
+                //- Test Project 1 1816
+                li#remington1816.featuredProject1
+                    a(href="#projectName", data-client="#")
+                        div.projectDeetsWrap
+                            div.proInnerWrap.onLittle
+                                div.projectHoverBg
+                                    span.proShawdow.proLeftShawdowBg
+                                    span.proShawdow.proRightShawdowBg
+                                    div.innerProBG
+                            h1.summitProjectLogo
+                                span Summit Projects
+                            h2.clientProjectLogo
+                                span Remington 1816
+                            h5.tpyeOfProject
+                                span.proTypeOne Ecommerce 
+                                span.proTypePluls + 
+                                span.proTypeTwo Lifestyle Site
+                            div.proBtnWrap.onLittle
+                                span.projectBtn View Work
+                //- Test Project 2 vega
+                li#vega.featuredProject2
+                    a(href="#projectName", data-client="#")
+                        div.projectDeetsWrap
+                            div.proInnerWrap.onLittle
+                                div.projectHoverBg
+                                    span.proShawdow.proLeftShawdowBg
+                                    span.proShawdow.proRightShawdowBg
+                                    div.innerProBG
+                            h1.summitProjectLogo
+                                span Summit Projects
+                            h2.clientProjectLogo
+                                span Remington 1816
+                            h5.tpyeOfProject
+                                span.proTypeOne Ecommerce 
+                                span.proTypePluls + 
+                                span.proTypeTwo Lifestyle Site
+                            div.proBtnWrap.onLittle
+                                span.projectBtn View Work
+                //- Test Project 2 1816
+                li#remington1816.featuredProject3
+                    a(href="#projectName", data-client="#")
+                        div.projectDeetsWrap
+                            div.proInnerWrap.onLittle
+                                div.projectHoverBg
+                                    span.proShawdow.proLeftShawdowBg
+                                    span.proShawdow.proRightShawdowBg
+                                    div.innerProBG
+                            h1.summitProjectLogo
+                                span Summit Projects
+                            h2.clientProjectLogo
+                                span Remington 1816
+                            h5.tpyeOfProject
+                                span.proTypeOne Ecommerce 
+                                span.proTypePluls + 
+                                span.proTypeTwo Lifestyle Site
+                            div.proBtnWrap.onLittle
+                                span.projectBtn View Work
+                //- Test Project 4 vega
+                li#vega.featuredProject4
+                    a(href="#projectName", data-client="#")
+                        div.projectDeetsWrap
+                            div.proInnerWrap.onLittle
+                                div.projectHoverBg
+                                    span.proShawdow.proLeftShawdowBg
+                                    span.proShawdow.proRightShawdowBg
+                                    div.innerProBG
+                            h1.summitProjectLogo
+                                span Summit Projects
+                            h2.clientProjectLogo
+                                span Remington 1816
+                            h5.tpyeOfProject
+                                span.proTypeOne Ecommerce 
+                                span.proTypePluls + 
+                                span.proTypeTwo Lifestyle Site
+                            div.proBtnWrap.onLittle
+                                span.projectBtn View Work
+                //- End Project Row 1
 
 
+
+
+                //- Begin Row 2
+
+                //- Test Project 1 1816
+                li#remington1816.featuredProject5
+                    a(href="#projectName", data-client="#")
+                        div.projectDeetsWrap
+                            div.proInnerWrap.onLittle
+                                div.projectHoverBg
+                                    span.proShawdow.proLeftShawdowBg
+                                    span.proShawdow.proRightShawdowBg
+                                    div.innerProBG
+                            h1.summitProjectLogo
+                                span Summit Projects
+                            h2.clientProjectLogo
+                                span Remington 1816
+                            h5.tpyeOfProject
+                                span.proTypeOne Ecommerce 
+                                span.proTypePluls + 
+                                span.proTypeTwo Lifestyle Site
+                            div.proBtnWrap.onLittle
+                                span.projectBtn View Work
+                //- Test Project 2 vega
+                li#vega.featuredProject6
+                    a(href="#projectName", data-client="#")
+                        div.projectDeetsWrap
+                            div.proInnerWrap.onLittle
+                                div.projectHoverBg
+                                    span.proShawdow.proLeftShawdowBg
+                                    span.proShawdow.proRightShawdowBg
+                                    div.innerProBG
+                            h1.summitProjectLogo
+                                span Summit Projects
+                            h2.clientProjectLogo
+                                span Remington 1816
+                            h5.tpyeOfProject
+                                span.proTypeOne Ecommerce 
+                                span.proTypePluls + 
+                                span.proTypeTwo Lifestyle Site
+                            div.proBtnWrap.onLittle
+                                span.projectBtn View Work
+                //- Test Project 2 1816
+                li#remington1816.featuredProject7
+                    a(href="#projectName", data-client="#")
+                        div.projectDeetsWrap
+                            div.proInnerWrap.onLittle
+                                div.projectHoverBg
+                                    span.proShawdow.proLeftShawdowBg
+                                    span.proShawdow.proRightShawdowBg
+                                    div.innerProBG
+                            h1.summitProjectLogo
+                                span Summit Projects
+                            h2.clientProjectLogo
+                                span Remington 1816
+                            h5.tpyeOfProject
+                                span.proTypeOne Ecommerce 
+                                span.proTypePluls + 
+                                span.proTypeTwo Lifestyle Site
+                            div.proBtnWrap.onLittle
+                                span.projectBtn View Work
+                //- Test Project 4 vega
+                li#vega.featuredProject8
+                    a(href="#projectName", data-client="#")
+                        div.projectDeetsWrap
+                            div.proInnerWrap.onLittle
+                                div.projectHoverBg
+                                    span.proShawdow.proLeftShawdowBg
+                                    span.proShawdow.proRightShawdowBg
+                                    div.innerProBG
+                            h1.summitProjectLogo
+                                span Summit Projects
+                            h2.clientProjectLogo
+                                span Remington 1816
+                            h5.tpyeOfProject
+                                span.proTypeOne Ecommerce 
+                                span.proTypePluls + 
+                                span.proTypeTwo Lifestyle Site
+                            div.proBtnWrap.onLittle
+                                span.projectBtn View Work
+                //- End Project Row 2
+
+
+
+
+                //- Begin Row 3
+
+                //- Test Project 1 1816
+                li#remington1816.featuredProject9
+                    a(href="#projectName", data-client="#")
+                        div.projectDeetsWrap
+                            div.proInnerWrap.onLittle
+                                div.projectHoverBg
+                                    span.proShawdow.proLeftShawdowBg
+                                    span.proShawdow.proRightShawdowBg
+                                    div.innerProBG
+                            h1.summitProjectLogo
+                                span Summit Projects
+                            h2.clientProjectLogo
+                                span Remington 1816
+                            h5.tpyeOfProject
+                                span.proTypeOne Ecommerce 
+                                span.proTypePluls + 
+                                span.proTypeTwo Lifestyle Site
+                            div.proBtnWrap.onLittle
+                                span.projectBtn View Work
+                //- Test Project 2 vega
+                li#vega.featuredProject10
+                    a(href="#projectName", data-client="#")
+                        div.projectDeetsWrap
+                            div.proInnerWrap.onLittle
+                                div.projectHoverBg
+                                    span.proShawdow.proLeftShawdowBg
+                                    span.proShawdow.proRightShawdowBg
+                                    div.innerProBG
+                            h1.summitProjectLogo
+                                span Summit Projects
+                            h2.clientProjectLogo
+                                span Remington 1816
+                            h5.tpyeOfProject
+                                span.proTypeOne Ecommerce 
+                                span.proTypePluls + 
+                                span.proTypeTwo Lifestyle Site
+                            div.proBtnWrap.onLittle
+                                span.projectBtn View Work
+                //- Test Project 2 1816
+                li#remington1816.featuredProject11
+                    a(href="#projectName", data-client="#")
+                        div.projectDeetsWrap
+                            div.proInnerWrap.onLittle
+                                div.projectHoverBg
+                                    span.proShawdow.proLeftShawdowBg
+                                    span.proShawdow.proRightShawdowBg
+                                    div.innerProBG
+                            h1.summitProjectLogo
+                                span Summit Projects
+                            h2.clientProjectLogo
+                                span Remington 1816
+                            h5.tpyeOfProject
+                                span.proTypeOne Ecommerce 
+                                span.proTypePluls + 
+                                span.proTypeTwo Lifestyle Site
+                            div.proBtnWrap.onLittle
+                                span.projectBtn View Work
+                //- Test Project 4 vega
+                li#vega.featuredProject12
+                    a(href="#projectName", data-client="#")
+                        div.projectDeetsWrap
+                            div.proInnerWrap.onLittle
+                                div.projectHoverBg
+                                    span.proShawdow.proLeftShawdowBg
+                                    span.proShawdow.proRightShawdowBg
+                                    div.innerProBG
+                            h1.summitProjectLogo
+                                span Summit Projects
+                            h2.clientProjectLogo
+                                span Remington 1816
+                            h5.tpyeOfProject
+                                span.proTypeOne Ecommerce 
+                                span.proTypePluls + 
+                                span.proTypeTwo Lifestyle Site
+                            div.proBtnWrap.onLittle
+                                span.projectBtn View Work
+                //- End Project Row 3
+
+
+                //- Begin Row 4
+
+                //- Test Project 1 1816
+                li#projectName.featuredProject13
+                    a(href="#projectName", data-client="#")
+                        div.projectDeetsWrap
+                            div.proInnerWrap.onLittle
+                                div.projectHoverBg
+                                    span.proShawdow.proLeftShawdowBg
+                                    span.proShawdow.proRightShawdowBg
+                                    div.innerProBG
+                            h1.summitProjectLogo
+                                span Summit Projects
+                            h2.clientProjectLogo
+                                span Remington 1816
+                            h5.tpyeOfProject
+                                span.proTypeOne Ecommerce 
+                                span.proTypePluls + 
+                                span.proTypeTwo Lifestyle Site
+                            div.proBtnWrap.onLittle
+                                span.projectBtn View Work
+                //- Test Project 2 vega
+                li#vega.featuredProject14
+                    a(href="#projectName", data-client="#")
+                        div.projectDeetsWrap
+                            div.proInnerWrap.onLittle
+                                div.projectHoverBg
+                                    span.proShawdow.proLeftShawdowBg
+                                    span.proShawdow.proRightShawdowBg
+                                    div.innerProBG
+                            h1.summitProjectLogo
+                                span Summit Projects
+                            h2.clientProjectLogo
+                                span Remington 1816
+                            h5.tpyeOfProject
+                                span.proTypeOne Ecommerce 
+                                span.proTypePluls + 
+                                span.proTypeTwo Lifestyle Site
+                            div.proBtnWrap.onLittle
+                                span.projectBtn View Work
+                //- Test Project 2 1816
+                li#remington1816.featuredProject15
+                    a(href="#projectName", data-client="#")
+                        div.projectDeetsWrap
+                            div.proInnerWrap.onLittle
+                                div.projectHoverBg
+                                    span.proShawdow.proLeftShawdowBg
+                                    span.proShawdow.proRightShawdowBg
+                                    div.innerProBG
+                            h1.summitProjectLogo
+                                span Summit Projects
+                            h2.clientProjectLogo
+                                span Remington 1816
+                            h5.tpyeOfProject
+                                span.proTypeOne Ecommerce 
+                                span.proTypePluls + 
+                                span.proTypeTwo Lifestyle Site
+                            div.proBtnWrap.onLittle
+                                span.projectBtn View Work
+                //- Test Project 4 vega
+                li#vega.featuredProject16.lastFeaturedProject
+                    a(href="#projectName", data-client="#")
+                        div.projectDeetsWrap
+                            div.proInnerWrap.onLittle
+                                div.projectHoverBg
+                                    span.proShawdow.proLeftShawdowBg
+                                    span.proShawdow.proRightShawdowBg
+                                    div.innerProBG
+                            h1.summitProjectLogo
+                                span Summit Projects
+                            h2.clientProjectLogo
+                                span Remington 1816
+                            h5.tpyeOfProject
+                                span.proTypeOne Ecommerce 
+                                span.proTypePluls + 
+                                span.proTypeTwo Lifestyle Site
+                            div.proBtnWrap.onLittle
+                                span.projectBtn View Work
+                //- End Project Row 4
 
 
     footer.gFoot
@@ -356,6 +498,8 @@ html.no-js
                 address 101.5 Oak St. Hood River, OR
             a.footTel(href="tel:") 541.399.4683
         div.footBottom
+            a.footCenterLogo(href="test")
+                span Summit Projects
             span.offSmall © Copyright 2014
             a.legal(href="#") 
                 div.legalFootWrap

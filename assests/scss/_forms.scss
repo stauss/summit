@@ -25,12 +25,12 @@ textarea:focus, input:focus{
 input[type='search'],
 input[type='input'],
 input[type='text'], 
-input[type='textarea']{
+textarea {
   width: 100%;
   font-style: italic;
   font-size: .6em;
   letter-spacing: .05em;
-  padding: 8px 0 8px 0px;
+  padding: 8px 0 8px 8px;
   @include simpleTransAni(all, .3s, ease-in-out);
   border: none;
   outline: none;
@@ -60,7 +60,7 @@ input[type='textarea']{
 .darkInputs input[type='search'],
 .darkInputs input[type='text'],
 .darkInputs input[type='input'],
-.darkInputs input[type='textarea'] {
+.darkInputs textarea {
     background-color: $darkInputBackground !important;
     border: 1px solid $darkInputBorder;
     color: $darkInputColor;
@@ -81,15 +81,15 @@ input[type='textarea']{
 
 
 // html5 place holder styling
-.darkInputs input::-webkit-input-placeholder {
+.darkInputs input::-webkit-input-placeholder,
+.darkInputs textarea::-webkit-input-placeholder {
   color: $darkInputColor;
   position: relative;
   @include simpleTransAni(all, .3s, ease-in-out);
 }
 
-.darkInputs input:focus::-webkit-input-placeholder {
-   color: $darkInputColor;
-   position: relative;
+.darkInputs input:focus::-webkit-input-placeholder,
+.darkInputs textarea:focus::-webkit-input-placeholder {
    color: $w;
 }
 

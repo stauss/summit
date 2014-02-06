@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="assests/css/style.css">
     <link rel="stylesheet" href="assests/css/icons.css">
     <!-- Google Font-->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,400,700">
+    <!-- custom modernizr-->
+    <script src="javascripts/vendor/modernizr.js"></script>
   </head>
   <body><!--[if lt IE 7]>
     <p class="browsehappy">
@@ -19,6 +21,45 @@
       Please <a href="http://browsehappy.com/">upgrade your browser</a>
       to improve your experience.
     </p><![endif]-->
+    <div id="contactHeadWrap" class="contactDropWrap">
+      <div class="contactDropCenterWrap">
+        <div class="contactFormWrap">
+          <h4>Send us a message</h4>
+          <div class="contactFromInner">
+            <form name="input" action="" method="post" class="darkInputs">
+              <input type="text" name="name" placeholder="Full Name" class="contactDropName">
+              <input type="text" name="email" placeholder="Email Address" class="contactDropEmail">
+              <textarea name="message" placeholder="Message" rows="4" cols="50"></textarea>
+              <input type="submit" name="submit" value="Send Message" class="greenSubmit"><a href="#" class="contactPrivacyLink">Read our <span>privacy policy?</span></a>
+            </form>
+          </div>
+        </div>
+        <div class="contactDropTextWrap">
+          <div class="onSmall">
+            <h3>Don’t be shy. Hit us up and we’ll be sure to hit back</h3>
+            <p>Donec sed odio dui. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. </p>
+          </div>
+          <div class="contactLocationWrap">
+            <h4>Main Office</h4>
+            <ul class="contactLocationList">
+              <li> <a href="">541.399.4683</a></li>
+              <li> <a href="">101.5 Oak Street,</a></li>
+              <li> <a href="">Hood River OR, 97031</a></li>
+              <li> <a href="" class="contactViewLink">View Map</a></li>
+            </ul>
+          </div>
+          <div class="contactSocialWrap">
+            <ul>
+              <li class="contactIcon"><a href="" class="ciFace">Facebook</a></li>
+              <li class="contactIcon"><a href="" class="ciIgram">Instagram</a></li>
+              <li class="contactIcon"><a href="" class="ciTwit">Twitter</a></li>
+              <li class="contactIcon"><a href="" class="ciPin">Pintrest</a></li>
+              <li class="contactIcon"><a href="" class="ciPlus">Google Plus</a></li>
+            </ul>
+          </div>
+        </div>
+      </div><a id="contactCloseBtn" href="#" class="contactDropCloseBtn">Close</a>
+    </div>
     <header class="gHead">          
       <div class="gNav"><a href="#" class="gLogo">
           <h1>Summit Projects</h1></a><i class="fa fa-search offLittle"></i><a href="#" id="menuIcon" class="menuIcon offLittle"></a>
@@ -39,201 +80,207 @@
         </div>
       </div>
     </header>
-    <div class="blogHero"></div>
+    <div id="indexHero" class="fullPageHeroBg">
+      <div></div>
+    </div>
+    <div class="indexHero">
+    </div>
     <div class="content">
-      <div class="wrap">
-        <div class="crumbs"><a href="#">Home / </a><a href="#">Big Ideas Blog</a></div>
-        <div class="innerWrap">
-          <div class="sbWrap onLittle">
-            <aside class="blogSb">
-              <div class="innerSbWrap">
-                <div class="blogSbSearchWrap">
-                  <h6>Search Summit Blog</h6>
-                  <div>
-                    <form method="get" action="">
-                      <input type="search" placeholder="Search" class="darkInput sbSearch">
-                      <input type="submit" value="Search" class="sbSearchInput greenSubmit">
-                    </form>
+      <div class="projectsWrap">
+        <ul id="projectGrid" class="featuredProjects">
+          <li id="remington1816" class="featuredProject1"><a href="#projectName" data-client="#">
+              <div class="projectDeetsWrap">
+                <div class="proInnerWrap onLittle">
+                  <div class="projectHoverBg"><span class="proShawdow proLeftShawdowBg"></span><span class="proShawdow proRightShawdowBg"></span>
+                    <div class="innerProBG"></div>
                   </div>
                 </div>
-                <div class="archiveListWrap">
-                  <h6>Blog Post Archives</h6>
-                  <ul class="sbLinkList">
-                    <li><a href="#">December</a></li>
-                    <li><a href="#">November</a></li>
-                    <li><a href="#">October</a></li>
-                  </ul><a href="#" class="sbSeeAllLink">View all Archives</a>
-                </div>
-                <div class="categoriesListWrap">
-                  <h6>Categories</h6>
-                  <ul class="sbLinkList">
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">Web Development</a></li>
-                    <li><a href="#">Technology</a></li>
-                  </ul><a href="#" class="sbSeeAllLink">View all Categories</a>
-                </div>
-                <div class="sbProjectWrap">
-                  <div></div>
-                </div>
-              </div>
-            </aside>
-            <aside class="newsSb onSmall">
-              <div class="innerNewsSbWrap">
-                <section class="newsArticleWrap">
-                  <article>
-                    <div class="newsPostDate"><a href="#">Web News</a>
-                      <time>1 / 6 / 2014</time>
-                    </div>
-                    <div class="newsTextWrap">
-                      <h5>Aenean lacinia biben nulla sed consectetur.</h5>
-                      <p>Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Nean lacinia bibendum nulla sed consectetur. Nulla tae elit lero, a pharetra augue.</p>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dinascetur ridiculus mus.</p><a href="#" class="btn btnG ">Read More</a><a href="#" class="btn btnB Share">Share</a>
-                    </div>
-                  </article>
-                </section>
-                <section class="newsArticleWrap">
-                  <article>
-                    <div class="newsPostDate"><a href="#">Web News</a>
-                      <time>1 / 6 / 2014</time>
-                    </div>
-                    <div class="newsTextWrap">
-                      <h5>Aenean lacinia biben nulla sed consectetur.</h5>
-                      <p>Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Nean lacinia bibendum nulla sed consectetur. Nulla tae elit lero, a pharetra augue.</p>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dinascetur ridiculus mus.</p><a href="#" class="btn btnG ">Read More</a><a href="#" class="btn btnB Share">Share</a>
-                    </div>
-                  </article>
-                </section>
-                <section class="newsArticleWrap">
-                  <article>
-                    <div class="newsPostDate"><a href="#">Web News</a>
-                      <time>1 / 6 / 2014</time>
-                    </div>
-                    <div class="newsTextWrap">
-                      <h5>Aenean lacinia biben nulla sed consectetur.</h5>
-                      <p>Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Nean lacinia bibendum nulla sed consectetur. Nulla tae elit lero, a pharetra augue.</p>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dinascetur ridiculus mus.</p><a href="#" class="btn btnG ">Read More</a><a href="#" class="btn btnB Share">Share</a>
-                    </div>
-                  </article>
-                </section>
-                <section class="newsArticleWrap">
-                  <article>
-                    <div class="newsPostDate"><a href="#">Web News</a>
-                      <time>1 / 6 / 2014</time>
-                    </div>
-                    <div class="newsTextWrap">
-                      <h5>Aenean lacinia biben nulla sed consectetur.</h5>
-                      <p>Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Nean lacinia bibendum nulla sed consectetur. Nulla tae elit lero, a pharetra augue.</p>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dinascetur ridiculus mus.</p><a href="#" class="btn btnG ">Read More</a><a href="#" class="btn btnB Share">Share</a>
-                    </div>
-                  </article>
-                </section>
-                <section class="newsArticleWrap">
-                  <article>
-                    <div class="newsPostDate"><a href="#">Web News</a>
-                      <time>1 / 6 / 2014</time>
-                    </div>
-                    <div class="newsTextWrap">
-                      <h5>Aenean lacinia biben nulla sed consectetur.</h5>
-                      <p>Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Nean lacinia bibendum nulla sed consectetur. Nulla tae elit lero, a pharetra augue.</p>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dinascetur ridiculus mus.</p><a href="#" class="btn btnG ">Read More</a><a href="#" class="btn btnB Share">Share</a>
-                    </div>
-                  </article>
-                </section>
-                <section class="newsArticleWrap">
-                  <article>
-                    <div class="newsPostDate"><a href="#">Web News</a>
-                      <time>1 / 6 / 2014</time>
-                    </div>
-                    <div class="newsTextWrap">
-                      <h5>Aenean lacinia biben nulla sed consectetur.</h5>
-                      <p>Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Nean lacinia bibendum nulla sed consectetur. Nulla tae elit lero, a pharetra augue.</p>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dinascetur ridiculus mus.</p><a href="#" class="btn btnG ">Read More</a><a href="#" class="btn btnB Share">Share</a>
-                    </div>
-                  </article>
-                </section>
-              </div>
-            </aside>
-          </div>
-          <div class="postWrap">
-            <section class="postSection"><a href="#">
-                <div style="background-image: url('assests/img/delete/blogImg.jpg');" class="postImgWrap"></div></a>
-              <div class="postTextWrap">
-                <div class="postDate">
-                  <time>1 / 6 / 2014</time><a href="http://johnsplace.com" rel="author">Author: <span>Caleb Stauss</span></a>
-                </div>
-                <article><a href="#">
-                    <h2>Curabb itur blandit tem abipus portt itor.</h2></a>
-                  <p>Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p><a href="#" class="btn btnG ">Read More</a><a href="#" class="btn btnB Share">Share This</a>
-                </article>
-              </div>
-            </section>
-            <section class="postSection"><a href="#">
-                <div style="background-image: url('assests/img/delete/blogImg.jpg');" class="postImgWrap"></div></a>
-              <div class="postTextWrap">
-                <div class="postDate">
-                  <time>1 / 6 / 2014</time><a href="http://johnsplace.com" rel="author">Author: <span>Caleb Stauss</span></a>
-                </div>
-                <article><a href="#">
-                    <h2>Curabb itur blandit tem abipus portt itor.</h2></a>
-                  <p>Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p><a href="#" class="btn btnG ">Read More</a><a href="#" class="btn btnB Share">Share This</a>
-                </article>
-              </div>
-            </section>
-            <section class="postSection"><a href="#">
-                <div style="background-image: url('assests/img/delete/blogImg.jpg');" class="postImgWrap"></div></a>
-              <div class="postTextWrap">
-                <div class="postDate">
-                  <time>1 / 6 / 2014</time><a href="http://johnsplace.com" rel="author">Author: <span>Caleb Stauss</span></a>
-                </div>
-                <article><a href="#">
-                    <h2>Curabb itur blandit tem abipus portt itor.</h2></a>
-                  <p>Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p><a href="#" class="btn btnG ">Read More</a><a href="#" class="btn btnB Share">Share This</a>
-                </article>
-              </div>
-            </section>
-            <section class="postSection"><a href="#">
-                <div style="background-image: url('assests/img/delete/blogImg.jpg');" class="postImgWrap"></div></a>
-              <div class="postTextWrap">
-                <div class="postDate">
-                  <time>1 / 6 / 2014</time><a href="http://johnsplace.com" rel="author">Author: <span>Caleb Stauss</span></a>
-                </div>
-                <article><a href="#">
-                    <h2>Curabb itur blandit tem abipus portt itor.</h2></a>
-                  <p>Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p><a href="#" class="btn btnG ">Read More</a><a href="#" class="btn btnB Share">Share This</a>
-                </article>
-              </div>
-            </section>
-            <section class="postSection"><a href="#">
-                <div style="background-image: url('assests/img/delete/blogImg.jpg');" class="postImgWrap"></div></a>
-              <div class="postTextWrap">
-                <div class="postDate">
-                  <time>1 / 6 / 2014</time><a href="http://johnsplace.com" rel="author">Author: <span>Caleb Stauss</span></a>
-                </div>
-                <article><a href="#">
-                    <h2>Curabb itur blandit tem abipus portt itor.</h2></a>
-                  <p>Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p><a href="#" class="btn btnG ">Read More</a><a href="#" class="btn btnB Share">Share This</a>
-                </article>
-              </div>
-            </section>
-            <div class="paginationWrap">
-              <div class="innerPagination">
-                <ul>
-                  <li><a href="#" class="prevArrow pageArrow pageArrowOnly"><span>Prev</span></a></li>
-                  <div class="pageNumWrap">
-                    <div>
-                      <li><a href="#" class="activePageLink">1</a></li>
-                      <li><a href="#">2</a></li>
-                      <li><a href="#">3</a></li>
-                      <li><a href="#">4</a></li>
-                      <li><a href="#">5</a></li>
-                    </div>
+                <h1 class="summitProjectLogo"><span>Summit Projects</span></h1>
+                <h2 class="clientProjectLogo"><span>Remington 1816</span></h2>
+                <h5 class="tpyeOfProject"><span class="proTypeOne">Ecommerce </span><span class="proTypePluls">+ </span><span class="proTypeTwo">Lifestyle Site</span></h5>
+                <div class="proBtnWrap onLittle"><span class="projectBtn">View Work</span></div>
+              </div></a></li>
+          <li id="vega" class="featuredProject2"><a href="#projectName" data-client="#">
+              <div class="projectDeetsWrap">
+                <div class="proInnerWrap onLittle">
+                  <div class="projectHoverBg"><span class="proShawdow proLeftShawdowBg"></span><span class="proShawdow proRightShawdowBg"></span>
+                    <div class="innerProBG"></div>
                   </div>
-                  <li><a href="#" class="nextArrow pageArrow pageArrowOnly"><span>Next</span></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+                </div>
+                <h1 class="summitProjectLogo"><span>Summit Projects</span></h1>
+                <h2 class="clientProjectLogo"><span>Remington 1816</span></h2>
+                <h5 class="tpyeOfProject"><span class="proTypeOne">Ecommerce </span><span class="proTypePluls">+ </span><span class="proTypeTwo">Lifestyle Site</span></h5>
+                <div class="proBtnWrap onLittle"><span class="projectBtn">View Work</span></div>
+              </div></a></li>
+          <li id="remington1816" class="featuredProject3"><a href="#projectName" data-client="#">
+              <div class="projectDeetsWrap">
+                <div class="proInnerWrap onLittle">
+                  <div class="projectHoverBg"><span class="proShawdow proLeftShawdowBg"></span><span class="proShawdow proRightShawdowBg"></span>
+                    <div class="innerProBG"></div>
+                  </div>
+                </div>
+                <h1 class="summitProjectLogo"><span>Summit Projects</span></h1>
+                <h2 class="clientProjectLogo"><span>Remington 1816</span></h2>
+                <h5 class="tpyeOfProject"><span class="proTypeOne">Ecommerce </span><span class="proTypePluls">+ </span><span class="proTypeTwo">Lifestyle Site</span></h5>
+                <div class="proBtnWrap onLittle"><span class="projectBtn">View Work</span></div>
+              </div></a></li>
+          <li id="vega" class="featuredProject4"><a href="#projectName" data-client="#">
+              <div class="projectDeetsWrap">
+                <div class="proInnerWrap onLittle">
+                  <div class="projectHoverBg"><span class="proShawdow proLeftShawdowBg"></span><span class="proShawdow proRightShawdowBg"></span>
+                    <div class="innerProBG"></div>
+                  </div>
+                </div>
+                <h1 class="summitProjectLogo"><span>Summit Projects</span></h1>
+                <h2 class="clientProjectLogo"><span>Remington 1816</span></h2>
+                <h5 class="tpyeOfProject"><span class="proTypeOne">Ecommerce </span><span class="proTypePluls">+ </span><span class="proTypeTwo">Lifestyle Site</span></h5>
+                <div class="proBtnWrap onLittle"><span class="projectBtn">View Work</span></div>
+              </div></a></li>
+          <li id="remington1816" class="featuredProject5"><a href="#projectName" data-client="#">
+              <div class="projectDeetsWrap">
+                <div class="proInnerWrap onLittle">
+                  <div class="projectHoverBg"><span class="proShawdow proLeftShawdowBg"></span><span class="proShawdow proRightShawdowBg"></span>
+                    <div class="innerProBG"></div>
+                  </div>
+                </div>
+                <h1 class="summitProjectLogo"><span>Summit Projects</span></h1>
+                <h2 class="clientProjectLogo"><span>Remington 1816</span></h2>
+                <h5 class="tpyeOfProject"><span class="proTypeOne">Ecommerce </span><span class="proTypePluls">+ </span><span class="proTypeTwo">Lifestyle Site</span></h5>
+                <div class="proBtnWrap onLittle"><span class="projectBtn">View Work</span></div>
+              </div></a></li>
+          <li id="vega" class="featuredProject6"><a href="#projectName" data-client="#">
+              <div class="projectDeetsWrap">
+                <div class="proInnerWrap onLittle">
+                  <div class="projectHoverBg"><span class="proShawdow proLeftShawdowBg"></span><span class="proShawdow proRightShawdowBg"></span>
+                    <div class="innerProBG"></div>
+                  </div>
+                </div>
+                <h1 class="summitProjectLogo"><span>Summit Projects</span></h1>
+                <h2 class="clientProjectLogo"><span>Remington 1816</span></h2>
+                <h5 class="tpyeOfProject"><span class="proTypeOne">Ecommerce </span><span class="proTypePluls">+ </span><span class="proTypeTwo">Lifestyle Site</span></h5>
+                <div class="proBtnWrap onLittle"><span class="projectBtn">View Work</span></div>
+              </div></a></li>
+          <li id="remington1816" class="featuredProject7"><a href="#projectName" data-client="#">
+              <div class="projectDeetsWrap">
+                <div class="proInnerWrap onLittle">
+                  <div class="projectHoverBg"><span class="proShawdow proLeftShawdowBg"></span><span class="proShawdow proRightShawdowBg"></span>
+                    <div class="innerProBG"></div>
+                  </div>
+                </div>
+                <h1 class="summitProjectLogo"><span>Summit Projects</span></h1>
+                <h2 class="clientProjectLogo"><span>Remington 1816</span></h2>
+                <h5 class="tpyeOfProject"><span class="proTypeOne">Ecommerce </span><span class="proTypePluls">+ </span><span class="proTypeTwo">Lifestyle Site</span></h5>
+                <div class="proBtnWrap onLittle"><span class="projectBtn">View Work</span></div>
+              </div></a></li>
+          <li id="vega" class="featuredProject8"><a href="#projectName" data-client="#">
+              <div class="projectDeetsWrap">
+                <div class="proInnerWrap onLittle">
+                  <div class="projectHoverBg"><span class="proShawdow proLeftShawdowBg"></span><span class="proShawdow proRightShawdowBg"></span>
+                    <div class="innerProBG"></div>
+                  </div>
+                </div>
+                <h1 class="summitProjectLogo"><span>Summit Projects</span></h1>
+                <h2 class="clientProjectLogo"><span>Remington 1816</span></h2>
+                <h5 class="tpyeOfProject"><span class="proTypeOne">Ecommerce </span><span class="proTypePluls">+ </span><span class="proTypeTwo">Lifestyle Site</span></h5>
+                <div class="proBtnWrap onLittle"><span class="projectBtn">View Work</span></div>
+              </div></a></li>
+          <li id="remington1816" class="featuredProject9"><a href="#projectName" data-client="#">
+              <div class="projectDeetsWrap">
+                <div class="proInnerWrap onLittle">
+                  <div class="projectHoverBg"><span class="proShawdow proLeftShawdowBg"></span><span class="proShawdow proRightShawdowBg"></span>
+                    <div class="innerProBG"></div>
+                  </div>
+                </div>
+                <h1 class="summitProjectLogo"><span>Summit Projects</span></h1>
+                <h2 class="clientProjectLogo"><span>Remington 1816</span></h2>
+                <h5 class="tpyeOfProject"><span class="proTypeOne">Ecommerce </span><span class="proTypePluls">+ </span><span class="proTypeTwo">Lifestyle Site</span></h5>
+                <div class="proBtnWrap onLittle"><span class="projectBtn">View Work</span></div>
+              </div></a></li>
+          <li id="vega" class="featuredProject10"><a href="#projectName" data-client="#">
+              <div class="projectDeetsWrap">
+                <div class="proInnerWrap onLittle">
+                  <div class="projectHoverBg"><span class="proShawdow proLeftShawdowBg"></span><span class="proShawdow proRightShawdowBg"></span>
+                    <div class="innerProBG"></div>
+                  </div>
+                </div>
+                <h1 class="summitProjectLogo"><span>Summit Projects</span></h1>
+                <h2 class="clientProjectLogo"><span>Remington 1816</span></h2>
+                <h5 class="tpyeOfProject"><span class="proTypeOne">Ecommerce </span><span class="proTypePluls">+ </span><span class="proTypeTwo">Lifestyle Site</span></h5>
+                <div class="proBtnWrap onLittle"><span class="projectBtn">View Work</span></div>
+              </div></a></li>
+          <li id="remington1816" class="featuredProject11"><a href="#projectName" data-client="#">
+              <div class="projectDeetsWrap">
+                <div class="proInnerWrap onLittle">
+                  <div class="projectHoverBg"><span class="proShawdow proLeftShawdowBg"></span><span class="proShawdow proRightShawdowBg"></span>
+                    <div class="innerProBG"></div>
+                  </div>
+                </div>
+                <h1 class="summitProjectLogo"><span>Summit Projects</span></h1>
+                <h2 class="clientProjectLogo"><span>Remington 1816</span></h2>
+                <h5 class="tpyeOfProject"><span class="proTypeOne">Ecommerce </span><span class="proTypePluls">+ </span><span class="proTypeTwo">Lifestyle Site</span></h5>
+                <div class="proBtnWrap onLittle"><span class="projectBtn">View Work</span></div>
+              </div></a></li>
+          <li id="vega" class="featuredProject12"><a href="#projectName" data-client="#">
+              <div class="projectDeetsWrap">
+                <div class="proInnerWrap onLittle">
+                  <div class="projectHoverBg"><span class="proShawdow proLeftShawdowBg"></span><span class="proShawdow proRightShawdowBg"></span>
+                    <div class="innerProBG"></div>
+                  </div>
+                </div>
+                <h1 class="summitProjectLogo"><span>Summit Projects</span></h1>
+                <h2 class="clientProjectLogo"><span>Remington 1816</span></h2>
+                <h5 class="tpyeOfProject"><span class="proTypeOne">Ecommerce </span><span class="proTypePluls">+ </span><span class="proTypeTwo">Lifestyle Site</span></h5>
+                <div class="proBtnWrap onLittle"><span class="projectBtn">View Work</span></div>
+              </div></a></li>
+          <li id="projectName" class="featuredProject13"><a href="#projectName" data-client="#">
+              <div class="projectDeetsWrap">
+                <div class="proInnerWrap onLittle">
+                  <div class="projectHoverBg"><span class="proShawdow proLeftShawdowBg"></span><span class="proShawdow proRightShawdowBg"></span>
+                    <div class="innerProBG"></div>
+                  </div>
+                </div>
+                <h1 class="summitProjectLogo"><span>Summit Projects</span></h1>
+                <h2 class="clientProjectLogo"><span>Remington 1816</span></h2>
+                <h5 class="tpyeOfProject"><span class="proTypeOne">Ecommerce </span><span class="proTypePluls">+ </span><span class="proTypeTwo">Lifestyle Site</span></h5>
+                <div class="proBtnWrap onLittle"><span class="projectBtn">View Work</span></div>
+              </div></a></li>
+          <li id="vega" class="featuredProject14"><a href="#projectName" data-client="#">
+              <div class="projectDeetsWrap">
+                <div class="proInnerWrap onLittle">
+                  <div class="projectHoverBg"><span class="proShawdow proLeftShawdowBg"></span><span class="proShawdow proRightShawdowBg"></span>
+                    <div class="innerProBG"></div>
+                  </div>
+                </div>
+                <h1 class="summitProjectLogo"><span>Summit Projects</span></h1>
+                <h2 class="clientProjectLogo"><span>Remington 1816</span></h2>
+                <h5 class="tpyeOfProject"><span class="proTypeOne">Ecommerce </span><span class="proTypePluls">+ </span><span class="proTypeTwo">Lifestyle Site</span></h5>
+                <div class="proBtnWrap onLittle"><span class="projectBtn">View Work</span></div>
+              </div></a></li>
+          <li id="remington1816" class="featuredProject15"><a href="#projectName" data-client="#">
+              <div class="projectDeetsWrap">
+                <div class="proInnerWrap onLittle">
+                  <div class="projectHoverBg"><span class="proShawdow proLeftShawdowBg"></span><span class="proShawdow proRightShawdowBg"></span>
+                    <div class="innerProBG"></div>
+                  </div>
+                </div>
+                <h1 class="summitProjectLogo"><span>Summit Projects</span></h1>
+                <h2 class="clientProjectLogo"><span>Remington 1816</span></h2>
+                <h5 class="tpyeOfProject"><span class="proTypeOne">Ecommerce </span><span class="proTypePluls">+ </span><span class="proTypeTwo">Lifestyle Site</span></h5>
+                <div class="proBtnWrap onLittle"><span class="projectBtn">View Work</span></div>
+              </div></a></li>
+          <li id="vega" class="featuredProject16 lastFeaturedProject"><a href="#projectName" data-client="#">
+              <div class="projectDeetsWrap">
+                <div class="proInnerWrap onLittle">
+                  <div class="projectHoverBg"><span class="proShawdow proLeftShawdowBg"></span><span class="proShawdow proRightShawdowBg"></span>
+                    <div class="innerProBG"></div>
+                  </div>
+                </div>
+                <h1 class="summitProjectLogo"><span>Summit Projects</span></h1>
+                <h2 class="clientProjectLogo"><span>Remington 1816</span></h2>
+                <h5 class="tpyeOfProject"><span class="proTypeOne">Ecommerce </span><span class="proTypePluls">+ </span><span class="proTypeTwo">Lifestyle Site</span></h5>
+                <div class="proBtnWrap onLittle"><span class="projectBtn">View Work</span></div>
+              </div></a></li>
+        </ul>
       </div>
     </div>
     <footer class="gFoot">
@@ -267,7 +314,7 @@
         </div><a href="#">
           <address>101.5 Oak St. Hood River, OR</address></a><a href="tel:" class="footTel">541.399.4683</a>
       </div>
-      <div class="footBottom"><span class="offSmall">© Copyright 2014</span><a href="#" class="legal"> 
+      <div class="footBottom"><a href="test" class="footCenterLogo"><span>Summit Projects</span></a><span class="offSmall">© Copyright 2014</span><a href="#" class="legal"> 
           <div class="legalFootWrap"><span class="onSmall">© Copyright Summit Projects 2014 | </span><span>Privacy policy</span></div></a></div>
     </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
