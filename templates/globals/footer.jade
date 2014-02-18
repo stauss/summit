@@ -26,7 +26,7 @@ footer.gFoot
             div.footSignUpWrap
                 span newsletter
                 form.darkInputs(method="post", action="")
-                    input(type='input', placeholder="Email Address")
+                    input.footNewsSignUp(type='text', placeholder="Email Address")
                     input.greenSubmit(type='submit', value='Sign Up')
     div.footMid
         h2.offSmall
@@ -61,11 +61,44 @@ script.
   window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.10.2.min.js"><\/script>')
 
 script(src='assests/js/vendor/menu.js')
+
+script(src='assests/js/vendor/swipe.js')
 script(src='assests/js/main.js')
+
 
 script
 
     $(document).ready(function() {
+
+        $('#nav li').on ('click', function () {
+            window.mySwipe.slide($(this).index(), 200);
+        });
+
+        $('#mySwipePrev').on('click', function () {
+           mySwipe.prev();
+
+           $navLi.removeClass('selected');
+           $navLi.eq(mySwipe.getPos() - 1).addClass('selected');
+        });
+        $('#mySwipeNext').on('click', function () {
+           mySwipe.next();
+           $navLi.removeClass('selected');
+           $navLi.eq(mySwipe.getPos() - 1).addClass('selected');
+        });
+
+        // pure JS slider nav
+        var elem = document.getElementById('mySwipe');
+        window.mySwipe = Swipe(elem, {
+          startSlide: 0,
+          auto: 1500,
+          continuous: true,
+          stopPropagation: true,
+        });
+
+
+
+
+
 
         //Mobile Nav Logic
         var $menuIcon = $('#menuIcon'),

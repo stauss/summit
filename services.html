@@ -19,6 +19,45 @@
       Please <a href="http://browsehappy.com/">upgrade your browser</a>
       to improve your experience.
     </p><![endif]-->
+    <div id="contactHeadWrap" class="contactDropWrap">
+      <div class="contactDropCenterWrap">
+        <div class="contactFormWrap">
+          <h4>Send us a message</h4>
+          <div class="contactFromInner">
+            <form name="input" action="" method="post" class="darkInputs">
+              <input type="text" name="name" placeholder="Full Name" class="contactDropName">
+              <input type="text" name="email" placeholder="Email Address" class="contactDropEmail">
+              <textarea name="message" placeholder="Message" rows="4" cols="50"></textarea>
+              <input type="submit" name="submit" value="Send Message" class="greenSubmit"><a href="#" class="contactPrivacyLink">Read our <span>privacy policy?</span></a>
+            </form>
+          </div>
+        </div>
+        <div class="contactDropTextWrap">
+          <div class="onSmall">
+            <h3>Don’t be shy. Hit us up and we’ll be sure to hit back</h3>
+            <p>Donec sed odio dui. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. </p>
+          </div>
+          <div class="contactLocationWrap">
+            <h4>Main Office</h4>
+            <ul class="contactLocationList">
+              <li> <a href="">541.399.4683</a></li>
+              <li> <a href="">101.5 Oak Street,</a></li>
+              <li> <a href="">Hood River OR, 97031</a></li>
+              <li> <a href="" class="contactViewLink">View Map</a></li>
+            </ul>
+          </div>
+          <div class="contactSocialWrap">
+            <ul>
+              <li class="contactIcon"><a href="" class="ciFace">Facebook</a></li>
+              <li class="contactIcon"><a href="" class="ciIgram">Instagram</a></li>
+              <li class="contactIcon"><a href="" class="ciTwit">Twitter</a></li>
+              <li class="contactIcon"><a href="" class="ciPin">Pintrest</a></li>
+              <li class="contactIcon"><a href="" class="ciPlus">Google Plus</a></li>
+            </ul>
+          </div>
+        </div>
+      </div><a id="contactCloseBtn" href="#" class="contactDropCloseBtn">Close</a>
+    </div>
     <header class="gHead">          
       <div class="gNav"><a href="#" class="gLogo">
           <h1>Summit Projects</h1></a><i class="fa fa-search offLittle"></i><a href="#" id="menuIcon" class="menuIcon offLittle"></a>
@@ -58,7 +97,15 @@
         </nav>
         <div class="servicesAboutWrap">
           <div class="servicesAboutInnerWrap">
-            <div class="servicesSlider"></div>
+            <div class="servicesSlider">
+              <div id="mySwipe" style="max-width:500px; margin:0 auto" class="swipe">
+                <div class="swipeWrap">
+                  <div><img src="assests/img/delete/slide1.jpg"></div>
+                  <div> <img src="assests/img/delete/slide2.jpg"></div>
+                  <div><img src="assests/img/delete/slide3.jpg"></div>
+                </div>
+              </div>
+            </div>
             <section class="servicesTextWrap">
               <h2>Who we are</h2>
               <p>Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nulla vitae elit libero, a pharetra augue. </p><span class="diamondSumitLogo"></span>
@@ -74,7 +121,7 @@
         </div>
         <div class="servicesCapWrap">
           <div class="servicesCapRow">
-            <h2>Capabilities</h2>
+            <h2>Our Capabilities</h2>
             <section>
               <h4>Development</h4>
               <p>Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
@@ -114,179 +161,75 @@
         <div class="servicesClientWrap">
           <section>
             <div class="servicesClientTextWrap">
-              <h2>Who we work with</h2>
-              <p>Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+              <div class="servicesClientTextInner">
+                <h2>Who we work with</h2>
+                <p>Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+              </div>
+              <section id="remington1816" class="clientAboutHoverSection hidden">
+                <h6>Remington 1816</h6>
+                <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
+              </section>
+              <section id="intelliskin" class="clientAboutHoverSection hidden">
+                <h6>Intelliskin</h6>
+                <p>Ulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>
+              </section>
+              <section id="mountainKhakis" class="clientAboutHoverSection hidden">
+                <h6>Mk</h6>
+                <p>Ulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>
+              </section>
+              <section id="wellpartner" class="clientAboutHoverSection hidden">
+                <h6>Wp</h6>
+                <p>Ulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>
+              </section>
+              <section id="bendixKing" class="clientAboutHoverSection hidden">
+                <h6>BK</h6>
+                <p>Ulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>
+              </section>
+              <section id="calNatural" class="clientAboutHoverSection hidden">
+                <h6>CalNatural</h6>
+                <p>Ulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>
+              </section>
+              <section id="farbank" class="clientAboutHoverSection hidden">
+                <h6>Farbank</h6>
+                <p>Ulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>
+              </section>
+              <section id="icebreaker" class="clientAboutHoverSection hidden">
+                <h6>Icebreaker</h6>
+                <p>Ulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>
+              </section>
             </div>
             <div class="servicesClientListWrap">
               <ul>
                 <li class="servicesListCallOut"></li>
                 <div class="servicesListClientName">
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
+                  <li data-client-link="remington1816">Remington 1816</li>
+                  <li data-client-link="intelliskin">Intelliskin</li>
+                  <li data-client-link="mountainKhakis">Mountain Khakis</li>
+                  <li data-client-link="wellpartner">Wellpartner</li>
+                  <li data-client-link="bendixKing">Bendix King</li>
+                  <li data-client-link="calNatural">CalNatural</li>
+                  <li data-client-link="farbank">Farbank</li>
+                  <li data-client-link="icebreaker">Icebreaker</li>
                 </div>
                 <div class="servicesListClientName">
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
+                  <li data-client-link="remington1816">Remington 1816</li>
+                  <li data-client-link="intelliskin">Intelliskin</li>
+                  <li data-client-link="mountainKhakis">Mountain Khakis</li>
+                  <li data-client-link="wellpartner">Wellpartner</li>
+                  <li data-client-link="bendixKing">Bendix King</li>
+                  <li data-client-link="calNatural">CalNatural</li>
+                  <li data-client-link="farbank">Farbank</li>
+                  <li data-client-link="icebreaker">Icebreaker</li>
                 </div>
                 <div class="servicesListClientName">
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
-                  <li>Remington 1816
-                    <section>
-                      <h6>Remington 1816</h6>
-                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
-                    </section>
-                  </li>
+                  <li data-client-link="remington1816">Remington 1816</li>
+                  <li data-client-link="intelliskin">Intelliskin</li>
+                  <li data-client-link="mountainKhakis">Mountain Khakis</li>
+                  <li data-client-link="wellpartner">Wellpartner</li>
+                  <li data-client-link="bendixKing">Bendix King</li>
+                  <li data-client-link="calNatural">CalNatural</li>
+                  <li data-client-link="farbank">Farbank</li>
+                  <li data-client-link="icebreaker">Icebreaker</li>
                 </div>
               </ul>
             </div>
@@ -322,7 +265,7 @@
           </ul>
           <div class="footSignUpWrap"><span>newsletter</span>
             <form method="post" action="" class="darkInputs">
-              <input type="input" placeholder="Email Address">
+              <input type="text" placeholder="Email Address" class="footNewsSignUp">
               <input type="submit" value="Sign Up" class="greenSubmit">
             </form>
           </div>
@@ -352,10 +295,41 @@
       
     </script>
     <script src="assests/js/vendor/menu.js"></script>
+    <script src="assests/js/vendor/swipe.js"></script>
     <script src="assests/js/main.js"></script>
     <script>
       $(document).ready(function() {
       
+          $('#nav li').on ('click', function () {
+              window.mySwipe.slide($(this).index(), 200);
+          });
+          
+          $('#mySwipePrev').on('click', function () {
+             mySwipe.prev();
+             
+             $navLi.removeClass('selected');
+             $navLi.eq(mySwipe.getPos() - 1).addClass('selected');
+          });
+          $('#mySwipeNext').on('click', function () {
+             mySwipe.next();
+             $navLi.removeClass('selected');
+             $navLi.eq(mySwipe.getPos() - 1).addClass('selected');
+          });
+          
+          // pure JS slider nav
+          var elem = document.getElementById('mySwipe');
+          window.mySwipe = Swipe(elem, {
+            startSlide: 0,
+            auto: 1500,
+            continuous: true,
+            stopPropagation: true,
+          });
+          
+          
+          
+          
+          
+          
           //Mobile Nav Logic
           var $menuIcon = $('#menuIcon'),
               $gNav = $('.gNav');

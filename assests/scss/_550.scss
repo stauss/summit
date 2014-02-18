@@ -338,6 +338,7 @@ li a:hover .projectHoverBg {
 
 .servicesSlider {
 	width: 35%;
+	display: block;
 }
 
 .servicesTextWrap {
@@ -346,5 +347,7 @@ li a:hover .projectHoverBg {
 	top: 0px;
 	right: 0px;
 	height: 100%;
+	@include cover();
+	@include backgroundImg('servicesAboutBg.jpg',no-repeat,center) 
 }
 

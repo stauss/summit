@@ -378,6 +378,12 @@ elements
 .footBottom a {
   float: right; }
 
+.footNewsSignUp {
+  position: absolute;
+  width: 205px !important;
+  top: 10px;
+  right: 0px; }
+
 /* 
 ==============================================================
 */
@@ -471,120 +477,6 @@ elements
 .contactLocationList li {
   font-size: .85em;
   line-height: 1.4em; }
-
-.servicesAboutWrap {
-  display: inline-block;
-  float: left;
-  width: 100%;
-  height: auto;
-  position: relative;
-  padding: 15px; }
-
-.servicesAboutInnerWrap {
-  display: inline-block;
-  float: left;
-  width: 100%;
-  height: 100%;
-  position: relative; }
-
-.servicesSlider {
-  display: inline-block;
-  float: left;
-  width: 100%;
-  height: 200px;
-  background-color: #bada55; }
-
-.servicesTextWrap {
-  display: inline-block;
-  float: left;
-  width: 100%;
-  height: auto;
-  padding: 15px;
-  text-align: center;
-  color: white;
-  background-color: #171716; }
-
-.servicesTextWrap h2 {
-  color: white; }
-
-.servicesCapWrap {
-  display: inline-block;
-  float: left;
-  width: 100%;
-  height: auto;
-  padding: 15px; }
-
-.servicesCapWrap section {
-  display: inline-block;
-  float: left;
-  width: 100%;
-  height: auto;
-  padding: 0 0 20px 0; }
-
-.servicesClientWrap {
-  padding: 15px; }
-
-.servicesListClientName section {
-  display: none; }
-
-.servicesClientListWrap {
-  display: inline-block;
-  float: left;
-  width: 100%;
-  height: auto; }
-
-.servicesClientListWrap ul {
-  display: block;
-  float: left;
-  width: 100%;
-  height: auto;
-  padding: 20px 0; }
-
-.servicesClientListWrap li {
-  display: block;
-  float: left;
-  width: 33.33333%;
-  height: auto;
-  font-size: .7em; }
-
-.servicesLocationWrap {
-  display: inline-block;
-  float: left;
-  width: 100%;
-  height: auto;
-  padding: 15px;
-  background-color: #bada55; }
-
-.servicesLocationPopUp section {
-  display: block;
-  float: none;
-  width: 100%;
-  height: 150px;
-  background-color: white; }
-
-.servicesLocationPopUp h2 {
-  display: block;
-  float: left;
-  width: 55px;
-  height: 150px;
-  overflow: hidden;
-  text-indent: -999999px;
-  background-color: #507a40; }
-
-.servicesLocationTextWrap {
-  display: block;
-  float: left;
-  width: 80%;
-  height: auto;
-  padding: 15px; }
-
-.servicesCenterWrap {
-  display: block;
-  float: none;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  max-width: 1200px; }
 
 /* ============================================================
 
@@ -796,6 +688,16 @@ page
 
 .wBg {
   background-color: white; }
+
+.hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
 
 .fullPageHeroBg {
   display: block;
@@ -1946,6 +1848,197 @@ div.stickyCenterWrap {
 .searchResultWrap .resultsWrapInner {
   border-bottom: none; }
 
+.servicesAboutWrap {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 15px; }
+
+.servicesAboutInnerWrap {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.servicesSlider {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: auto;
+  max-height: 275px;
+  position: relative;
+  overflow: hidden;
+  background-color: #171717; }
+
+.servicesTextWrap {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  background-color: #171716; }
+
+.servicesTextWrap h2 {
+  color: white; }
+
+.servicesCapWrap {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: auto;
+  padding: 15px; }
+
+.servicesCapWrap section {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: auto;
+  padding: 0 0 20px 0; }
+
+.servicesClientWrap {
+  float: left;
+  padding: 15px; }
+
+.servicesListClientName section {
+  display: none; }
+
+.servicesListClientName li:hover section {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+.servicesClientListWrap {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: auto; }
+
+.servicesClientListWrap li {
+  position: relative; }
+
+.servicesClientListWrap li::after {
+  display: block;
+  float: none;
+  width: 4px;
+  height: 4px;
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  background-color: #507a40;
+  opacity: 0;
+  visibility: hidden;
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1.5); }
+
+.servicesClientListWrap li:hover {
+  color: #507a40 !important;
+  cursor: pointer;
+  text-decoration: underline; }
+
+.servicesClientListWrap li:hover:after {
+  left: -8px;
+  opacity: 1;
+  visibility: visible; }
+
+.servicesClientListWrap ul {
+  display: block;
+  float: left;
+  width: 100%;
+  height: auto;
+  padding: 20px 0; }
+
+.servicesClientListWrap li {
+  display: block;
+  float: left;
+  width: 33.33333%;
+  height: auto;
+  font-size: .7em; }
+
+.servicesLocationWrap {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: 375px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: transparent url(../img/backgrounds/locationImg.jpg) no-repeat top center;
+  padding: 15px; }
+
+.servicesLocationPopUp section {
+  display: block;
+  float: none;
+  width: 100%;
+  height: 150px;
+  position: relative;
+  background-color: white;
+  box-shadow: 0.5px 0.866px 30px 0px rgba(2, 2, 2, 0.55); }
+
+.servicesLocationPopUp h2 {
+  display: block;
+  float: left;
+  width: 55px;
+  height: 150px;
+  overflow: hidden;
+  text-indent: -999999px;
+  background-color: #507a40; }
+
+.servicesLocationTextWrap {
+  display: block;
+  float: left;
+  width: 80%;
+  height: auto;
+  padding: 15px; }
+
+.servicesCenterWrap {
+  display: block;
+  float: none;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  max-width: 1200px; }
+
+.swipeWrap {
+  overflow: hidden;
+  position: relative; }
+
+.swipeWrap div {
+  float: left;
+  width: 100%;
+  position: relative; }
+
+.swipeWrap div > img {
+  width: 100%; }
+
+.servicesLocationPopUp section::after {
+  display: block;
+  float: none;
+  width: 0;
+  height: 0;
+  content: '';
+  position: absolute;
+  top: 150px;
+  left: 16px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #507a40; }
+
 /* ============================================================
 
 Forms
@@ -2261,7 +2354,10 @@ input[type='submit'] {
     max-width: 280px; }
 
   .servicesLocationWrap {
-    padding: 50px 15px; } }
+    padding: 50px 15px; }
+
+  .servicesSlider {
+    display: none; } }
 @media only screen and (min-width: 550px) {
   /* ============================================================
   
@@ -2516,14 +2612,20 @@ input[type='submit'] {
     display: none; }
 
   .servicesSlider {
-    width: 35%; }
+    width: 35%;
+    display: block; }
 
   .servicesTextWrap {
     width: 65%;
     position: absolute;
     top: 0px;
     right: 0px;
-    height: 100%; } }
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: transparent url(../img/backgrounds/servicesAboutBg.jpg) no-repeat center; } }
 @media only screen and (min-width: 650px) {
   /* ============================================================
   
@@ -2785,6 +2887,15 @@ input[type='submit'] {
   .notFoundSignUpWrap {
     display: block; }
 
+  .servicesSlider {
+    height: 250px; }
+
+  .servicesClientTextWrap, .servicesClientListWrap {
+    display: block;
+    float: left;
+    width: 50%;
+    height: auto; }
+
   /* 
   ====================================================== Blog Archive
   */ }
@@ -2986,7 +3097,18 @@ input[type='submit'] {
   .resultsWrapInner .paginationWrap a.pageArrow {
     width: 110px;
     height: 110px;
-    text-indent: 0px; } }
+    text-indent: 0px; }
+
+  .servicesCapRow section {
+    width: 33.3333333333%; }
+
+  .contactDropTextWrap {
+    float: left;
+    width: 45%; }
+
+  .contactFormWrap {
+    float: right;
+    width: 50%; } }
 @media only screen and (min-width: 900px) {
   /* ============================================================
   
@@ -3159,7 +3281,13 @@ input[type='submit'] {
     padding: 0 0 0 10px; }
 
   .notFoundHeader {
-    height: 400px; } }
+    height: 400px; }
+
+  .servicesCapRow section {
+    width: 25%; }
+
+  .servicesSlider {
+    height: 450px; } }
 @media only screen and (min-width: 1220px) {
   /* ============================================================
   

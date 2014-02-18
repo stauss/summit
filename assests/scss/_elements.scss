@@ -224,6 +224,13 @@ elements
 	float: right;
 }
 
+// this is the news letter sign up in the footer
+.footNewsSignUp {
+	position: absolute;
+	width: 205px !important;
+	top: 10px;
+	right: 0px;
+}
 
 /* 
 ==============================================================
@@ -335,104 +342,6 @@ elements
 //===============================================================================================================================|
 
 
-
-
-//====================================================================================================| Services Page |==========|
-
-// full services wrap | the about section
-.servicesAboutWrap {
-	@include sizeEl(inline-block, left, 100%, auto);
-	position: relative;
-	padding: 15px;
-}
-
-.servicesAboutInnerWrap {
-	@include sizeEl(inline-block, left, 100%, 100%);
-	position: relative;
-}
-
-.servicesSlider {
-	@include sizeEl(inline-block, left, 100%, 200px);
-	background-color: #bada55;
-}
-
-.servicesTextWrap {
-	@include sizeEl(inline-block, left, 100%, auto);
-	padding: 15px;
-	text-align: center;
-	color: $w;
-	background-color: $headBg;
-}
-
-.servicesTextWrap h2 {
-	color: $w;
-}
-
-.servicesCapWrap {
-	@include sizeEl(inline-block, left, 100%, auto);
-	padding: 15px;
-}
-
-.servicesCapWrap section {
-	@include sizeEl(inline-block, left, 100%, auto);
-	padding: 0 0 20px 0;
-}
-
-
-.servicesClientWrap {
-	padding: 15px;
-}
-
-.servicesListClientName section {
-	display: none;
-}
-
-.servicesClientListWrap {
-	@include sizeEl(inline-block, left, 100%, auto);
-}
-
-.servicesClientListWrap ul {
-	@include sizeEl(block, left, 100%, auto);
-	padding: 20px 0;
-}
-
-.servicesClientListWrap li {
-	@include sizeEl(block, left, 33.33333%, auto);
-	font-size: .7em;
-}
-
-.servicesLocationWrap {
-	@include sizeEl(inline-block, left, 100%, auto);
-	padding: 15px;
-	background-color: #bada55;
-}
-
-
-.servicesLocationPopUp section {
-	@include sizeEl(block, none, 100%, 150px);
-	background-color: $w;
-}
-
-.servicesLocationPopUp h2 {
-	@include sizeEl(block, left, 55px, 150px);
-	overflow: hidden;
-	text-indent: -999999px;
-	background-color: $bGreen;
-}
-
-.servicesLocationTextWrap {
-	@include sizeEl(block, left, 80%, auto);
-	padding: 15px;
-}
-
-.servicesCenterWrap {
-	@include sizeEl(block, none, 100%, auto);
-	margin: 0 auto;
-	max-width: 1200px;
-}
-
-
-//===============================================================================================================================|
 
 
 

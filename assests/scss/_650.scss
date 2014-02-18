@@ -303,9 +303,13 @@ h5.tpyeOfProject span {
 
 
 
+.servicesSlider {
+	height: 250px;
+}
 
-
-
+.servicesClientTextWrap, .servicesClientListWrap {
+	@include sizeEl(block, left, 50%, auto);
+}
 
 
 

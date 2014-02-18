@@ -11,7 +11,7 @@
       </ul>
       <div class="footSignUpWrap"><span>newsletter</span>
         <form method="post" action="" class="darkInputs">
-          <input type="input" placeholder="Email Address"/>
+          <input type="text" placeholder="Email Address" class="footNewsSignUp"/>
           <input type="submit" value="Sign Up" class="greenSubmit"/>
         </form>
       </div>
@@ -41,10 +41,41 @@
   
 </script>
 <script src="assests/js/vendor/menu.js"></script>
+<script src="assests/js/vendor/swipe.js"></script>
 <script src="assests/js/main.js"></script>
 <script>
   $(document).ready(function() {
   
+      $('#nav li').on ('click', function () {
+          window.mySwipe.slide($(this).index(), 200);
+      });
+      
+      $('#mySwipePrev').on('click', function () {
+         mySwipe.prev();
+         
+         $navLi.removeClass('selected');
+         $navLi.eq(mySwipe.getPos() - 1).addClass('selected');
+      });
+      $('#mySwipeNext').on('click', function () {
+         mySwipe.next();
+         $navLi.removeClass('selected');
+         $navLi.eq(mySwipe.getPos() - 1).addClass('selected');
+      });
+      
+      // pure JS slider nav
+      var elem = document.getElementById('mySwipe');
+      window.mySwipe = Swipe(elem, {
+        startSlide: 0,
+        auto: 1500,
+        continuous: true,
+        stopPropagation: true,
+      });
+      
+      
+      
+      
+      
+      
       //Mobile Nav Logic
       var $menuIcon = $('#menuIcon'),
           $gNav = $('.gNav');

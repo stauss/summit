@@ -52,6 +52,16 @@ page
 .wBg { background-color: $w; }
 
 
+// boilerplate for hiding things
+.hidden {   
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}
+
+
 //===============================================================================================================================|
 
 
@@ -1358,7 +1368,6 @@ div.stickyCenterWrap {
 
 .secondaryHeader { 
 	@include sizeEl(block, left, 100%, 135px); 
-	//background-color: #bada55;
 }
 
 
@@ -1583,4 +1592,209 @@ div.stickyCenterWrap {
 	border-bottom: none;
 }
 //================================================================================================================================|
+
+
+
+
+//====================================================================================================| Services Page |==========|
+
+// full services wrap | the about section
+.servicesAboutWrap {
+	@include sizeEl(inline-block, left, 100%, auto);
+	position: relative;
+	padding: 15px;
+}
+
+.servicesAboutInnerWrap {
+	@include sizeEl(inline-block, left, 100%, 100%);
+	position: relative;
+}
+
+.servicesSlider {
+	@include sizeEl(inline-block, left, 100%, auto);
+	max-height: 275px;
+	position: relative;
+	overflow: hidden;
+	background-color: #171717;
+}
+
+
+
+
+
+
+
+
+.servicesTextWrap {
+	@include sizeEl(inline-block, left, 100%, auto);
+	padding: 15px;
+	text-align: center;
+	color: $w;
+	background-color: $headBg;
+}
+
+.servicesTextWrap h2 {
+	color: $w;
+}
+
+.servicesCapWrap {
+	@include sizeEl(inline-block, left, 100%, auto);
+	padding: 15px;
+}
+
+.servicesCapWrap section {
+	@include sizeEl(inline-block, left, 100%, auto);
+	padding: 0 0 20px 0;
+}
+
+
+.servicesClientWrap {
+	float: left;
+	padding: 15px;
+}
+
+.servicesListClientName section {
+	display: none;
+}
+
+.servicesListClientName li:hover section {
+	display: block;
+	position: absolute; 
+	top: 0px;
+	left: 0px;
+}
+
+.servicesClientListWrap {
+	@include sizeEl(inline-block, left, 100%, auto);
+}
+
+.servicesClientListWrap li {
+	position: relative;
+}
+
+.servicesClientListWrap li::after {
+	@include sizeEl(block, none, 4px, 4px);
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 0px;
+	background-color: $bGreen;
+	opacity: 0;
+	visibility: hidden;
+
+	-moz-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	transform:rotate(45deg);
+
+	@include simpleTransAni(all, .15s, ease-in-out);
+
+
+	// ie filter magic
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1.5);
+}
+
+.servicesClientListWrap li:hover {
+	color: $bGreen !important;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.servicesClientListWrap li:hover:after {
+	left: -8px;
+	opacity: 1;
+	visibility: visible;
+}
+
+
+
+
+
+.servicesClientListWrap ul {
+	@include sizeEl(block, left, 100%, auto);
+	padding: 20px 0;
+}
+
+.servicesClientListWrap li {
+	@include sizeEl(block, left, 33.33333%, auto);
+	font-size: .7em;
+}
+
+.servicesLocationWrap {
+	@include sizeEl(inline-block, left, 100%, 375px);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	@include backgroundImg('locationImg.jpg', no-repeat, top center); 
+	padding: 15px;
+}
+
+
+.servicesLocationPopUp section {
+	@include sizeEl(block, none, 100%, 150px);
+	position: relative;
+	background-color: $w;
+  	box-shadow: 0.5px 0.866px 30px 0px rgba( 2, 2, 2, .55 );
+}
+
+.servicesLocationPopUp h2 {
+	@include sizeEl(block, left, 55px, 150px);
+	overflow: hidden;
+	text-indent: -999999px;
+	background-color: $bGreen;
+}
+
+.servicesLocationTextWrap {
+	@include sizeEl(block, left, 80%, auto);
+	padding: 15px;
+}
+
+.servicesCenterWrap {
+	@include sizeEl(block, none, 100%, auto);
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+
+.swipeWrap {
+  overflow: hidden;
+  position: relative;
+}
+
+// slider
+.swipeWrap div {
+	  float:left;
+	  width:100%;
+	  position: relative;
+}
+
+.swipeWrap div > img {
+	width: 100%;
+}
+
+
+
+
+
+
+
+.servicesLocationPopUp section::after {
+	@include sizeEl(block, none, 0, 0);
+	content: '';
+	position: absolute;
+	top: 150px;
+	left: 16px;
+
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	
+	border-top: 20px solid $bGreen;
+}
+
+
+//===============================================================================================================================|
+
+
 
