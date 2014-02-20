@@ -4,6 +4,13 @@ $(document).ready(function() {
 
 
 
+    var mMenuWrap = $('.menuWrap'),
+        mTrigger = $('#mobileMenuTrig');
+
+    mTrigger.on('click', function(){
+        mMenuWrap.addClass('showMenu');
+    });
+
 
 
 	// when the window is scrolled

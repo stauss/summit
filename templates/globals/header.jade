@@ -1,74 +1,78 @@
-div#contactHeadWrap.contactDropWrap
-    div.contactDropCenterWrap
+//- div#contactHeadWrap.contactDropWrap
+//- 	div.contactDropCenterWrap
 
-        div.contactFormWrap
-            h4 Send us a message
-            div.contactFromInner
-                form.darkInputs(name="input", action="", method="post")
-                    input.contactDropName(type="text", name="name", placeholder="Full Name")
-                    input.contactDropEmail(type="text", name="email", placeholder="Email Address")
-                    textarea(name="message", placeholder="Message", rows="4", rows="4", cols="50")
-                    input.greenSubmit(type="submit", name="submit", value='Send Message')
-                    a(href="#").contactPrivacyLink Read our 
-                        span privacy policy?
+//- 		div.contactFormWrap
+//- 			h4 Send us a message
+//- 			div.contactFromInner
+//- 				form.darkInputs(name="input", action="", method="post")
+//- 					input.contactDropName(type="text", name="name", placeholder="Full Name")
+//- 					input.contactDropEmail(type="text", name="email", placeholder="Email Address")
+//- 					textarea(name="message", placeholder="Message", rows="4", rows="4", cols="50")
+//- 					input.greenSubmit(type="submit", name="submit", value='Send Message')
+//- 					a(href="#").contactPrivacyLink Read our 
+//- 					span privacy policy?
 
-        div.contactDropTextWrap
-            div.onSmall
-                h3 Don’t be shy. Hit us up and we’ll be sure to hit back
-                p Donec sed odio dui. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. 
+//- 		div.contactDropTextWrap
+//- 			div.onSmall
+//- 				h3 Don’t be shy. Hit us up and we’ll be sure to hit back
+//- 				p Donec sed odio dui. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. 
 
-            div.contactLocationWrap
-                h4 Main Office
-                ul.contactLocationList
-                    li 
-                        a(href="") 541.399.4683
-                    li 
-                        a(href="") 101.5 Oak Street,
-                    li 
-                        a(href="") Hood River OR, 97031
-                    li 
-                        a.contactViewLink(href="") View Map
+//- 			div.contactLocationWrap
+//- 				h4 Main Office
+//- 					ul.contactLocationList
+//- 						li 
+//- 							a(href="") 541.399.4683
+//- 						li 
+//- 							a(href="") 101.5 Oak Street,
+//- 						li 
+//- 							a(href="") Hood River OR, 97031
+//- 						li 
+//- 							a.contactViewLink(href="") View Map
 
 
-            div.contactSocialWrap
-                ul
-                    li.contactIcon
-                        a.ciFace(href="") Facebook
-                    li.contactIcon
-                        a.ciIgram(href="") Instagram
-                    li.contactIcon
-                        a.ciTwit(href="") Twitter
-                    li.contactIcon
-                        a.ciPin(href="") Pintrest
-                    li.contactIcon
-                        a.ciPlus(href="") Google Plus
+//- 			div.contactSocialWrap
+//- 				ul
+//- 					li.contactIcon
+//- 						a.ciFace(href="") Facebook
+//- 					li.contactIcon
+//- 						a.ciIgram(href="") Instagram
+//- 					li.contactIcon
+//- 						a.ciTwit(href="") Twitter
+//- 					li.contactIcon
+//- 						a.ciPin(href="") Pintrest
+//- 					li.contactIcon
+//- 						a.ciPlus(href="") Google Plus
 
-    a#contactCloseBtn.contactDropCloseBtn(href="#") Close
+//- 	a#contactCloseBtn.contactDropCloseBtn(href="#") Close
 
-//- Global Header
-header.gHead           
-    div.gNav
 
-        a.gLogo(href="#")
-            h1 Summit Projects
 
-        i(class="fa fa-search offLittle")
-        a(href="#", id="menuIcon", class="menuIcon offLittle")
+header.gHead#mainNav    
+	div.gNav
 
-        div.menuWrap
-            nav(role="navigation")
-                div.mobileMenuHead
-                    h1 
-                        a(href="#") Summit Projects
-                    h2 Big Ideas for Great Breands
-                ul
-                    li.firstLink
-                        a(href="#") Work
-                    li.secondLink
-                        a(href="#") Services
-                    li.thirdLink
-                        a(href="#") Contact
-                    li.forthLink
-                        a(href="#") Blog
-                    li.offLittle
-                        a(href="#") Newsletter Signup
+		a.gLogo(href="#main-navigation")
+			h1 Summit Projects
+
+		i(class="fa fa-search offLittle")
+		a#mobileMenuTrig(href="#", class="menuIcon offLittle")
+
+		div.menuWrap
+			div.navInnerWrap
+				a.navCloseBtn(href="")
+				div.mobileMenuHead
+					h1 
+						a(href="#") Summit Projects
+					h2 Big Ideas for Great Breands
+				nav
+					ul
+						li.firstLink
+							a(href="#") Work
+						li.secondLink
+							a(href="#") Services
+						li.thirdLink
+							a(href="#") Contact
+						li.forthLink
+							a(href="#") Blog
+						li.offLittle
+							span Newsletter Signup
+							a.btn.btnW(href="#") Sign Up Now

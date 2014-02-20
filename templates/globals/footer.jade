@@ -70,6 +70,14 @@ script
 
     $(document).ready(function() {
 
+
+
+        $(function() {
+            $('nav#menu').mmenu();
+        });
+
+
+
         $('#nav li').on ('click', function () {
             window.mySwipe.slide($(this).index(), 200);
         });
@@ -97,6 +105,12 @@ script
 
 
 
+
+
+        $("a[href^=#]").on("click", function(e) {
+          e.preventDefault();
+          history.pushState({}, "", this.href);
+        });
 
 
 

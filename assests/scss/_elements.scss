@@ -54,7 +54,6 @@ elements
 	@include sizeEl(block, none, 85px, 50px);
 	@include spritePos('sprite.png', 0px 16px);
 	position: absolute;
-	background-color: #bada55;
 	z-index: 999999;
 }
 
@@ -80,9 +79,18 @@ elements
 	//background-color: $bA;
 }
 
-.menuWrap {
-	@include disNone();
+#menuWrap:target {
+  width: 20%; 
 }
+
+.menuWrap {
+	//@include disNone();
+	// transition: width 0.3s ease;
+}
+
+// .menuWrap.showMenu {
+// 	@include disBlock();
+// }
 
 .gNav li a {
 	color: #fff !important;
@@ -91,6 +99,149 @@ elements
 
 
 
+
+.menuWrap.showMenu .navInnerWrap { 
+-webkit-animation: mMenuSlide .65s forwards;
+   -moz-animation: mMenuSlide .65s forwards;
+    -ms-animation: mMenuSlide .65s forwards;
+     -o-animation: mMenuSlide .65s forwards;
+        animation: mMenuSlide .65s forwards;
+}
+
+
+.navInnerWrap {
+	@include sizeEl(inherit, none, 75%, 200%);
+	position: fixed; 
+	top: 0px;
+	left: -100%;
+	background-color: $headBg;
+	border-right: solid 1px #1f1f1f;
+  	box-shadow: 11px 0px 90px 0px rgba( 2, 2, 2, .9);
+	z-index: 1;
+	padding-left: 20px;
+}
+
+
+
+
+
+
+
+@-webkit-keyframes mMenuSlide {
+   0%  { -webkit-transform: translateX(-10%);    }
+   80% { -webkit-transform: translateX(128%);  }
+   100% { -webkit-transform: translateX(125%);  }
+}
+
+// @-moz-keyframes menuIconBack {
+//    from { background-position:    0px; }
+//      to { background-position: -245px; }
+// }
+
+// @-ms-keyframes menuIconBack {
+//    from { background-position:    0px; }
+//      to { background-position: -245px; }
+// }
+
+// @-o-keyframes menuIconBack {
+//    from { background-position:    0px; }
+//      to { background-position: -245px; }
+// }
+
+// @keyframes menuIconBack {
+//    from { background-position:    0px; }
+//      to { background-position: -245px; }
+// }
+
+
+
+
+
+
+
+.mobileMenuHead {
+	@include sizeEl(block, left, 100%, 200px);
+	overflow: hidden;
+	@include cover();
+	@include backgroundImg("mMenuHeader.jpg", no-repeat, center);
+}
+
+
+// mobile menu header
+.mobileMenuHead h1 {
+	@include sizeEl(block, none, 50px, 100px);
+	overflow: hidden;
+	text-indent: -99999px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.mobileMenuHead h1 a {
+	@include sizeEl(block, none, 50px, 50px);
+	position: absolute;
+	bottom: 15px;
+	@include spritePos('sprite.png', -130px -50px);
+}
+
+.mobileMenuHead h2 {
+	@include sizeEl(block, none, 155px, 55px);
+	overflow: hidden;
+	text-indent: -99999px;
+	margin: 0 auto;
+	@include spritePos('sprite.png', 0px -246px);
+}
+
+.menuWrap li {
+	@include sizeEl(block, left, 100%, auto);
+	border-bottom: solid 1px #1f1f1f;
+	text-transform: uppercase;
+	font-size: .8em;
+	letter-spacing: .2em;
+	color: $w;
+}
+
+.menuWrap li:last-child {
+	display: none;
+	border-bottom: none;
+	padding: 15px;
+}
+
+.menuWrap li:hover {
+	background-color: #1f1f1f;
+}
+
+.menuWrap li:last-child span {
+	@include sizeEl(block, left, 100%, auto);
+}
+
+.menuWrap li a {
+	padding: 15px;
+}
+
+.menuWrap li a.btnW {
+	margin: 10px 0 0 0;
+	color: #000 !important;
+	font-weight: 800;
+	padding: 5px 8px;
+}
+
+.menuActiveOverlay {
+	position: fixed;
+	width: 100%;
+	height: 200%;
+	top: 0px;
+	left: 0px;
+	background-color: $b;
+	z-index: 0;
+	opacity: .85;
+}
+
+
+@media only screen and (min-height: 420px) {
+	.menuWrap li:last-child {
+		display: block;
+	}
+}
 
 /* 
 ========================================================================================================================== Crumbs

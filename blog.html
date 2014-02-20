@@ -19,62 +19,25 @@
       Please <a href="http://browsehappy.com/">upgrade your browser</a>
       to improve your experience.
     </p><![endif]-->
-    <div id="contactHeadWrap" class="contactDropWrap">
-      <div class="contactDropCenterWrap">
-        <div class="contactFormWrap">
-          <h4>Send us a message</h4>
-          <div class="contactFromInner">
-            <form name="input" action="" method="post" class="darkInputs">
-              <input type="text" name="name" placeholder="Full Name" class="contactDropName">
-              <input type="text" name="email" placeholder="Email Address" class="contactDropEmail">
-              <textarea name="message" placeholder="Message" rows="4" cols="50"></textarea>
-              <input type="submit" name="submit" value="Send Message" class="greenSubmit"><a href="#" class="contactPrivacyLink">Read our <span>privacy policy?</span></a>
-            </form>
-          </div>
-        </div>
-        <div class="contactDropTextWrap">
-          <div class="onSmall">
-            <h3>Don’t be shy. Hit us up and we’ll be sure to hit back</h3>
-            <p>Donec sed odio dui. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. </p>
-          </div>
-          <div class="contactLocationWrap">
-            <h4>Main Office</h4>
-            <ul class="contactLocationList">
-              <li> <a href="">541.399.4683</a></li>
-              <li> <a href="">101.5 Oak Street,</a></li>
-              <li> <a href="">Hood River OR, 97031</a></li>
-              <li> <a href="" class="contactViewLink">View Map</a></li>
-            </ul>
-          </div>
-          <div class="contactSocialWrap">
-            <ul>
-              <li class="contactIcon"><a href="" class="ciFace">Facebook</a></li>
-              <li class="contactIcon"><a href="" class="ciIgram">Instagram</a></li>
-              <li class="contactIcon"><a href="" class="ciTwit">Twitter</a></li>
-              <li class="contactIcon"><a href="" class="ciPin">Pintrest</a></li>
-              <li class="contactIcon"><a href="" class="ciPlus">Google Plus</a></li>
-            </ul>
-          </div>
-        </div>
-      </div><a id="contactCloseBtn" href="#" class="contactDropCloseBtn">Close</a>
-    </div>
-    <header class="gHead">          
-      <div class="gNav"><a href="#" class="gLogo">
-          <h1>Summit Projects</h1></a><i class="fa fa-search offLittle"></i><a href="#" id="menuIcon" class="menuIcon offLittle"></a>
+    <header id="mainNav" class="gHead">   
+      <div class="gNav"><a href="#main-navigation" class="gLogo">
+          <h1>Summit Projects</h1></a><i class="fa fa-search offLittle"></i><a id="mobileMenuTrig" href="#" class="menuIcon offLittle"></a>
         <div class="menuWrap">
-          <nav role="navigation">
+          <div class="navInnerWrap"><a href="" class="navCloseBtn"></a>
             <div class="mobileMenuHead">
               <h1> <a href="#">Summit Projects</a></h1>
               <h2>Big Ideas for Great Breands</h2>
             </div>
-            <ul>
-              <li class="firstLink"><a href="#">Work</a></li>
-              <li class="secondLink"><a href="#">Services</a></li>
-              <li class="thirdLink"><a href="#">Contact</a></li>
-              <li class="forthLink"><a href="#">Blog</a></li>
-              <li class="offLittle"><a href="#">Newsletter Signup</a></li>
-            </ul>
-          </nav>
+            <nav>
+              <ul>
+                <li class="firstLink"><a href="#">Work</a></li>
+                <li class="secondLink"><a href="#">Services</a></li>
+                <li class="thirdLink"><a href="#">Contact</a></li>
+                <li class="forthLink"><a href="#">Blog</a></li>
+                <li class="offLittle"><span>Newsletter Signup</span><a href="#" class="btn btnW">Sign Up Now</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
@@ -289,6 +252,14 @@
     <script>
       $(document).ready(function() {
       
+      
+      
+          $(function() {
+              $('nav#menu').mmenu();
+          });
+          
+          
+          
           $('#nav li').on ('click', function () {
               window.mySwipe.slide($(this).index(), 200);
           });
@@ -316,6 +287,12 @@
           
           
           
+          
+          
+          $("a[href^=#]").on("click", function(e) {
+            e.preventDefault();
+            history.pushState({}, "", this.href);
+          });
           
           
           
