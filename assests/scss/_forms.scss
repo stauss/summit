@@ -119,6 +119,12 @@ input[type='submit'] {
 
 
 
+input[type="text"].whiteInput {
+    background-color: $w !important;
+    border: 1px solid $w;
+    color: $textColor;
+}
+
 
 
 

@@ -111,5 +111,20 @@ p, ol, ul, dl, address, time {
 
 
 
+.legalQuestionTxt {
+	font-style: italic;
+	text-align: right;
+	font-size: 10px;
+	letter-spacing: .05em;
+	padding: 8px 0 0 0;
+}
+
+
+.legalQuestionTxt span {
+	color: $bGreen !important;
+	font-weight: 700 !important;
+}
+
+
 
 

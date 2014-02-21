@@ -175,6 +175,17 @@ p, ol, ul, dl, address, time {
     text-decoration: none;
     font-style: normal; }
 
+.legalQuestionTxt {
+  font-style: italic;
+  text-align: right;
+  font-size: 10px;
+  letter-spacing: .05em;
+  padding: 8px 0 0 0; }
+
+.legalQuestionTxt span {
+  color: #507a40 !important;
+  font-weight: 700 !important; }
+
 /* ============================================================
 
 elements
@@ -597,6 +608,183 @@ elements
 .contactLocationList li {
   font-size: .85em;
   line-height: 1.4em; }
+
+.modalPop {
+  display: block;
+  float: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999999;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 15px; }
+
+.modalHead, .modalContent {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 100%; }
+
+.modalHead {
+  overflow: hidden;
+  height: 50px;
+  padding: 20px 20px 20px 15px;
+  position: relative; }
+
+.modalHead h2 {
+  color: white;
+  font-size: 12px;
+  letter-spacing: .2em; }
+
+.modalCloseBtn {
+  display: block;
+  float: none;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  text-indent: -99999px;
+  cursor: pointer;
+  top: 0px;
+  right: 0px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear; }
+
+.modalCloseBtn:before, .modalCloseBtn:after {
+  content: "";
+  display: block;
+  float: none;
+  width: 1px;
+  height: 16px;
+  background-color: white;
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear; }
+
+.modalCloseBtn:after {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.modalCloseBtn:before {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+.modalCloseBtn:hover:after {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+.modalCloseBtn:hover:before {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.modalContent {
+  padding: 15px; }
+
+.modalContent form {
+  display: block;
+  position: relative;
+  background-color: #bada55; }
+
+.modalContent p {
+  padding-bottom: 15px; }
+
+.modalContent .greenSubmit {
+  position: absolute;
+  top: -2px;
+  right: -2px; }
+
+.modalPop section {
+  display: block;
+  float: left;
+  width: 100%;
+  height: auto;
+  background-color: #101010;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear; }
+
+.modalPop section:hover {
+  background-color: #507a40; }
+
+.modalCloseBtn:hover {
+  background-color: #476d38; }
+
+.modalContent {
+  background-color: #171716; }
+
+.modalLegalTxt a {
+  padding: 10px 0 0 0; }
+
+.modalShareList {
+  display: block;
+  float: left;
+  width: 100%;
+  height: auto; }
+
+.shareSocialIcon {
+  display: block;
+  float: left;
+  width: 48%;
+  height: auto;
+  margin: 1%;
+  padding: 8px 13px;
+  background-color: red; }
+
+.shareSocialIcon i,
+.modalShareEmail i {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 100%;
+  max-width: 40px;
+  text-align: left; }
+
+.shareSocialIcon i {
+  padding: 4px 0 0 0;
+  width: 20%; }
+
+.shareSocialIcon span {
+  padding: 0 0 0 5px; }
+
+.modalShareFace {
+  background-color: #00539f; }
+
+.modalShareTwitter {
+  background-color: #00aeef; }
+
+.modalSharePin {
+  background-color: #d73532; }
+
+.modalSharePlus {
+  background-color: #302f2f; }
+
+.modalShareEmail {
+  display: block;
+  float: left;
+  width: 100%;
+  height: auto;
+  background-color: #507a40;
+  padding: 18px 20px; }
+
+.modalShareEmail i {
+  width: 12%; }
 
 /* ============================================================
 
@@ -1906,15 +2094,15 @@ div.stickyCenterWrap {
   top: -2px;
   right: -2px; }
 
-.notFoundSignUpWrap a {
+.legalQuestionTxt {
   font-style: italic;
   text-align: right;
   font-size: 11px;
   padding: 8px 0 0 0; }
 
-.notFoundSignUpWrap a span {
-  color: #507a40;
-  font-weight: 700; }
+.legalQuestionTxt span {
+  color: #507a40 !important;
+  font-weight: 700 !important; }
 
 .catList li, .catList a {
   float: left;
@@ -2262,6 +2450,11 @@ input[type='submit'] {
   -moz-box-shadow: 0;
   -webkit-box-shadow: 0;
   box-shadow: 0; }
+
+input[type="text"].whiteInput {
+  background-color: white !important;
+  border: 1px solid white;
+  color: #3c3c3c; }
 
 /*
   jQuery.mmenu CSS

@@ -1494,17 +1494,23 @@ div.stickyCenterWrap {
 	right: -2px;
 }
 
-.notFoundSignUpWrap a {
+
+
+
+.legalQuestionTxt {
 	font-style: italic;
 	text-align: right;
 	font-size: 11px;
 	padding: 8px 0 0 0;
 }
 
-.notFoundSignUpWrap a span {
-	color: $bGreen;
-	font-weight: 700;
+
+.legalQuestionTxt span {
+	color: $bGreen !important;
+	font-weight: 700 !important;
 }
+
+
 //------------------------------------------------ News Letter!
 
 

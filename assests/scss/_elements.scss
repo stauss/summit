@@ -495,6 +495,158 @@ elements
 
 
 
+// modal gen styles
+.modalPop {
+	@include sizeEl(block, none, 100%, 100%);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 999999;
+	background-color: rgba(0, 0, 0, .85);
+	color: $w;
+	padding: 15px;
+}
+
+// head wrap and the modal content wrap
+.modalHead, .modalContent { @include sizeEl(block, left, 100%, 100%); }
+
+
+//----------------------------------------------------------------------------- modal head
+.modalHead {
+	overflow: hidden;
+	height: 50px;
+	padding: 20px 20px 20px 15px;
+	position: relative;
+}
+
+.modalHead h2 {
+	color: $w;
+	font-size: 12px;
+	letter-spacing: .2em;
+}
+
+.modalCloseBtn {
+	@include sizeEl(block, none, 50px, 50px);
+	position: absolute;
+	text-indent: -99999px;
+	cursor: pointer;
+	top: 0px;
+	right: 0px;
+	@include simpleTransAni(all, 0.2s, linear);
+}
+
+.modalCloseBtn:before, .modalCloseBtn:after {
+	content: "";
+	@include sizeEl(block, none, 1px, 16px);
+	background-color: $w;
+	position: absolute;
+	top: 18px;
+	right: 24px;
+	@include simpleTransAni(all, 0.2s, linear);
+}
+
+ .modalCloseBtn:after {
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg); 
+	transform: rotate(45deg);
+}
+
+ .modalCloseBtn:before {
+	-ms-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg); 
+	transform: rotate(-45deg);
+}
+
+
+ .modalCloseBtn:hover:after {
+ 	-ms-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg); 
+	transform: rotate(-45deg);
+ }
+
+  .modalCloseBtn:hover:before {
+ 	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg); 
+	transform: rotate(45deg);
+ }
+
+
+
+// .modalCloseBtn:after {
+// 	width: 0;
+// 	height: 0;
+// 	border-left: 50px solid transparent;
+// 	border-right: 50px solid transparent;
+// 	border-top: 100px solid red;
+// 	position: absolute;
+// 	content: "";
+// 	top: 0px;
+// 	left: 0px;
+// }
+
+//-----------------------------------------------------------------------------
+
+
+
+//----------------------------------------------------------------------------- modal conent
+
+// these are used for the padding so the bgs create a full bleed
+.modalContent {
+	padding: 15px;
+}
+
+.modalContent form {
+	display: block;
+	position: relative;
+	background-color: #bada55;
+}
+
+.modalContent p {
+	padding-bottom: 15px;
+}
+
+.modalContent .greenSubmit {
+	position: absolute;
+	top: -2px;
+	right: -2px;
+}
+
+//-----------------------------------------------------------------------------
+
+// this is the bg for the modal content ! not the trans BG
+.modalPop section {
+	@include sizeEl(block, left, 100%, auto);
+	background-color: $modalHeadBg;
+	@include simpleTransAni(background-color, 0.2s, linear);
+}
+
+.modalPop section:hover{
+	background-color: $bGreen;
+}
+
+.modalCloseBtn:hover {
+	background-color: $closeBtnBgHover;
+}
+
+// wraps the actual content of the modal
+// this is after the header
+.modalContent {
+	background-color: $modalContentBg; 
+}
+
+
+
+// .modalLegalTxt {
+// 	@include sizeEl(block, left, 100%, auto);
+// }
+
+.modalLegalTxt a {
+	padding: 10px 0 0 0;
+}
 
 
 
@@ -502,14 +654,48 @@ elements
 
 
 
+.modalShareList {
+	@include sizeEl(block, left, 100%, auto);
+}
+
+.shareSocialIcon {
+	@include sizeEl(block, left, 48%, auto);
+	margin: 1%;
+	padding:8px 13px;
+	background-color: red;
+}
+
+.shareSocialIcon i, 
+.modalShareEmail i {
+	@include sizeEl(block, left, 50px, 100%);
+	max-width: 40px;
+	text-align: left;
+	//-background-color: red;
+}
+
+.shareSocialIcon i {
+	padding: 4px 0 0 0;
+	width: 20%;
+}
+
+.shareSocialIcon span {
+	padding: 0 0 0 5px;
+}
+
+// icon bg colors
+.modalShareFace    { background-color: $facebookBg   ; }
+.modalShareTwitter { background-color: $twitterBg    ; }
+.modalSharePin     { background-color: $pinterestBg  ; }
+.modalSharePlus    { background-color: $googlePlusBg ; }
 
 
+.modalShareEmail {
+	@include sizeEl(block, left, 100%, auto);
+	background-color: $bGreen;
+	padding: 18px 20px;
+}
 
-
-
-
-
-
+.modalShareEmail i { width: 12%; }
 
 
 
